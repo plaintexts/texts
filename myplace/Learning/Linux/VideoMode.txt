@@ -1,0 +1,586 @@
+Video Mode
+==========
+
+video mode number
+-----------------
+
+### Modes defined by VESA ###
+
+<table class="wikitable">
+<tbody><tr>
+<th>Graphics modes</th>
+<th>320x200</th>
+<th>640x400</th>
+<th>640x480</th>
+<th>800x600</th>
+<th>1024x768</th>
+<th>1280x1024</th>
+</tr>
+<tr>
+<th>16 color palette</th>
+<td></td>
+<td></td>
+<td></td>
+<td>258 (0102h), 106 (6Ah)</td>
+<td>260 (0104h)</td>
+<td>262 (0106h)</td>
+</tr>
+<tr>
+<th>256 color palette</th>
+<td></td>
+<td>256 (0100h)</td>
+<td>257 (0101h)</td>
+<td>259 (0103h)</td>
+<td>261 (0105h)</td>
+<td>263 (0107h)</td>
+</tr>
+<tr>
+<th>15-bit (5:5:5)</th>
+<td>269 (010Dh)</td>
+<td></td>
+<td>272 (0110h)</td>
+<td>275 (0113h)</td>
+<td>278 (0116h)</td>
+<td>281 (0119h)</td>
+</tr>
+<tr>
+<th>16-bit (5:6:5)</th>
+<td>270 (010Eh)</td>
+<td></td>
+<td>273 (0111h)</td>
+<td>276 (0114h)</td>
+<td>279 (0117h)</td>
+<td>282 (011Ah)</td>
+</tr>
+<tr>
+<th>24-bit (8:8:8)</th>
+<td>271 (010Fh)</td>
+<td></td>
+<td>274 (0112h)</td>
+<td>277 (0115h)</td>
+<td>280 (0118h)</td>
+<td>283 (011Bh)</td>
+</tr>
+</tbody></table>
+<table class="wikitable">
+<tbody><tr>
+<th>Text modes</th>
+<th colspan="2">Columns</th>
+</tr>
+<tr>
+<th>Rows</th>
+<th>80</th>
+<th>132</th>
+</tr>
+<tr>
+<th>25</th>
+<td></td>
+<td>109h</td>
+</tr>
+<tr>
+<th>43</th>
+<td></td>
+<td>10Ah</td>
+</tr>
+<tr>
+<th>50</th>
+<td></td>
+<td>10Bh</td>
+</tr>
+<tr>
+<th>60</th>
+<td>108h</td>
+<td>10Ch</td>
+</tr>
+</tbody></table>
+
+### Other commonly available modes ###
+
+<table class="wikitable">
+<tbody><tr>
+<th></th>
+<th>320x200</th>
+<th>640x400</th>
+<th>640x480</th>
+<th>800x500</th>
+<th>800x600</th>
+<th>896x672</th>
+<th>1024x640</th>
+<th>1024x768</th>
+<th>1152x720</th>
+<th>1280x1024</th>
+<th>1440x900</th>
+<th>1600x1200</th>
+</tr>
+<tr>
+<th>16 color palette</th>
+<td><sup id="cite_ref-tradvga_0-0" class="reference"><a href="#cite_note-tradvga-0"><span>[</span>1<span>]</span></a></sup></td>
+<td></td>
+<td><sup id="cite_ref-tradvga_0-1" class="reference"><a href="#cite_note-tradvga-0"><span>[</span>1<span>]</span></a></sup></td>
+<td></td>
+<td>258 (0102h)</td>
+<td></td>
+<td></td>
+<td>260 (0104h)</td>
+<td></td>
+<td>262 (0106h)</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<th>256 color palette</th>
+<td><sup id="cite_ref-tradvga_0-2" class="reference"><a href="#cite_note-tradvga-0"><span>[</span>1<span>]</span></a></sup></td>
+<td>256 (0100h)</td>
+<td>257 (0101h)</td>
+<td>367 (016Fh)</td>
+<td>259 (0103h)</td>
+<td>303 (012Fh)</td>
+<td>362 (016Ah)</td>
+<td>261 (0105h)</td>
+<td>357 (0165h)</td>
+<td>263 (0107h)</td>
+<td>352 (0160h)</td>
+<td>284 (011Ch)</td>
+</tr>
+<tr>
+<th>15-bit (5:5:5)</th>
+<td>269 (010Dh)</td>
+<td>289 (0121h)</td>
+<td>272 (0110h)</td>
+<td>368 (0170h)</td>
+<td>275 (0113h)</td>
+<td>304 (0130h)</td>
+<td>363 (016Bh)</td>
+<td>278 (0116h)</td>
+<td>358 (0166h)</td>
+<td>281 (0119h)</td>
+<td>353 (0161h)</td>
+<td>285 (011Dh)</td>
+</tr>
+<tr>
+<th>16-bit (5:6:5)</th>
+<td>270 (010Eh)</td>
+<td>290 (0122h)</td>
+<td>273 (0111h)</td>
+<td>369 (0171h)</td>
+<td>276 (0114h)</td>
+<td>305 (0131h)</td>
+<td>364 (016Ch)</td>
+<td>279 (0117h)</td>
+<td>359 (0167h)</td>
+<td>282 (011Ah)</td>
+<td>354 (0162h)</td>
+<td>286 (011Eh)</td>
+</tr>
+<tr>
+<th>24-bit (8:8:8)</th>
+<td>271 (010Fh)</td>
+<td>291 (0123h)</td>
+<td>274 (0112h)</td>
+<td>370 (0172h)</td>
+<td>277 (0115h)</td>
+<td>306 (0132h)</td>
+<td>365 (016Dh)</td>
+<td>280 (0118h)</td>
+<td>360 (0168h)</td>
+<td>283 (011Bh)</td>
+<td>355 (0163h)</td>
+<td>287 (011Fh)</td>
+</tr>
+<tr>
+<th>32-bit (8:8:8)</th>
+<td></td>
+<td>292 (0124h)</td>
+<td>297 (0129h)</td>
+<td>371 (0173h)</td>
+<td>302 (012Eh)</td>
+<td>307 (0133h)</td>
+<td>366 (016Eh)</td>
+<td>312 (0138h)</td>
+<td>361 (0169h)</td>
+<td>317 (013Dh)</td>
+<td>356 (0164h)</td>
+<td>322 (0142h)</td>
+</tr>
+</tbody></table>
+
+### Linux video mode numbers ###
+<table class="wikitable" style="text-align: center;">
+<tbody><tr>
+<th></th>
+<th>320
+<p>×</p>
+<p>200</p>
+</th>
+<th>640
+<p>×</p>
+<p>400</p>
+</th>
+<th>640
+<p>×</p>
+
+<p>480</p>
+</th>
+<th>800
+<p>×</p>
+<p>500</p>
+</th>
+<th>800
+<p>×</p>
+<p>600</p>
+</th>
+<th>896
+<p>×</p>
+
+<p>672</p>
+</th>
+<th>1024
+<p>×</p>
+<p>640</p>
+</th>
+<th>1024
+<p>×</p>
+<p>768</p>
+</th>
+<th>1152
+<p>×</p>
+
+<p>720</p>
+</th>
+<th>1280
+<p>×</p>
+<p>1024</p>
+</th>
+<th>1400
+<p>×</p>
+<p>1050</p>
+</th>
+<th>1440
+<p>×</p>
+
+<p>900</p>
+</th>
+<th>1600
+<p>×</p>
+<p>1200</p>
+</th>
+<th>1900
+<p>×</p>
+<p>1200</p>
+</th>
+</tr>
+<tr>
+
+<th>16 colors</th>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>770</td>
+<td></td>
+<td></td>
+<td>772</td>
+<td></td>
+<td>774</td>
+<td></td>
+<td></td>
+
+<td></td>
+<td></td>
+</tr>
+<tr>
+<th>256 colors</th>
+<td></td>
+<td>768</td>
+<td>769</td>
+<td>879</td>
+<td>771</td>
+<td>815</td>
+
+<td>874</td>
+<td>773</td>
+<td><span style="color: red;">869</span></td>
+<td>775</td>
+<td><span style="color: red;">835</span></td>
+<td><span style="color: red;">864</span></td>
+<td><span style="color: red;">796</span></td>
+<td><span style="color: red;">893</span></td>
+</tr>
+
+<tr>
+<th>15-bit (5:5:5)</th>
+<td>781</td>
+<td>801</td>
+<td>784</td>
+<td>880</td>
+<td>787</td>
+<td>816</td>
+<td>875</td>
+
+<td>790</td>
+<td><span style="color: red;">870</span></td>
+<td>793</td>
+<td></td>
+<td><span style="color: red;">865</span></td>
+<td><span style="color: red;">797</span></td>
+<td></td>
+</tr>
+<tr>
+<th>16-bit (5:6:5)</th>
+<td>782</td>
+<td>802</td>
+<td>785</td>
+<td>881</td>
+<td>788</td>
+<td>817</td>
+<td>876</td>
+<td>791</td>
+<td><span style="color: red;">871</span></td>
+<td>794</td>
+<td><span style="color: red;">837</span></td>
+<td><span style="color: red;">866</span></td>
+<td><span style="color: red;">798</span></td>
+<td></td>
+</tr>
+<tr>
+<th>24-bit (8:8:8)</th>
+<td>783</td>
+<td>803</td>
+<td>786</td>
+<td>882</td>
+<td>789</td>
+<td>818</td>
+<td>877</td>
+<td>792</td>
+<td><span style="color: red;">872</span></td>
+<td>795</td>
+<td><span style="color: red;">838</span></td>
+<td><span style="color: red;">867</span></td>
+<td><span style="color: red;">799</span></td>
+<td></td>
+</tr>
+<tr>
+<th>32-bit (8:8:8)<sup>1</sup></th>
+<td></td>
+<td>804</td>
+<td>809</td>
+<td>883</td>
+<td>814</td>
+<td>819</td>
+<td>878</td>
+<td>824</td>
+<td><span style="color: red;">873</span></td>
+<td>829</td>
+<td></td>
+<td><span style="color: red;">868</span></td>
+<td><span style="color: red;">834</span></td>
+<td></td>
+</tr>
+</tbody></table>
+
+
+video=vesafb
+------------
+http://www.mjmwired.net/kernel/Documentation/fb/vesafb.txt
+
+This is a generic driver for a graphic framebuffer on intel boxes.
+
+The idea is simple:  Turn on graphics mode at boot time with the help
+of the BIOS, and use this as framebuffer device /dev/fb0, like the m68k
+(and other) ports do.
+
+### How to use it? ###
+
+Switching modes is done using the vga=... boot parameter.  Read
+Documentation/svga.txt for details.
+
+The graphic modes are NOT in the list which you get if you boot with
+vga=ask and hit return. The mode you wish to use is derived from the
+VESA mode number. Here are those VESA mode numbers:
+
+        | 640x480  800x600  1024x768 1280x1024
+    ----+-------------------------------------
+    256 |  0x101    0x103    0x105    0x107   
+    32k |  0x110    0x113    0x116    0x119   
+    64k |  0x111    0x114    0x117    0x11A   
+    16M |  0x112    0x115    0x118    0x11B   
+
+The video mode number of the Linux kernel is the VESA mode number plus
+0x200.
+ 
+ Linux_kernel_mode_number = VESA_mode_number + 0x200
+
+So the table for the Kernel mode numbers are:
+
+        | 640x480  800x600  1024x768 1280x1024
+    ----+-------------------------------------
+    256 |  0x301    0x303    0x305    0x307   
+    32k |  0x310    0x313    0x316    0x319   
+    64k |  0x311    0x314    0x317    0x31A   
+    16M |  0x312    0x315    0x318    0x31B   
+
+To enable one of those modes you have to specify "vga=ask" in the
+lilo.conf file and rerun LILO. Then you can type in the desired
+mode at the "vga=ask" prompt. For example if you like to use 
+1024x768x256 colors you have to say "305" at this prompt.
+
+1. Note: LILO cannot handle hex, for booting directly with 
+         "vga=mode-number" you have to transform the numbers to decimal.
+2. Note: Some newer versions of LILO appear to work with those hex values,
+         if you set the 0x in front of the numbers.
+
+### Configuration ###
+
+
+You can pass options to vesafb using "video=vesafb:option" on
+the kernel command line.  Multiple options should be separated
+by comma, like this: "video=vesafb:ypan,invers"
+
+### Accepted options ###
+
+invers	no comment...
+
+ypan	enable display panning using the VESA protected mode 
+	interface.  The visible screen is just a window of the
+	video memory, console scrolling is done by changing the
+	start of the window.
+
+ywrap	Same as ypan, but assumes your gfx board can wrap-around 
+	the video memory (i.e. starts reading from top if it
+	reaches the end of video memory).  Faster than ypan.
+
+redraw	scroll by redrawing the affected part of the screen, this
+	is the safe (and slow) default.
+
+vgapal	Use the standard vga registers for palette changes.
+	This is the default.
+pmipal	Use the protected mode interface for palette changes.
+
+mtrr:n	setup memory type range registers for the vesafb framebuffer
+	where n:
+	      0 - disabled (equivalent to nomtrr) (default)
+	      1 - uncachable
+	      2 - write-back
+	      3 - write-combining
+	      4 - write-through
+nomtrr  disable mtrr
+
+vremap:n
+        remap 'n' MiB of video RAM. If 0 or not specified, remap memory
+	according to video mode. (2.5.66 patch/idea by Antonino Daplas
+	reversed to give override possibility (allocate more fb memory
+	than the kernel would) to 2.4 by tmb[AT]iki[DOT]fi)
+
+vtotal:n
+        if the video BIOS of your card incorrectly determines the total
+        amount of video RAM, use this option to override the BIOS (in MiB).
+
+video=uvesafb
+-------------
+http://www.mjmwired.net/kernel/Documentation/fb/uvesafb.txt
+
+uvesafb should work with any video card that has a Video BIOS compliant
+with the VBE 2.0 standard.
+
+Unlike other drivers, uvesafb makes use of a userspace helper called
+v86d.  v86d is used to run the x86 Video BIOS code in a simulated and
+controlled environment.  This allows uvesafb to function on arches other
+than x86.  
+
+uvesafb can be compiled either as a module, or directly into the kernel.
+In both cases it supports the same set of configuration options, which
+are either given on the kernel command line or as module parameters, e.g.:
+
+ video=uvesafb:1024x768-32,mtrr:3,ywrap (compiled into the kernel)
+
+ # modprobe uvesafb mode_option=1024x768-32 mtrr=3 scroll=ywrap  (module)
+
+### Accepted options ###
+
+ypan    Enable display panning using the VESA protected mode
+        interface.  The visible screen is just a window of the
+        video memory, console scrolling is done by changing the
+        start of the window.  This option is available on x86
+        only and is the default option on that architecture.
+
+ywrap   Same as ypan, but assumes your gfx board can wrap-around
+        the video memory (i.e. starts reading from top if it
+        reaches the end of video memory).  Faster than ypan.
+        Available on x86 only.
+
+redraw  Scroll by redrawing the affected part of the screen, this
+        is the default on non-x86.
+
+(If you're using uvesafb as a module, the above three options are
+ used a parameter of the scroll option, e.g. scroll=ypan.)
+
+vgapal  Use the standard VGA registers for palette changes.
+
+pmipal  Use the protected mode interface for palette changes.
+        This is the default if the protected mode interface is
+        available.  Available on x86 only.
+
+mtrr:n  Setup memory type range registers for the framebuffer
+        where n:
+              0 - disabled (equivalent to nomtrr) (default)
+              1 - uncachable
+              2 - write-back
+              3 - write-combining
+              4 - write-through
+
+nomtrr  Do not use memory type range registers.
+
+vremap:n
+        Remap 'n' MiB of video RAM.  If 0 or not specified, remap memory
+        according to video mode.
+
+vtotal:n
+        If the video BIOS of your card incorrectly determines the total
+        amount of video RAM, use this option to override the BIOS (in MiB).
+
+<mode>  The mode you want to set, in the standard modedb format.  Refer to
+        modedb.txt for a detailed description.  When uvesafb is compiled as
+        a module, the mode string should be provided as a value of the
+        'mode_option' option.
+
+vbemode:x
+        Force the use of VBE mode x.  The mode will only be set if it's
+        found in the VBE-provided list of supported modes.
+        NOTE: The mode number 'x' should be specified in VESA mode number
+        notation, not the Linux kernel one (eg. 257 instead of 769).
+        HINT: If you use this option because normal <mode> parameter does
+        not work for you and you use a X server, you'll probably want to
+        set the 'nocrtc' option to ensure that the video mode is properly
+        restored after console <-> X switches.
+
+nocrtc  Do not use CRTC timings while setting the video mode.  This option
+        has any effect only if the Video BIOS is VBE 3.0 compliant.  Use it
+        if you have problems with modes set the standard way.  Note that
+        using this option implies that any refresh rate adjustments will
+        be ignored and the refresh rate will stay at your BIOS default (60 Hz).
+
+noedid  Do not try to fetch and use EDID-provided modes.
+
+noblank Disable hardware blanking.
+
+v86d:path
+        Set path to the v86d executable. This option is only available as
+        a module parameter, and not as a part of the video= string.  If you
+        need to use it and have uvesafb built into the kernel, use
+        uvesafb.v86d="path".
+
+Additionally, the following parameters may be provided.  They all override the
+EDID-provided values and BIOS defaults.  Refer to your monitor's specs to get
+the correct values for maxhf, maxvf and maxclk for your hardware.
+
+maxhf:n     Maximum horizontal frequency (in kHz).
+maxvf:n     Maximum vertical frequency (in Hz).
+maxclk:n    Maximum pixel clock (in MHz).
+
+
+version information
+------- -----------
+Revision 5, Last updated Sun Jun  6 21:19:23 2010, by xiaoranzzz@myplace.hell
+ts: 1275830363
+lastmajor: 5
+keep-ts: 1275830363

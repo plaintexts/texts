@@ -1,13 +1,18 @@
-学习
-====
+Learning
+========
 
 [[.五笔|五笔]]
+
 [[.文学理论|文学理论]]
-[[.Programming|程序设计]]
+
+[[.Programming|Programming]]
+
+[[.Linux|Linux]]
+
 
 version information
 ------- -----------
-Revision 7, Last updated Sat May 29 01:15:52 2010, by xiaoranzzz@myplace.hell
-ts: 1275066952
-lastmajor: 7
-keep-ts: 1275066952
+Revision 8, Last updated Sun Jun  6 19:48:05 2010, by xiaoranzzz@myplace.hell
+ts: 1275824885
+lastmajor: 8
+keep-ts: 1275824885

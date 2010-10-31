@@ -1,0 +1,15 @@
+Linux
+=====
+
+Booting
+-------
+
+[[.VideoMode|Video Mode]]
+
+
+version information
+------- -----------
+Revision 3, Last updated Sun Jun  6 21:16:25 2010, by xiaoranzzz@myplace.hell
+ts: 1275830185
+lastmajor: 3
+keep-ts: 1275830185
