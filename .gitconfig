@@ -1,0 +1,12 @@
+[core]
+	repositoryformatversion = 0
+	filemode = true
+	bare = false
+	logallrefupdates = true
+[svn-remote "svn"]
+	url = https://xrzworkspace.googlecode.com/svn
+	fetch = text/trunk:refs/remotes/trunk
+	branches = text/branches/*:refs/remotes/*
+	tags = text/tags/*:refs/remotes/tags/*
+[svn]
+	authorsfile = .gitauthors
