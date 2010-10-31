@@ -13,3 +13,6 @@
 [remote "github"]
 	url = git@github.com:eotect/text.git
 	fetch = +refs/heads/*:refs/remotes/github/*
+[user]
+	name = xiaoranzzz
+	email = xiaoranzzz@gmail.com
