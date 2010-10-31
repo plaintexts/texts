@@ -1,0 +1,26 @@
+<toc>
+
+== # Perl Based == 
+* [http://ikiwiki.info/ ikiwiki], a "wiki compiler" by Joey Hess - can use Subversion or git as the backend storage mechanism.
+* [http://mojomojo.org/ MojoMojo] is an open-source web2.0 wiki built on top of the Catalyst web framework, blending the functions of wikis, CMSes and blogs
+* [http://code.google.com/p/noosphere/source/browse/wiki/Noosphere.wiki?spec=svn2&r=2 Noösphere]], the engine for PlanetMath.
+* [http://www.november-wiki.org/ November], a wiki engine written in Perl 6.
+* [http://www.daemon.de/PodWiki PodWiki] is a wiki which supports multiple markup languages, primarily Perl POD.
+* [http://www.socialtext.com/ Socialtext] is an enterprise wiki and weblog partially derived from open-source Kwiki. Socialtext is available as a hosted service, or a dedicated hardware appliance.
+* [http://twiki.org/ TWiki] is a structured wiki, typically used to run a project development space, a document management system, a knowledge base, or any other groupware tool. Also available as a VMware appliance.
+* [[.UseModWiki]] (Clifford Adams, 2000) is a clone of AtisWiki.
+** [[.Oddmuse]] is a fork of [[.UseModWiki]].
+* [http://c2.com/cgi/wiki WikiWikiWeb] (Ward Cunningham, 1994)
+---------<META>---------
+flags: 01010101010
+blocks: <h2 id="Heading1"># Perl Based</h2><ul><li><a class="url http outside" href="http://ikiwiki.info/">ikiwiki</a>, a "wiki compiler" by Joey Hess - can use Subversion or git as the backend storage mechanism.</li><li><a class="url http outside" href="http://mojomojo.org/">MojoMojo</a> is an open-source web2.0 wiki built on top of the Catalyst web framework, blending the functions of wikis, CMSes and blogs</li><li><a class="url http outside" href="http://code.google.com/p/noosphere/source/browse/wiki/Noosphere.wiki?spec=svn2&amp;r=2">Noösphere</a>], the engine for PlanetMath.</li><li><a class="url http outside" href="http://www.november-wiki.org/">November</a>, a wiki engine written in Perl 6.</li><li><a class="url http outside" href="http://www.daemon.de/PodWiki">PodWiki</a> is a wiki which supports multiple markup languages, primarily Perl POD.</li><li><a class="url http outside" href="http://www.socialtext.com/">Socialtext</a> is an enterprise wiki and weblog partially derived from open-source Kwiki. Socialtext is available as a hosted service, or a dedicated hardware appliance.</li><li><a class="url http outside" href="http://twiki.org/">TWiki</a> is a structured wiki, typically used to run a project development space, a document management system, a knowledge base, or any other groupware tool. Also available as a VMware appliance.</li><li>[[.UseModWiki]] (Clifford Adams, 2000) is a clone of AtisWiki.<ul><li>[[.Oddmuse]] is a fork of [[.UseModWiki]].</li></ul></li><li><a class="url http outside" href="http://c2.com/cgi/wiki">WikiWikiWeb</a> (Ward Cunningham, 1994)</li></ul>
+ip: ::ffff:127.0.0.1
+ts: 1251212855
+minor: 
+host: ::ffff:127.0.0.1
+username: xiaoranzzz
+revision: 3
+summary: <toc> == # Perl Based ==  * ikiwiki, a "wiki compiler" by Joey Hess - can use Subversion or git as the backend . . .
+languages: 
+lastmajor: 3
+keep-ts: 1251212855

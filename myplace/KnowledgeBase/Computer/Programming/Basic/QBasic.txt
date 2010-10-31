@@ -1,0 +1,45 @@
+====== QBasic ======
+Created Sunday 28 October 2007
+From Wikipedia, the free encyclopedia
+
+Appeared in 	1991 - 1998
+Developer 	Microsoft Corporation
+OS 	DOS, Windows 95, Windows 98
+License 	EULA
+Website 	www.microsoft.com
+
+QBasic is an IDE and interpreter for a variant of the [[BASIC]] programming language which is based on [[Basic:QuickBasic|QuickBasic]]. Code entered into the IDE is compiled to an intermediate form, and this intermediate form is immediately interpreted on demand within the IDE.
+Contents
+
+	* 1 Syntax
+	* 2 History
+	* 3 "Hello, World!" Example
+	* 4 Trivia
+	* 5 See also
+	* 6 External Links
+
+**Syntax**
+
+Like [[Basic:QuickBasic|QuickBasic]], but unlike earlier versions of Microsoft BASIC, QBasic is a structured programming language, supporting constructs such as named subroutines and while loops. Line numbers, a concept often associated with BASIC, are supported for compatibility, but are not considered good form, having been replaced by descriptive line labels. QBasic has limited support for user-defined data types (structures), and several primitive types used to contain strings of text or numeric data.
+
+**History**
+
+QBasic was intended as a replacement for GW-BASIC. Version 1.0 was shipped together with DOS 5.0 and higher, as well as Windows 95, Windows NT 3.x, and Windows NT 4.0. IBM recompiled QBasic and included it in PCDOS 5.x, as well as OS/2 2.0 onwards. eComStation, decended from OS/2 code, includes QBasic 1.0. QBasic 1.1 is included with DOS 6.x, and, without EDIT, in Windows 95, and Windows 98. Starting with Windows 2000, Microsoft no longer includes QBasic with their operating systems.
+
+It was based on the earlier [[Basic:QuickBasic|QuickBasic]] 4.5 compiler but without [[Basic:QuickBasic|QuickBasic]]'s compiler and linker elements. Until DOS 7, the DOS editor required QBasic. The "edit.com" program simply started QBasic in editor mode only.
+
+Although QBasic (along with the built-in DOS Editor) was first introduced as part of the DOS 5.0 Package, it did not depend specifically on DOS 5.0 to run. QBASIC (and the Editor) could be used with previous versions of DOS, down to at least version 3.20. However, sufficient memory and a reasonably fast CPU were still needed, otherwise the program would run very slowly.
+
+For its time, QBasic provided a state-of-the-art IDE, including a debugger with features such as on-the-fly expression evaluation and code modification that were still relatively unusual more than ten years later.
+
+QBasic is able to be run natively under nearly all versions of DOS and of Windows, and by using the free DOSBox emulator, it can run on platforms such as Linux and FreeBSD.
+
+QBasic came complete with a couple of pre-written example programs. These were Nibbles (a variant of the Snake game), Gorillas, an explosive-banana throwing game derived from Artillery Game first produced on the Tektronix 4051 and later HP 2640 HP 2647 and RemLine, a GW-BASIC code line number removing program.
+
+** "Hello, World!" Example**
+
+PRINT "Hello, World!"
+
+**Trivia**
+
+QBasic has a little known easter egg. To see it, press and hold LeftCtrl+LeftShift+LeftAlt and RightCtrl+RightShift+RightAlt simultaneously after running QBasic at the DOS prompt but before the title screen loads: this lists The Team of programmers. Note that on modern computers, it is much too fast to perform. It is best done on an old PC (preferably one with a working Turbo button, with the switch on to slow the CPU to 4.77MHz) or in an emulator like Bochs or DOSBox which can be slowed down.

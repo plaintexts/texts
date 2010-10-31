@@ -1,0 +1,20 @@
+* [[已标点]]
+* [[未标点]]
+
+---------<META>---------
+flags: 01010
+blocks: <ul><li>[[已标点]]</li><li>[[未标点]]</li></ul>
+diff-minor: <p><strong>Changed:</strong></p>
+	<div class="old"><p>&lt; [[已标点]]<br />&lt; [[未标点]]</p></div><p><strong>to</strong></p>
+	<div class="new"><p>&gt; <strong class="changes">*</strong> [[已标点]]<br />&gt; <strong class="changes">*</strong> [[未标点]]</p></div>
+ip: ::ffff:127.0.0.1
+ts: 1251109885
+minor: 
+host: ::ffff:127.0.0.1
+username: xiaoranzzz
+revision: 6
+diff-major: 1
+summary: * 已标点 * 未标点 
+languages: 
+lastmajor: 6
+keep-ts: 1251109885

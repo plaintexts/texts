@@ -1,0 +1,8 @@
+[Notebook]
+document_root=~/Documents
+home=:Home
+icon=
+name=myplace
+slow_fs=0
+
+# vim: syntax=desktop

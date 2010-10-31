@@ -1,0 +1,21 @@
+====== Basic ======
+Created Sunday 28 October 2007
+
+[[.BASICA|Microsoft BASICA]]
+
+[[.GW-BASIC|Microsoft GW-BASIC]]
+
+[[.QuickBasic|Microsoft QuickBasic]]
+
+[[.QBasic|Microsoft QBasic]]
+
+[[.VisualBasic|Microsoft Visual Basic]]
+
+[[.TurboBasic|Borland TurboBasic]]
+
+[[.FreeBasic|FreeBasic]]
+---------<META>---------
+revision: 1
+flags: 010101010101010
+blocks: <p><span class="post_title">Basic </span><br /><span class="footer">Created Sunday 28 October 2007</span><br /></p><p>[[.BASICA|Microsoft BASICA]]<br /><br />[[.GW-BASIC|Microsoft GW-BASIC]]<br /><br />[[.QuickBasic|Microsoft QuickBasic]]<br /><br />[[.QBasic|Microsoft QBasic]]<br /><br />[[.VisualBasic|Microsoft Visual Basic]]<br /><br />[[.TurboBasic|Borland TurboBasic]]<br /><br />[[.FreeBasic|FreeBasic]]</p>
+ts: 1250977836

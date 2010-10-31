@@ -1,0 +1,19 @@
+====== Writting ======
+Created Wednesday 24 September 2008
+
+* [[.风雨飘摇之夜|风雨飘摇之夜]]
+---------<META>---------
+flags: 010
+blocks: <p><span class="post_title">Writting </span><br /><span class="footer">Created Wednesday 24 September 2008</span><br /></p><ul><li>[[.风雨飘摇之夜|风雨飘摇之夜]]</li></ul>
+diff-minor: 
+ip: 127.0.0.1
+ts: 1251132121
+minor: 
+host: venus-vista
+username: 
+revision: 2
+diff-major: 1
+summary: 
+languages: 
+lastmajor: 2
+keep-ts: 1251132121

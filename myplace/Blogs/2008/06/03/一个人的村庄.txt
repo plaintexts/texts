@@ -1,0 +1,645 @@
+====== 一个人的村庄 ======
+Created 2008-06-03 18:40:00
+Updated 2008-06-03 18:41:00
+
+
+开始有一个不美丽的误会。书的前面没有注明作者是谁,所以我以为是外国人;刚刚看完看不见的城市,所以我以为又是一部散文式的小说。不幸得很,作者是刘亮程,是散文集。更不幸的是,我还没有看完。菜还是那个菜,但已经变味,很难不承认嗖的是隔夜的我。 
+
+好吧,谈谈在星巴克喝下这杯米饭的心情。我有些愉快,这是真的,因为很少有假的愉快。是不是一个外国名字就足以令我愉快?还是得加上每年都要刮几次吹走几样东西的风?得加上热火炉再也烤不暖的某一个冬天冻坏的那根骨头?得加上那个在梦里不断追逐我的瘸腿人?以及那个小孩怆惶回看的眼睛?以及蚂蚁以及草?这是孤独者的梦、记忆和心中秘密。我们在深夜里通过抚弄此类东西而心情平静,周身疲软。 
+
+文章很好,在国人的散文中如此风格的文字、内容是我前所未见。不过因为是国人的作品,只能说,很不坏了。 
+
+== Comments: ==
+
+* **re: 一个人的村庄**
+这算不算自嘲？
+**BruceBack**,2008-06-09 09:16:00
+
+* **re: 一个人的村庄[未登录]**
+好了,這次你可以真正更新我的博客鏈接了. 
+
+買了個玉米和空間,自己搭了個wp博客.
+**上善若水**,2008-06-09 12:59:00
+
+* **re: 一个人的村庄**
+@上善若水 
+
+留不了言你那里,500内部服务器错误. 
+
+php我懂一点,搞不定的话源码给我看看 
+**xrLiN**,2008-06-10 00:06:00
+
+* **re: 一个人的村庄**
+@BruceBack 
+
+有点这个意思~~
+**xrLiN**,2008-06-10 00:06:00
+
+* **re: 一个人的村庄[未登录]**
+<pre>
+code: 
+
+--------- 
+
+<?php // Do not delete these lines 
+
+ if ('comments.php' == basename($_SERVER['SCRIPT_FILENAME'])) 
+
+ die ('Please do not load this page directly. Thanks!'); 
+
+ if (!empty($post->post_password)) { 
+
+ if ($_COOKIE['wp-postpass_' . COOKIEHASH] != $post->post_password) { 
+
+ ?> 
+
+ <p class="nocomments">This post is password protected. Enter the password to view comments.<p> 
+
+ <?php 
+
+ return; 
+
+ } 
+
+ } 
+
+ if(!$tablecomments && $wpdb->comments) 
+
+ $tablecomments = $wpdb->comments; 
+
+ $comments = $wpdb->get_results("SELECT * FROM $tablecomments WHERE comment_post_ID = '$id' AND comment_approved = '1' ORDER BY comment_date"); 
+
+// You can start editing here 
+
+ $GLOBALS['comments_reply'] = array(); 
+
+ function write_comment(&$c, $deep_id = -1, $color = true) { 
+
+ global $max_level; 
+
+ $comments_reply = $GLOBALS['comments_reply']; 
+
+ if ($c->comment_author_email== get_the_author_email()) 
+
+ $style = ' class="mine"'; 
+
+ else if ($color==true){$style=' class="borderc1"';$color=!$color;} 
+
+ else{$style=' class="borderc2"';$color=!$color;} 
+
+?> 
+
+ <li id="comment-<?php echo $c->comment_ID ?>" <?php echo $style?>><div class="commenthead"> 
+
+ <?php echo mysql2date('Y/m/d H:i', $c->comment_date);?>, 
+
+ <a name='comment-<?php echo $c->comment_ID ?>'></a> 
+
+ <span class="author"><?php echo get_comment_author_link();?></span> 留言： </div> 
+
+ <div class="gravatar_a"><?php if (function_exists('get_avatar')) { echo get_avatar(get_comment_author_email(),'64'); } ?></div> 
+
+ <div class="body"> 
+
+ <?php comment_text();?> 
+
+ </div> 
+
+ <div class="meta"> 
+
+ <?php 
+
+ global $user_ID, $post; 
+
+ get_currentuserinfo(); 
+
+ if (user_can_edit_post_comments($user_ID, $post->ID) || ($GLOBALS['cmtDepth'] < $max_level)) 
+
+ echo '['; 
+
+ // comment_favicon(); 
+
+ edit_comment_link(' 编辑 ', '',(($GLOBALS['cmtDepth'] < $max_level)?'|': '')); 
+
+ if ($GLOBALS['cmtDepth'] < $max_level) { 
+
+ if ( get_option("comment_registration") && !$user_ID ) 
+
+ echo '<a href="'. get_option('siteurl') . '/wp-login.php?redirect_to=' . get_permalink() .'"> 请登录后留言 </a> ]'; 
+
+ else 
+
+</pre>
+**上善若水**,2008-06-10 00:19:00
+
+* **re: 一个人的村庄[未登录]**
+確實是留言系統有毛病，不過500內部服務器錯誤沒有碰到過啊。 
+
+是提示有一條語句有問題，我搞不定啊，搞不定。 
+
+error message: 
+
+---------- 
+
+Warning: Invalid argument supplied for foreach() in /home/tabimiti/public_html/wordpress/wp-content/themes/JsPaper/comments.php on line 92 
+
+---------- 
+**上善若水**,2008-06-10 00:19:00
+
+* **re: 一个人的村庄[未登录]**
+繼續。 
+<pre>
+echo '<a href="javascript:moveForm('.$c->comment_ID.')" title="reply"> 回复 </a>'; 
+
+ } 
+
+ if (user_can_edit_post_comments($user_ID, $post->ID) || ($GLOBALS['cmtDepth'] < $max_level)) 
+
+ echo ']</div>'; 
+
+ if ($comments_reply[$c->comment_ID]) { 
+
+ $id = $c->comment_ID; 
+
+ if($GLOBALS['cmtDepth'] < $max_level ) 
+
+ echo '<ul>'; 
+
+ foreach($comments_reply[$id] as $c) { 
+
+ $GLOBALS['cmtDepth']++; 
+
+ if($GLOBALS['cmtDepth'] == $max_level) 
+
+ write_comment($c, $c->comment_ID); 
+
+ else 
+
+ write_comment($c, $deep_id); 
+
+ $GLOBALS['cmtDepth']--; 
+
+ } 
+
+ if($GLOBALS['cmtDepth'] < $max_level ) 
+
+ echo '</ul>'; 
+
+ } 
+
+ echo '</li>'; 
+
+ ?> 
+
+<?php 
+
+ } 
+
+?> 
+
+<div class="clear"></div> 
+
+<script type="text/javascript"> 
+
+var blogurl="<?php echo get_settings('home');?>"; 
+
+var needemail="<?php echo get_option('comment_registration');?>"; 
+
+var nowurl="<?php echo get_settings("home");?>/wp-content/themes/yuewei/jscript/getpost.php?id=<?php echo $post->ID;?>"; 
+
+var md5 = "<?php echo md5(get_settings("home"));?>"; 
+
+</script> 
+
+<?php echo '<script type="text/javascript" src="'.get_settings('home').'/wp-content/plugins/ajaxcomment/comment.js" defer="true"></script>'; ?> 
+
+<div class="h2"><?php comments_number('暂无留言，抢个沙发如何？', '沙发没了，还有张板凳，快点！', '目前已经有%条留言' );?></div> 
+
+<div class="metalinks"> 
+
+ <span class="commentsrsslink"><?php comments_rss_link('留言订阅'); ?></span> 
+
+ <span class="trackbacklink"><a href="<?php trackback_url(true); ?>" title="引用本文地址">引用本文</a></span> 
+
+ </div> 
+
+<ul class="commentlist" id="comments"> 
+
+ <?php 
+
+ if ($comments) : 
+
+ foreach ($comments as $c) { 
+
+ $GLOBALS['comments_reply'][$c->comment_reply_ID][] = $c; 
+
+ } 
+
+ $GLOBALS['cmtDepth'] = 0;$color=true; 
+
+ foreach($GLOBALS['comments_reply'][0] as $cmt) { 
+
+ $GLOBALS['comment'] = &$cmt; 
+
+ write_comment($GLOBALS['comment'], '-1', $color); 
+
+ $color=!$color; 
+
+ } 
+
+ else: 
+
+ endif; 
+
+ ?> 
+
+</ul> 
+
+<?php if ('open' == $post->comment_status) : ?> 
+
+<div id="cmtForm"> 
+
+<?php if ( get_option('comment_registration') && !$user_ID ) : ?> 
+
+<p>You must be <a href="<?php echo get_option('siteurl'); ?>/wp-login.php?redirect_to=<?php the_permalink(); ?>">logged in</a> to post a comment.</p> 
+
+<?php else : ?> 
+
+<form action="<?php echo get_option('siteurl'); ?>/wp-comments-post.php" method="post" id="commentform" onsubmit="AjaxSendComment();return false;"> 
+
+<?php if ( $user_ID ) : ?> 
+
+<p>登录为 <a href="<?php echo get_option('siteurl'); ?>/wp-admin/profile.php"><?php echo $user_identity; ?></a>. <a href="<?php echo get_option('siteurl'); ?>/wp-login.php?action=logout" title="Log out of this account">登出 &raquo;</a></p> 
+
+<?php else : ?> 
+
+<div> 
+
+<p><label for="author">昵称</label> 
+
+<input type="text" name="author" id="author" value="<?php echo $comment_author?>" tabindex="1" /> 
+
+ <span id="nm">(必需)</span><br/></p> 
+
+<p><label for="email">邮件</label> 
+
+<input type="text" name="email" id="email" value="<?php echo $comment_author_email?>" tabindex="2" /> (必需，不公开)<br/></p> 
+
+<p><label for="url">网址</label> 
+
+<input type="text" name="url" id="url" value="<?php echo $comment_author_url; ?>" tabindex="3" /> <br/><?php do_action('comment_form', $post->ID); ?></p> 
+
+</div> 
+
+<?php endif; ?> 
+
+<table width="100%"><tr><td><textarea name="comment" id="comment" tabindex="4" rows="4" cols="70"></textarea></td></tr></table> 
+
+<input value="发表留言" name="submit" type="submit" tabindex="5"/> 
+
+<input id="reRoot" type="button" onclick="javascript:moveForm(0)" style="display:none" value="取消" tabindex="6"/> 
+
+<input type="hidden" name="comment_post_ID" value="<?php echo $id; ?>" /> 
+
+<input type="hidden" name="comment_reply_ID" id="comment_reply_ID" value="0" /> 
+
+<?php do_action('comment_form', $post->ID); ?> 
+
+</form> 
+
+</div> 
+
+<?php endif; // If registration required and not logged in ?> 
+
+<?php endif; // if you delete this the sky will fall on your head ?> 
+
+</pre>
+**上善若水**,2008-06-10 00:20:00
+
+* **re: 一个人的村庄[未登录]**
+用的這個theme 
+
+其中出錯的是comment.php
+**上善若水**,2008-06-10 00:21:00
+
+* **re: 一个人的村庄**
+
+
+这个文件找不到好像,是不是少了ajaxcomment这个插件?
+
+另一处可疑的地方就是第92行那里:
+
+foreach($GLOBALS['comments_reply'][0] as $cmt) {
+
+试试改成
+
+foreach($GLOBALS['comments_reply'] as $cmt) {
+
+不太清楚数据库里这些留言怎么表示的,所以只是猜测
+**xrLiN**,2008-06-10 12:36:00
+
+* **re: 一个人的村庄[未登录]**
+很不錯，確實缺少那個插件。 
+
+另外，將[0]去掉后，能顯示留言了。 
+
+就是前面有個 
+
+, Anonymous 的留言。 
+
+我回去把插件弄好再看看。 
+
+お前強いぞ！
+**上善若水**,2008-06-10 14:19:00
+
+* **re: 一个人的村庄[未登录]**
+下了個ajaxcomment插件，留言現在還像個樣子了。 
+
+可惜那個調用圖像的框框不知道死哪去了。 
+
+代碼這東西還真不是一般人能玩得轉的。
+**上善若水**,2008-06-10 23:11:00
+
+* **re: 一个人的村庄**
+其实不难，那么多流行的语言，C，C++，C#,Perl,Python,Ruby,Java,JavaScript甚至VisualBasic,甚至VBScript，只要熟悉随便一种，看什么代码都基本没什么问题~~
+**xrLiN**,2008-06-11 17:48:00
+
+* **re: 一个人的村庄[未登录]**
+我明白的，你是想說你都熟悉了。
+**上善若水**,2008-06-11 19:57:00
+
+* **re: 一个人的村庄**
+嘘嘘。。我是很谦虚的
+**xrLiN**,2008-06-12 00:05:00
+
+---------<META>---------
+flags: 010101010
+blocks: <p><span class="post_title">一个人的村庄 </span><br /><span class="footer">Created 2008-06-03 18:40:00</span><br /><span class="footer">Updated 2008-06-03 18:41:00</span><br /></p><p>开始有一个不美丽的误会。书的前面没有注明作者是谁,所以我以为是外国人;刚刚看完看不见的城市,所以我以为又是一部散文式的小说。不幸得很,作者是刘亮程,是散文集。更不幸的是,我还没有看完。菜还是那个菜,但已经变味,很难不承认嗖的是隔夜的我。 </p><p>好吧,谈谈在星巴克喝下这杯米饭的心情。我有些愉快,这是真的,因为很少有假的愉快。是不是一个外国名字就足以令我愉快?还是得加上每年都要刮几次吹走几样东西的风?得加上热火炉再也烤不暖的某一个冬天冻坏的那根骨头?得加上那个在梦里不断追逐我的瘸腿人?以及那个小孩怆惶回看的眼睛?以及蚂蚁以及草?这是孤独者的梦、记忆和心中秘密。我们在深夜里通过抚弄此类东西而心情平静,周身疲软。 </p><p>文章很好,在国人的散文中如此风格的文字、内容是我前所未见。不过因为是国人的作品,只能说,很不坏了。 </p><h2 id="Heading1">Comments:</h2><ul><li>**re: 一个人的村庄** 这算不算自嘲？ **BruceBack**,2008-06-09 09:16:00</li><li>**re: 一个人的村庄[未登录]** 好了,這次你可以真正更新我的博客鏈接了.</li></ul><p>買了個玉米和空間,自己搭了個wp博客. **上善若水**,2008-06-09 12:59:00</p><ul><li>**re: 一个人的村庄** @上善若水 </li></ul><p>留不了言你那里,500内部服务器错误.</p><p>php我懂一点,搞不定的话源码给我看看  **xrLiN**,2008-06-10 00:06:00</p><ul><li>**re: 一个人的村庄** @BruceBack</li></ul><p>有点这个意思~~ **xrLiN**,2008-06-10 00:06:00</p><ul><li>**re: 一个人的村庄[未登录]** </li></ul><pre class="real">code: 
+	
+	--------- 
+	
+	&lt;?php // Do not delete these lines 
+	
+	 if ('comments.php' == basename($_SERVER['SCRIPT_FILENAME'])) 
+	
+	 die ('Please do not load this page directly. Thanks!'); 
+	
+	 if (!empty($post-&gt;post_password)) { 
+	
+	 if ($_COOKIE['wp-postpass_' . COOKIEHASH] != $post-&gt;post_password) { 
+	
+	 ?&gt; 
+	
+	 &lt;p class="nocomments"&gt;This post is password protected. Enter the password to view comments.&lt;p&gt; 
+	
+	 &lt;?php 
+	
+	 return; 
+	
+	 } 
+	
+	 } 
+	
+	 if(!$tablecomments &amp;&amp; $wpdb-&gt;comments) 
+	
+	 $tablecomments = $wpdb-&gt;comments; 
+	
+	 $comments = $wpdb-&gt;get_results("SELECT * FROM $tablecomments WHERE comment_post_ID = '$id' AND comment_approved = '1' ORDER BY comment_date"); 
+	
+	// You can start editing here 
+	
+	 $GLOBALS['comments_reply'] = array(); 
+	
+	 function write_comment(&amp;$c, $deep_id = -1, $color = true) { 
+	
+	 global $max_level; 
+	
+	 $comments_reply = $GLOBALS['comments_reply']; 
+	
+	 if ($c-&gt;comment_author_email== get_the_author_email()) 
+	
+	 $style = ' class="mine"'; 
+	
+	 else if ($color==true){$style=' class="borderc1"';$color=!$color;} 
+	
+	 else{$style=' class="borderc2"';$color=!$color;} 
+	
+	?&gt; 
+	
+	 &lt;li id="comment-&lt;?php echo $c-&gt;comment_ID ?&gt;" &lt;?php echo $style?&gt;&gt;&lt;div class="commenthead"&gt; 
+	
+	 &lt;?php echo mysql2date('Y/m/d H:i', $c-&gt;comment_date);?&gt;, 
+	
+	 &lt;a name='comment-&lt;?php echo $c-&gt;comment_ID ?&gt;'&gt;&lt;/a&gt; 
+	
+	 &lt;span class="author"&gt;&lt;?php echo get_comment_author_link();?&gt;&lt;/span&gt; 留言： &lt;/div&gt; 
+	
+	 &lt;div class="gravatar_a"&gt;&lt;?php if (function_exists('get_avatar')) { echo get_avatar(get_comment_author_email(),'64'); } ?&gt;&lt;/div&gt; 
+	
+	 &lt;div class="body"&gt; 
+	
+	 &lt;?php comment_text();?&gt; 
+	
+	 &lt;/div&gt; 
+	
+	 &lt;div class="meta"&gt; 
+	
+	 &lt;?php 
+	
+	 global $user_ID, $post; 
+	
+	 get_currentuserinfo(); 
+	
+	 if (user_can_edit_post_comments($user_ID, $post-&gt;ID) || ($GLOBALS['cmtDepth'] &lt; $max_level)) 
+	
+	 echo '['; 
+	
+	 // comment_favicon(); 
+	
+	 edit_comment_link(' 编辑 ', '',(($GLOBALS['cmtDepth'] &lt; $max_level)?'|': '')); 
+	
+	 if ($GLOBALS['cmtDepth'] &lt; $max_level) { 
+	
+	 if ( get_option("comment_registration") &amp;&amp; !$user_ID ) 
+	
+	 echo '&lt;a href="'. get_option('siteurl') . '/wp-login.php?redirect_to=' . get_permalink() .'"&gt; 请登录后留言 &lt;/a&gt; ]'; 
+	
+	 else 
+	
+	</pre><p>**上善若水**,2008-06-10 00:19:00</p><ul><li>**re: 一个人的村庄[未登录]** 確實是留言系統有毛病，不過500內部服務器錯誤沒有碰到過啊。 </li></ul><p>是提示有一條語句有問題，我搞不定啊，搞不定。 </p><p>error message:</p><hr /><p>Warning: Invalid argument supplied for foreach() in /home/tabimiti/public_html/wordpress/wp-content/themes/JsPaper/comments.php on line 92</p><hr /><p>**上善若水**,2008-06-10 00:19:00</p><ul><li>**re: 一个人的村庄[未登录]** 繼續。  </li></ul><pre class="real">echo '&lt;a href="javascript:moveForm('.$c-&gt;comment_ID.')" title="reply"&gt; 回复 &lt;/a&gt;'; 
+	
+	 } 
+	
+	 if (user_can_edit_post_comments($user_ID, $post-&gt;ID) || ($GLOBALS['cmtDepth'] &lt; $max_level)) 
+	
+	 echo ']&lt;/div&gt;'; 
+	
+	 if ($comments_reply[$c-&gt;comment_ID]) { 
+	
+	 $id = $c-&gt;comment_ID; 
+	
+	 if($GLOBALS['cmtDepth'] &lt; $max_level ) 
+	
+	 echo '&lt;ul&gt;'; 
+	
+	 foreach($comments_reply[$id] as $c) { 
+	
+	 $GLOBALS['cmtDepth']++; 
+	
+	 if($GLOBALS['cmtDepth'] == $max_level) 
+	
+	 write_comment($c, $c-&gt;comment_ID); 
+	
+	 else 
+	
+	 write_comment($c, $deep_id); 
+	
+	 $GLOBALS['cmtDepth']--; 
+	
+	 } 
+	
+	 if($GLOBALS['cmtDepth'] &lt; $max_level ) 
+	
+	 echo '&lt;/ul&gt;'; 
+	
+	 } 
+	
+	 echo '&lt;/li&gt;'; 
+	
+	 ?&gt; 
+	
+	&lt;?php 
+	
+	 } 
+	
+	?&gt; 
+	
+	&lt;div class="clear"&gt;&lt;/div&gt; 
+	
+	&lt;script type="text/javascript"&gt; 
+	
+	var blogurl="&lt;?php echo get_settings('home');?&gt;"; 
+	
+	var needemail="&lt;?php echo get_option('comment_registration');?&gt;"; 
+	
+	var nowurl="&lt;?php echo get_settings("home");?&gt;/wp-content/themes/yuewei/jscript/getpost.php?id=&lt;?php echo $post-&gt;ID;?&gt;"; 
+	
+	var md5 = "&lt;?php echo md5(get_settings("home"));?&gt;"; 
+	
+	&lt;/script&gt; 
+	
+	&lt;?php echo '&lt;script type="text/javascript" src="'.get_settings('home').'/wp-content/plugins/ajaxcomment/comment.js" defer="true"&gt;&lt;/script&gt;'; ?&gt; 
+	
+	&lt;div class="h2"&gt;&lt;?php comments_number('暂无留言，抢个沙发如何？', '沙发没了，还有张板凳，快点！', '目前已经有%条留言' );?&gt;&lt;/div&gt; 
+	
+	&lt;div class="metalinks"&gt; 
+	
+	 &lt;span class="commentsrsslink"&gt;&lt;?php comments_rss_link('留言订阅'); ?&gt;&lt;/span&gt; 
+	
+	 &lt;span class="trackbacklink"&gt;&lt;a href="&lt;?php trackback_url(true); ?&gt;" title="引用本文地址"&gt;引用本文&lt;/a&gt;&lt;/span&gt; 
+	
+	 &lt;/div&gt; 
+	
+	&lt;ul class="commentlist" id="comments"&gt; 
+	
+	 &lt;?php 
+	
+	 if ($comments) : 
+	
+	 foreach ($comments as $c) { 
+	
+	 $GLOBALS['comments_reply'][$c-&gt;comment_reply_ID][] = $c; 
+	
+	 } 
+	
+	 $GLOBALS['cmtDepth'] = 0;$color=true; 
+	
+	 foreach($GLOBALS['comments_reply'][0] as $cmt) { 
+	
+	 $GLOBALS['comment'] = &amp;$cmt; 
+	
+	 write_comment($GLOBALS['comment'], '-1', $color); 
+	
+	 $color=!$color; 
+	
+	 } 
+	
+	 else: 
+	
+	 endif; 
+	
+	 ?&gt; 
+	
+	&lt;/ul&gt; 
+	
+	&lt;?php if ('open' == $post-&gt;comment_status) : ?&gt; 
+	
+	&lt;div id="cmtForm"&gt; 
+	
+	&lt;?php if ( get_option('comment_registration') &amp;&amp; !$user_ID ) : ?&gt; 
+	
+	&lt;p&gt;You must be &lt;a href="&lt;?php echo get_option('siteurl'); ?&gt;/wp-login.php?redirect_to=&lt;?php the_permalink(); ?&gt;"&gt;logged in&lt;/a&gt; to post a comment.&lt;/p&gt; 
+	
+	&lt;?php else : ?&gt; 
+	
+	&lt;form action="&lt;?php echo get_option('siteurl'); ?&gt;/wp-comments-post.php" method="post" id="commentform" onsubmit="AjaxSendComment();return false;"&gt; 
+	
+	&lt;?php if ( $user_ID ) : ?&gt; 
+	
+	&lt;p&gt;登录为 &lt;a href="&lt;?php echo get_option('siteurl'); ?&gt;/wp-admin/profile.php"&gt;&lt;?php echo $user_identity; ?&gt;&lt;/a&gt;. &lt;a href="&lt;?php echo get_option('siteurl'); ?&gt;/wp-login.php?action=logout" title="Log out of this account"&gt;登出 &amp;raquo;&lt;/a&gt;&lt;/p&gt; 
+	
+	&lt;?php else : ?&gt; 
+	
+	&lt;div&gt; 
+	
+	&lt;p&gt;&lt;label for="author"&gt;昵称&lt;/label&gt; 
+	
+	&lt;input type="text" name="author" id="author" value="&lt;?php echo $comment_author?&gt;" tabindex="1" /&gt; 
+	
+	 &lt;span id="nm"&gt;(必需)&lt;/span&gt;&lt;br/&gt;&lt;/p&gt; 
+	
+	&lt;p&gt;&lt;label for="email"&gt;邮件&lt;/label&gt; 
+	
+	&lt;input type="text" name="email" id="email" value="&lt;?php echo $comment_author_email?&gt;" tabindex="2" /&gt; (必需，不公开)&lt;br/&gt;&lt;/p&gt; 
+	
+	&lt;p&gt;&lt;label for="url"&gt;网址&lt;/label&gt; 
+	
+	&lt;input type="text" name="url" id="url" value="&lt;?php echo $comment_author_url; ?&gt;" tabindex="3" /&gt; &lt;br/&gt;&lt;?php do_action('comment_form', $post-&gt;ID); ?&gt;&lt;/p&gt; 
+	
+	&lt;/div&gt; 
+	
+	&lt;?php endif; ?&gt; 
+	
+	&lt;table width="100%"&gt;&lt;tr&gt;&lt;td&gt;&lt;textarea name="comment" id="comment" tabindex="4" rows="4" cols="70"&gt;&lt;/textarea&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt; 
+	
+	&lt;input value="发表留言" name="submit" type="submit" tabindex="5"/&gt; 
+	
+	&lt;input id="reRoot" type="button" onclick="javascript:moveForm(0)" style="display:none" value="取消" tabindex="6"/&gt; 
+	
+	&lt;input type="hidden" name="comment_post_ID" value="&lt;?php echo $id; ?&gt;" /&gt; 
+	
+	&lt;input type="hidden" name="comment_reply_ID" id="comment_reply_ID" value="0" /&gt; 
+	
+	&lt;?php do_action('comment_form', $post-&gt;ID); ?&gt; 
+	
+	&lt;/form&gt; 
+	
+	&lt;/div&gt; 
+	
+	&lt;?php endif; // If registration required and not logged in ?&gt; 
+	
+	&lt;?php endif; // if you delete this the sky will fall on your head ?&gt; 
+	
+	</pre><p>**上善若水**,2008-06-10 00:20:00</p><ul><li>**re: 一个人的村庄[未登录]** 用的這個theme </li></ul><p>其中出錯的是comment.php **上善若水**,2008-06-10 00:21:00</p><ul><li>**re: 一个人的村庄**</li></ul><p>这个文件找不到好像,是不是少了ajaxcomment这个插件?</p><p>另一处可疑的地方就是第92行那里:</p><p>foreach($GLOBALS['comments_reply'][0] as $cmt) {</p><p>试试改成</p><p>foreach($GLOBALS['comments_reply'] as $cmt) {</p><p>不太清楚数据库里这些留言怎么表示的,所以只是猜测 **xrLiN**,2008-06-10 12:36:00</p><ul><li>**re: 一个人的村庄[未登录]** 很不錯，確實缺少那個插件。 </li></ul><p>另外，將[0]去掉后，能顯示留言了。 </p><p>就是前面有個 </p><p>, Anonymous 的留言。 </p><p>我回去把插件弄好再看看。 </p><p>お前強いぞ！ **上善若水**,2008-06-10 14:19:00</p><ul><li>**re: 一个人的村庄[未登录]** 下了個ajaxcomment插件，留言現在還像個樣子了。 </li></ul><p>可惜那個調用圖像的框框不知道死哪去了。 </p><p>代碼這東西還真不是一般人能玩得轉的。 **上善若水**,2008-06-10 23:11:00</p><ul><li>**re: 一个人的村庄** 其实不难，那么多流行的语言，C，C++，C#,Perl,Python,Ruby,Java,JavaScript甚至VisualBasic,甚至VBScript，只要熟悉随便一种，看什么代码都基本没什么问题~~ **xrLiN**,2008-06-11 17:48:00</li><li>**re: 一个人的村庄[未登录]** 我明白的，你是想說你都熟悉了。 **上善若水**,2008-06-11 19:57:00</li><li>**re: 一个人的村庄** 嘘嘘。。我是很谦虚的 **xrLiN**,2008-06-12 00:05:00</li></ul>
+diff-minor: 
+ip: 127.0.0.1
+ts: 1251140211
+minor: 
+host: venus-vista
+username: xiaoranzzz
+revision: 3
+diff-major: 1
+summary: 
+languages: 
+lastmajor: 3
+keep-ts: 1251140211

@@ -1,0 +1,130 @@
+====== VisualBasic ======
+Created Sunday 28 October 2007
+From Wikipedia, the free encyclopedia
+
+Paradigm 	Event-driven
+Developer 	Microsoft
+Typing discipline 	Static, strong
+Influenced by 	QuickBASIC
+Influenced 	Visual Basic .NET
+OS 	Microsoft Windows
+
+Visual Basic (VB) is an event driven programming language and associated development environment from Microsoft for its COM programming model.[1] Visual Basic was derived from [[BASIC]] and enables the rapid application development (RAD) of graphical user interface (GUI) applications, access to databases using DAO, RDO, or ADO, and creation of ActiveX controls and objects. Scripting languages such as VBA and VBScript are syntactically similar to Visual Basic, but perform differently.[2]
+
+A programmer can put together an application using the components provided with Visual Basic itself. Programs written in Visual Basic can also use the Windows API, but doing so requires external function declarations.
+
+In business programming, Visual Basic has one of the largest user bases. In a survey conducted in 2005, 62% of developers reported using some form of Visual Basic, it currently competes with C++, JavaScript, C# and Java for dominance in the business world.[3]
+Contents
+
+* 1 Language features
+* 2 Characteristics present in Visual Basic
+* 3 Programming constructs not present in Visual Basic
+* 4 Evolution of Visual Basic
+      o 4.1 Timeline of Visual Basic (VB1 to VB6)
+* 5 Derivative languages
+* 6 Performance and other issues
+* 7 Sample code
+* 8 References
+* 9 External links
+* 10 See also	
+
+=== Language features ===
+
+Visual Basic was designed to be easy to learn and use. The language not only allows programmers to create simple GUI applications, but can also develop fairly complex applications as well. Programming in VB is a combination of visually arranging components or controls on a form, specifying attributes and actions of those components, and writing additional lines of code for more functionality. Since default attributes and actions are defined for the components, a simple program can be created without the programmer having to write many lines of code. Performance problems were experienced by earlier versions, but with faster computers and native code compilation this has become less of an issue.
+
+Although programs can be compiled into native code executables from version 5 onwards, they still require the presence of runtime libraries of approximately 2 MB in size. This runtime is included by default in Windows 2000 and later, but for earlier versions of Windows it must be distributed together with the executable.
+
+Forms are created using drag and drop techniques. A tool is used to place controls (e.g., text boxes, buttons, etc.) on the form (window). Controls have attributes and event handlers associated with them. Default values are provided when the control is created, but may be changed by the programmer. Many attribute values can be modified during run time based on user actions or changes in the environment, providing a dynamic application. For example, code can be inserted into the form resize event handler to reposition a control so that it remains centered on the form, expands to fill up the form, etc. By inserting code into the event handler for a keypress in a text box, the program can automatically translate the case of the text being entered, or even prevent certain characters from being inserted.
+
+Visual Basic can create executables (EXE files), ActiveX controls, DLL files, but is primarily used to develop Windows applications and to interface web database systems. Dialog boxes with less functionality (e.g., no maximize/minimize control) can be used to provide pop-up capabilities. Controls provide the basic functionality of the application, while programmers can insert additional logic within the appropriate event handlers. For example, a drop-down combination box will automatically display its list and allow the user to select any element. An event handler is called when an item is selected, which can then execute additional code created by the programmer to perform some action based on which element was selected, such as populating a related list.
+
+Alternatively, a Visual Basic component can have no user interface, and instead provide ActiveX objects to other programs via Component Object Model (COM). This allows for server-side processing or an add-in module.
+
+The language is garbage collected using reference counting, has a large library of utility objects, and has basic object oriented support. Since the more common components are included in the default project template, the programmer seldom needs to specify additional libraries. Unlike many other programming languages, Visual Basic is generally not case sensitive, although it will transform keywords into a standard case configuration and force the case of variable names to conform to the case of the entry within the symbol table entry. String comparisons are case sensitive by default, but can be made case insensitive if so desired.
+
+The Visual Basic compiler is shared with other Visual Studio languages (C, C++), but restrictions in the IDE do not allow the creation of some targets (Windows model DLL's) and threading models.
+
+=== Characteristics present in Visual Basic ===
+
+Visual Basic has the following uncommon traits:
+
+* Boolean constant True has numeric value −1.[4] This is because the Boolean data type is stored as a 16-bit signed integer. In this construct −1 evaluates to 16 binary 1s (the Boolean value True), and 0 as 16 0s (the Boolean value False). This is apparent when performing a Not operation on a 16 bit signed integer value 0 which will return the integer value −1, in other words True = Not False. This inherent functionality becomes especially useful when performing logical operations on the individual bits of an integer such as And, Or, Xor and Not. This definition of True is also consistent with BASIC since the early 1970s Microsoft BASIC implementation and is also related to the characteristics of microprocessor instructions at the time.
+* Logical and bitwise operators are unified. This is unlike all the C-derived languages (such as Java or Perl), which have separate logical and bitwise operators. This again is a traditional feature of BASIC.
+* Variable array base. Arrays are declared by specifying the upper and lower bounds in a way similar to Pascal and Fortran. It is also possible to use the Option Base statement to set the default lower bound. Use of the Option Base statement can lead to confusion when reading Visual Basic code and is best avoided by always explicitly specifying the lower bound of the array. This lower bound is not limited to 0 or 1, because it can also be set by declaration. In this way, both the lower and upper bounds are programmable. In more subscript-limited languages, the lower bound of the array is not variable. This uncommon trait does not exist in Visual Basic .NET and VBScript.
+
+OPTION BASE was introduced by ANSI, with the standard for ANSI Minimal BASIC in the late 1970s. The extension to using a form of DIM A(1976 TO 2020) was first introduced in BBC Basic, found on the BBC micro, which in turn was influenced by COMAL.
+
+* Relatively strong integration with the Windows operating system and the Component Object Model.
+* Banker's rounding as the default behavior when converting real numbers to integers.
+* Integers are automatically promoted to reals in expressions involving the normal division operator (/) so that division of an odd integer by an even integer produces the intuitively correct result. There is a specific integer divide operator (\) which does truncate.
+* By default, if a variable has not been declared or if no type declaration character is specified, the variable is of type Variant. However this can be changed with Deftype statements such as DefInt, DefBool, DefVar, DefObj, DefStr. There are 12 Deftype statements in total offered by Visual Basic 6.0. The default type may be overridden for a specific declaration by using a special suffix character on the variable name (# for Double, ! for Single, & for Long, % for Integer, $ for String, and @ for Currency) or using the key phrase As (type). VB can also be set in a mode that only explicitly declared variables can be used with the command Option Explicit.
+
+=== Programming constructs not present in Visual Basic ===
+
+Many of these features are implemented in Microsoft's replacement for Visual Basic 6 and prior, VB.NET.
+
+* Inheritance. Visual Basic versions 5 and 6 do not include implementation inheritance. VB5 and 6 do, however, include specification of interfaces. That is, a single class can have as many distinct interfaces as the programmer desires. Visual Basic provides a specific syntax for access to attributes called Property methods, and this is often implemented using getters and setters in C++ or Java.
+* Threading support. (However, threads can be used by using external Windows API functions. See below.)
+* C++ or Java exception handling. Error handling is controlled by an "On Error" statement, which provides similar functionality to Windows Structured Exception Handling. (However, unstructured/unhandled exceptions can be handled by using Windows API functions. See below.)
+* Typecasting. VB has checked conversion functions for primitive types. Visual Basic thus permits type casting of primitive types only to those types in the pre-defined conversion functions, rather than to any general user-defined type. Casting of object types is permitted to any of the interfaces supported by those types. It is also possible to copy the raw data from one user-defined type to another using the LSet statement but it is not possible to use this on a defined object created in a class.
+* Equivalents to C-style pointers are very limited. This facilitates simpler, safer, but sometimes less flexible coding. Function pointers can be access by the AddressOf opererator while variable and string pointers can be accessed with the VarPtr() and StrPtr() functions respectively.
+* Visual Basic is limited to unsigned 8-bit integers and signed integers of 16 and 32 bits. Many other languages provide wider range of signed and unsigned integers. However, Visual Basic does provide an unusual "Currency" Data Type, which is essentially a 64-bit fixed-point number with 15 digits to the left and 4 to the right of the decimal point. This can be accurately used in place of Integers larger than 32 Bits if one ignores the decimal values. Through the Variant's half-supported "Decimal" pseudo-type, even larger numbers can be supported accurately. However support for the Decimal type with built-in Visual Basic functionality is extremely limited at best and can only be access by first declaring a variable as type Variant and then using the CDec() function to cast a value to return the Decimal data type.
+* 32-bit Visual Basic is internally limited to UCS2 strings, although it provides a conversion function StrConv() to other formats (16-bit Visual Basic is internally limited to ASCII strings).
+* Visual Basic doesn't allow constant variables to contain an array. Therefore extra processing is required to emulate this.
+* Visual Basic does not support a full Object-oriented programming model like other languages such as C++, Java, Lisp and the .NET languages.
+
+While Visual Basic does not naturally support these features, programmers can construct work-arounds to give their programs similar functionality if they desire, most often using the Windows API.
+
+=== Evolution of Visual Basic ===
+
+VB 1.0 was introduced in 1991. The approach for connecting the programming language to the graphical user interface is derived from a prototype developed by Alan Cooper called Tripod. Microsoft contracted with Cooper and his associates to develop Tripod into a programmable shell for Windows 3.0, under the code name Ruby (no relation to the Ruby programming language).
+
+Tripod did not include a programming language at all, and Ruby contained only a rudimentary command processor sufficient for its role as a Windows shell. Microsoft decided to use the simple Program Manager shell for Windows 3.0 instead of Ruby, and combine Ruby with the Basic language to create Visual Basic.
+
+Ruby provided the "visual" part of Visual Basic — the form designer and editing tools — along with the ability to load dynamic link libraries containing additional controls (then called "gizmos"). Ruby's extensible gizmos later became the VBX interface.
+
+=== Timeline of Visual Basic (VB1 to VB6) ===
+
+* Project 'Thunder' was initiated
+* Visual Basic 1.0 (May 1991) was released for Windows at the Comdex/Windows World trade show in Atlanta, Georgia.
+
+
+Visual Basic for DOS
+
+* Visual Basic 1.0 for DOS was released in September 1992. The language itself was not quite compatible with Visual Basic for Windows, as it was actually the next version of Microsoft's DOS-based BASIC compilers, QuickBASIC and BASIC Professional Development System. The interface was textual, using extended ASCII characters to simulate the appearance of a GUI.
+* Visual Basic 2.0 was released in November 1992. The programming environment was easier to use, and its speed was improved. Notably, forms became instantiable objects, thus laying the foundational concepts of class modules as were later offered in VB4.
+* Visual Basic 3.0 was released in the summer of 1993 and came in Standard and Professional versions. VB3 included version 1.1 of the Microsoft Jet Database Engine that could read and write Jet (or Access) 1.x databases.
+* Visual Basic 4.0 (August 1995) was the first version that could create 32-bit as well as 16-bit Windows programs. It also introduced the ability to write non-GUI classes in Visual Basic.
+* With version 5.0 (February 1997), Microsoft released Visual Basic exclusively for 32-bit versions of Windows. Programmers who preferred to write 16-bit programs were able to import programs written in Visual Basic 4.0 to Visual Basic 5.0, and Visual Basic 5.0 programs can easily be converted with Visual Basic 4.0. Visual Basic 5.0 also introduced the ability to create custom user controls, as well as the ability to compile to native Windows executable code, speeding up calculation-intensive code execution.
+* Visual Basic 6.0 (Mid 1998) improved in a number of areas, including the ability to create web-based applications. VB6 is currently scheduled to enter Microsoft's "non-supported phase" starting March 2008.
+* Mainstream Support for Microsoft Visual Basic 6.0 ended on March 31, 2005. Extended support will end in March 2008.[5] In response, the Visual Basic user community expressed its grave concern and lobbied users to sign a petition to keep the product alive.[6] Microsoft has so far refused to change their position on the matter. Ironically, around this time, it was exposed that Microsoft's new anti-spyware offering, Microsoft AntiSpyware (part of the GIANT Company Software purchase), was coded in Visual Basic 6.0.[7] Windows Defender Beta 2 was rewritten as C++/CLI code.[8] It is difficult to tell what impact this decision will have on any future offerings of Microsoft if the perception is created that long lasting applications cannot be built with Microsoft Products due to planned obsolescence.[citation needed]
+
+=== Derivative languages ===
+
+Microsoft has developed derivatives of Visual Basic for use in scripting. It is derived heavily from BASIC and host applications, and has replaced the original Visual Basic language with a .NET platform version:
+
+* Visual Basic for Applications (VBA) is included in many Microsoft applications (Microsoft Office), and also in many third-party products like AutoCAD, WordPerfect Office 2002 and ArcGIS. There are small inconsistencies in the way VBA is implemented in different applications, but it is largely the same language as VB6 and uses the same runtime library.
+* VBScript is the default language for Active Server Pages and can be used in Windows scripting and client-side web page scripting. Although it resembles VB in syntax, it is a separate language and it is executed by the Windows Script Host as opposed to the VB runtime. These differences can affect the performance of an ASP web site. ASP and VBScript must not be confused with ASP.NET which uses Visual Basic.NET or any other language that targets the .NET Common Language Runtime.
+* Visual Basic .NET is Microsoft's designated successor to Visual Basic 6.0, and is part of Microsoft's .NET platform. It compiles and runs on the .NET Framework. It is not backwards compatible with VB6. An automated conversion tool exists, but for some projects automated conversion is impossible.[9]
+
+=== Performance and other issues ===
+
+Earlier counterparts of Visual Basic (prior to version 5) compiled the code to P-Code or Pseudo code only. Visual Basic 5 and 6 are able to compile the code to either native or P-Code as the programmer chooses. The P-Code is interpreted by the language runtime, also known as virtual machine, implemented for benefits such as portability and small code. However, it usually slows down the execution by adding an additional layer of interpretation of code by the runtime although small amounts of code and algorithms can be constructed to run faster than the compiled native code. Visual Basic applications require Microsoft Visual Basic runtime MSVBVMxx.DLL, where xx is the relevant version number, either 50 or 60. MSVBVM60.dll comes as standard with Windows in all editions after Windows 98 while MSVBVM50.dll comes with all editions after Windows 95. A Windows 95 machine would however require that which ever dll was needed by the program was included with the installer.
+
+Visual Basic is criticized for its poor memory management and non-standard programming constructs which is said to result in poor programming practices and inefficient outputs. When programming in Visual Basic, it can sometimes be hard to tell if a variable is a reference to an object, or is the explicit object. In the same vein, it can sometimes be difficult to tell if an operation will result in a copy of a reference to an object, or a copy of the entire object. This ambiguity could result in unexpected results or poor program performance.
+
+
+
+=== References ===
+
+1. ^ VB has been deprecated in favor of Visual Basic .NET, although conversion from VB to VB .NET can be non-trivial. [1].)
+2. ^ For example: S="ABC" : S = S & "DEF" : S = S & "GHI" is common practice in VB, but will cause major problems if used on ASP pages. This is because strings are handled differently by the two languages. The above code will cause significant overhead for VBScript.
+3. ^ http://www.computerworld.com/developmenttopics/development/story/0,10801,100542,00.html
+4. ^ In most languages, True is mapped to a non zero numeric value, often 1 or -1.
+5. ^ http://msdn2.microsoft.com/en-us/vbrun/ms788707.aspx
+6. ^ http://www.classicvb.org/petition/
+7. ^ Andrew Orlowski and Carey Bishop (2005-07-22). MS Anti-Spyware built on MS Abandonware. The Register. Retrieved on 2006-10-04.
+8. ^ http://www.winsupersite.com/reviews/windefender_beta2.asp
+9. ^ Piquet, Lori (2002-02-20). Abandoning the Fantasy of VB Migration Wizardry. DevX.com. Jupitermedia. Retrieved on 2007-05-17.
+
+

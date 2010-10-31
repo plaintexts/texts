@@ -1,0 +1,12 @@
+[[.ProgrammingPerl3ED|Programming Perl 3ED]] 
+---------<META>---------
+flags: 010
+ip: ::ffff:127.0.0.1
+ts: 1251622404
+minor: 
+host: ::ffff:127.0.0.1
+username: xiaoranzzz
+revision: 1
+summary: [[.ProgrammingPerl3ED|Programming Perl 3ED]] 
+languages: 
+lastmajor: 1

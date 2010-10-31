@@ -1,0 +1,344 @@
+
+<toc> 
+
+== Overview ==
+
+See also: WikiBugs/TextFormatting, MeatBall:TextFormattingRules and WikiMarkupLanguage.
+
+== # Tips and Hints  ==
+
+The following <b>text</b> is an overview of the UseModWiki text formatting rules. 
+
+Wiki Text Formatting Rules: simple <b>editing</b> is one of the major benefits of using a wiki. Users can edit pages without knowing HTML, and still use many formatting features of HTML. Most wikis define a set of formatting rules to convert plain text into HTML. Some wikis (like this one) also allow some HTML "tags", like <nowiki><b>, <i>, and <pre></nowiki> within a page. (Some wikis use raw HTML instead of special formatting rules.)
+
+* For examples without all the explanatory text, see the TextFormattingExamples. 
+* <b>To see how any page is formatted, just follow the link "Edit text of this page" at the bottom of the page.</b>
+* and to try these rules for yourself, please feel free to edit the SandBox page. 
+
+'''Q.''' Can anyone change this page?
+
+:'''A.''' Yes, but please don't unless you're actually adding useful content.
+
+== # Basic Text Formatting ==
+
+Entering text on a wiki can be done simply. Follow these guidelines:
+
+* '''Carriage returns''' (ie pressing the <i>Enter</i> key) are significant in formatting a wiki page 
+* '''Multiple spaces''' and '''tabs''' are ignored
+* use <nowiki>''</nowiki> (two single-quotes) for '''italics''', <nowiki>'''</nowiki> (three single-quotes) for '''bold''', and <nowiki>'''''</nowiki> (five single-quotes) for '''bold-italics'''. Alternatively, use tags <nowiki><b></nowiki><b>bold</b><nowiki></b></nowiki> and <nowiki><i></nowiki><i>italic</i><nowiki></i></nowiki> 
+* Use tag <nowiki><tt></nowiki><tt>for '''monospace text'''</tt><nowiki></tt></nowiki> (tt stands for typewriter text)
+* The first character entered on a line often controls the formatting of the text on that line (shades of Fortran), in brief (see below and sub pages for details):
+** <tt>" "</tt> space causes text to appear in a <tt>'''monospaced font''' where spaces are significant</tt>
+** <tt>":"</tt> colon causes '''text to be indented'''
+** <tt>"="</tt> equals - followed by a space - creates a '''heading''', a trailing <tt>"="</tt> - preceded by a space - is required
+** <tt>"*"</tt> asterisk creates a '''bulleted list'''
+** <tt>"#"</tt> hash creates a '''numbered list'''
+** <tt>";"</tt> semicolon creates a '''<i>definition</i> list''', a <tt>":"</tt> colon is required subsequently on the same line
+** <tt>"<nowiki>----</nowiki>"</tt> four hyphens creates a '''horizontal line'''
+** <tt>"||"</tt> vertical bar creates a '''table''' (requires a table patch for versions prior to 1.0, eg WikiPatches/TableSyntaxCommonMarkup).
+: Repetition of the first character on the line generally increases the indentation or emphasis
+* Leave a single blank line between '''paragraphs'''.
+* '''Suppress wiki formatting''' and linking through escaped <nowiki>WikiWiki</nowiki> text -- <<nowiki>nowiki>WikiWiki</nowiki</nowiki>>
+* '''Insert an image''' using a full URL, eg <tt><nowiki>http://usemod.com/wiki.gif</nowiki></tt>
+
+[#additional]
+
+== # Additional Text Formatting Rules ==
+
+* /WikiTextFormatting
+* /WikiLists
+* /WikiHeadings
+* /TableOfContents
+* /WikiImages
+* /WikiLines
+* /WikiTables
+* TableFormatting
+
+== # Pages, URL, and <nowiki>InterWiki</nowiki> Links ==
+
+See InterWiki, too.
+
+=== # Pages ===
+
+You can link to a page by removing the spaces between two or more words, and starting each word with a capital letter. For instance, WikiName and TextFormattingExamples are samples of page links. 
+
+People abhorring PascalCase can use a ''free link'': surround text with two pairs of square brackets like <nowiki>[[Sample Free Link]]</nowiki>. This allows all-downcase or atomic capitalized names as well as strange names including punctuation.
+
+=== # URLs ===
+
+Plain URL link: http://www.usemod.com/cgi-bin/mb.pl?SandBox -- <nowiki>http://www.usemod.com/cgi-bin/mb.pl?SandBox</nowiki>
+
+Named URL link: [http://www.usemod.com/cgi-bin/mb.pl?SandBox Sandbox] -- <nowiki>[http://www.usemod.com/cgi-bin/mb.pl?SandBox Sandbox]</nowiki>
+ 
+=== # [#anchors] URLs Using Anchors ===
+
+ [http:/cgi-bin/mb.pl?SandBox#anchor Buried Treasure]  -- <nowiki>[http:/cgi-bin/mb.pl?SandBox#anchor Buried Treasure]</nowiki>
+
+(Tip: you should be able to use relative addressing eg http:/wiki.pl?SandBox#Anchor)
+
+To set an anchor:
+
+* [#anchor] -- <nowiki>[#anchor]</nowiki>
+
+=== # On-Site URLS ===
+
+To make on-site links you must respecify the protocol e.g.:
+
+*[http:/wiki.gif like this local link] -- <nowiki>[http:/wiki.gif like this local link]</nowiki>
+*[http:../wiki.gif this relative link] -- <nowiki>[http:../wiki.gif this relative link]</nowiki>
+*[http:#anchor this anchor on the current page does not seem to work] -- <nowiki>[http:#anchor this anchor on the current page does not seem to work]</nowiki>
+:Problem is local; this #anchor syntax works for me without any issues. --[[CParker]]
+:It doesn't work because the syntax is incorrect. You need to use <code>[http:/cgi-bin/wiki.pl?page#anchor link-text]</code> instead of <code>[http:#anchor link-text]</code>.  --AndrewTurner
+
+Full relative urls do not seem to work.
+
+''There is a problem with this.  This generates links which looks like this in the source: <nowiki><a href="http:/wiki.gif"></nowiki>.  This is, however, not a correct relative URL, according to [http://www.faqs.org/rfcs/rfc1808.html RFC1808] (see Section 5.2, last example).  It seems that netscape 7 does not interpret such links as intended, for example.''
+
+=== # <nowiki>InterWiki</nowiki> ===
+
+InterWiki link: UseMod:InterWiki -- <nowiki>UseMod:InterWiki</nowiki>
+
+You can separate links from adjacent text with spaces or the special "" (two double-quotes) delimiter. The "" delimiter is <i>not</i> displayed - it is useful for cases like plural forms of page links (such as UseModWiki""s). In nearly all cases, trailing punctuation is ignored, so you can safely make links like http://www.usemod.com/, without the trailing comma being part of the link.
+You can also use FreeLinks.
+
+== # Lists ==
+
+=== # Simple lists ===
+<pre>
+* Text for a bulleted list item.
+** Text for second-level list.
+*** Text for third level, etc.
+</pre>
+
+...which looks like:
+* Text for a bulleted list item.
+** Text for second-level list.
+*** Text for third level, etc.
+
+=== # Numbered lists ===
+<pre>
+# Text for a numbered list item.
+## Text for second-level list.
+### Text for third level, etc.
+## Another Text for the second level.
+</pre>
+
+...which looks like:
+# Text for a numbered list item.
+## Text for second-level list.
+### Text for third level, etc.
+## Another Text for the second level.
+
+=== # Indented Text ===
+<pre>
+: Text to be indented (quote-block)
+:: Text indented more
+::: Text indented to third level
+</pre>
+
+...which looks like:
+: Text to be indented (quote-block)
+:: Text indented more
+::: Text indented to third level
+
+=== # Definition List ===
+
+Term with indented definition: [without a blank line between term and definition]
+<pre>
+;Term:Definition (indented)
+;;Term (indented):Definition (indented two levels)
+;;;Term (indented twice):Definition (indented to third level)
+</pre>
+...which looks like:
+;Term:Definition (indented)
+;;Term (indented):Definition (indented two levels)
+
+;;;Term (indented twice):Definition (indented to third level)
+
+== # Images ==
+
+Just provide the URL, and the image will be inserted inline.
+
+http://www.usemod.com/wiki.gif
+
+These extensions are recognized: gif, jpg, png, bmp, jpeg, ico and tiff.
+
+Note case sensitivity: capitalized extensions such as .GIF, .PNG, .JPG, etc. do NOT work. Some digital cams capitalize image names automatically, so you have to edit them before linking them into your wiki. -- Celine
+
+If you have a choice, results are usually best with png for computer generated images, and JPEG for photographic images.
+
+== # Preformatted Text ==
+
+Individual lines can be displayed as preformatted (fixed-width or "typewriter"-font) text by placing one or more spaces at the start of the line. Other wiki formatting (like links) will be applied to this kind of preformatted text.
+
+<nowiki>Additionally, multi-line sections can be marked as pre-formatted text using lines starting with <pre> (to start pre-formatted text), and </pre> (to end preformatted text). The <pre> and </pre> tags are not displayed. Wiki links and other formatting is not done within a preformatted section. (If you want wiki formatting, use spaces at the start of the line instead of the <pre> and </pre> tags.)</nowiki>
+
+For instance:
+<pre>
+Pre-formatted section here.  No other link =link=
+  or format processing
+
+is done on pre-formatted sections.
+
+For instance, UseModWiki is not a link here.
+</pre>
+and:
+
+   This is the starting-spaces version of
+   preformatted text.  Note that links like
+   UseModWiki still work.
+
+== # Miscellaneous rules ==
+
+* To quote text without applying the wiki formatting rules, enclose it within a <nowiki><nowiki></nowiki> ... <nowiki></nowiki></nowiki> section. Within a nowiki section, only HTML-quoting of special characters (<>&) will occur - no other formatting rules will be applied.
+* A line which ends in a backslash character (\) will be joined with the next line before most formatting rules are applied. This can be useful for breaking up long sections of text in line-sensitive sections (like lists or indented text).
+* If raw-HTML sections are enabled (they are disabled by default), you can enter raw HTML code within an <html> ... </html> section. Note that <b>no</b> quoting is done, so you will need to use sequences like &amp;lt; if you want to display a < character.
+* Most of the formatting rules are order-independent. On rare occasions, the order of processing may be important. The rules are processed in the following order: raw HTML sections, HTML quoting, nowiki tags, backslash line joining, preformatted sections, paragraphs, lists and indented text, horizontal lines, italic/bold text, URLs, and finally ordinary WikiName links. [No longer fully accurate for 0.88, needs updating.]
+* To redirect one wiki page to another, use the following syntax:<pre><nowiki>#REDIRECT TargetPage</nowiki>
+<nowiki>#REDIRECT TargetPage/SubPage</nowiki></pre>
+
+== # HTML ==
+
+* Encoding the "<" less than, ">" greater than, and "&" ampersand characters is optional.
+* Characters such as &lt;, &copy; and &infin; may be encoded on pages as: \
+"&<nowiki>lt;</nowiki>", "&<nowiki>copy;</nowiki>" and "&<nowiki>infin;</nowiki>" respectively.\
+See http://www.w3.org/TR/html4/sgml/entities.html. [UseMod:DougConley dcon]
+
+== # Questions ==
+
+'''Q.''' I don't know whether this is intentional, but you can create an image which links to a url using <nowiki>[url image_url]</nowiki> e.g.
+
+[http://www.usemod.com/cgi-bin/wiki.pl http://usemod.com/wiki.gif]
+
+:'''A.''' This feature is intentional, and it was added for the 1.0 release of UseModWiki. I simply hadn't updated the documentation yet.
+
+'''Problem With Underscores in Links to Pages:'''
+
+'''Q.''' Say I create a page called "My_New_Page" -- when viewing it, the underscores are changed to spaces, etc.
+
+But I can't seem to link to it using a page link. If I link to MyNewPage it's shown with a questionmark as a nonexistant page. Fair enough, it ''doesn't'' exist. But if I link to it as "My_New_Page" that doesn't get picked up as a page link. Any thoughts? 
+
+:'''A.''' Try [[My_New_Page]] ("My_New_Page" in double square brackets). Look at the explanation of FreeLinks.
+
+Nonexistent pages, like SampleUndefinedPage, will be displayed with a question mark link. The question mark link indicates the page doesn't exist yet--follow the link to create and edit the page.  [The sample page used here is a special example page--you <i>can't</i> define it.]
+
+'''Q. ''' How can I create a comment in <nowiki>UseModWiki</nowiki>? I want to place a comment in a Wiki, not shown on the generated HTML page.
+
+:'''A.''' There is no way to add invisible comments in UseModWiki. (Some other wikis allow HTML-style comments, but not UseModWiki.) -- CliffordAdams
+
+:: Not strictly true - if you allow raw html ($RawHtml =1; <b>NB security risk</b>) you can then put <nowiki><html><!-- coment in here --></html></nowiki> -- Rob Stone
+
+:: Futher to that i've made a simple change adding one line (~ line 1690 immediately before the <nowiki><tt> (MeatBall)</nowiki> line  
+::::<nowiki>s/\&amp;lt;\!--(.*?)--\&amp;gt;/<\!-- $1 -->/gis; #RFS</nowiki> 
+
+:::This seems to work fine for coments - Is there an issue i am missing ?-- Rob Stone
+
+A company has a name ending in a plus sign, such as "foo+". How can I make that into a link? If I use the doubled brackets [[foo+]], it doesn't come out right. 
+
+'''Q.''' If a link has a '[' and ']' character, how do I link it to wiki? e.g. www.anywebpage.com/[test].doc
+
+:'''A.''' un-escaped  '[' and ']' characters are not valid in URIs [http://www.ietf.org/rfc/rfc2396.txt RFC2396 2.4.3]. Maybe %encoding them (%5b and %5d) in the URL would work?
+
+'''Q.''' I have just got UseMod working on my Windows 2K machine, with Apache, but the InterWiki feature doesn't seem to work. For example, when I type <tt> UseMod:InterWiki </tt>, it assumes I want to create two new pages, called <nowiki>UseMod and InterWiki</nowiki> respectively. How do I enable the InterWiki functionality?
+
+:'''A.''' ''Have you added an Intermap file to your data directory, as discussed in InterWikiDocumentation?''
+
+'''Q.''' Referencing an uploaded file with a camel-case-name produces defunct link. Is there a workaround?
+
+:'''A.''' See WikiBugs/CamelCaseImageUploadCausesProblemsWithDisplay
+
+'''Q.''' Has anyone considered removing the underscore '_' character from the page name.  So that these:  '[[Many_Times_Before]]' '[[Many Times Before]]' and ManyTimesBefore would all go to the same page? Also, is the behavior of free links with spaces intentional (it diplays an outer set of brackets)?
+
+:'''A.''' To remove underscore characters from page names, modify the function FreeToNormal (on or about line 3057).  My version follows.  It not only removes underlines as suggested (as that appeals to me), but always capitalizes the first character (as the current code has a slight bug in it that resolves <nowiki>[[ many times before]]</nowiki> to <nowiki>[[many_Times_Before]]</nowiki> rather than <nowiki>[[Many_Times_Before]]</nowiki>.  By simply moving the ucfirst call to <i>after</i> the check for leading spaces, this is resolved.
+                               -- DarochDad
+
+<pre>
+sub FreeToNormal {
+  my ($id) = @_;
+
+  $id =~ s/ /_/g;
+  if (index($id, '_') > -1) {  # Quick check for any space/underscores
+    $id =~ s/__+/_/g;
+    $id =~ s/^_//;
+    $id =~ s/_$//;
+    if ($UseSubpage) {
+      $id =~ s|_/|/|g;
+      $id =~ s|/_|/|g;
+    }
+  }
+  $id = ucfirst($id)  if ($UpperFirst || $FreeUpper); #moved -- DarochDad
+  if ($FreeUpper) {
+    # Note that letters after ' are *not* capitalized
+    if ($id =~ m|[-_.,\(\)/][a-z]|) {    # Quick check for non-canonical case
+      $id =~ s|([-_.,\(\)/])([a-z])|$1 . uc($2)|ge;
+    }
+  }
+  $id =~ s/_//g; # Remove _ characters -- DarochDad
+  return $id;
+}
+</pre>
+:'''A.''' Hmm, I can't reproduce this: [[ many times before]] [[many_Times_Before]] [[Many_Times_Before]]. [[ sample free link]] [[sample_Free_Link]] [[Sample_Free_Link]] -- MarkusLude
+
+'''Q:''' Is there an equivalent to named URL links for uploaded files? I would prefer to see [Document_A] or [important document] instead of <nowiki>upload:Document_A</nowiki> when linking a document? 
+
+:'''A:''' There's no an equivalent by design; unless you want to hack the script and sintax. If you make that, there won't be possible export to other usemod based wikis (unless you want to write some snippets in order to make possible conversion) --JuanmaMP
+
+---------<META>---------
+flags: 01010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010
+blocks: <div class="toc"><h2>Contents</h2><ol><li><a href="#Heading1">Overview</a></li><li><a href="#Heading2"># Tips and Hints</a></li><li><a href="#Heading3"># Basic Text Formatting</a></li><li><a href="#Heading4"># Additional Text Formatting Rules</a></li><li><a href="#Heading5"># Pages, URL, and &lt;nowiki&gt;InterWiki&lt;/nowiki&gt; Links</a><ol><li><a href="#Heading6"># Pages</a></li><li><a href="#Heading7"># URLs</a></li><li><a href="#Heading8"># [#anchors] URLs Using Anchors</a></li><li><a href="#Heading9"># On-Site URLS</a></li><li><a href="#Heading10"># &lt;nowiki&gt;InterWiki&lt;/nowiki&gt;</a></li></ol></li><li><a href="#Heading11"># Lists</a><ol><li><a href="#Heading12"># Simple lists</a></li><li><a href="#Heading13"># Numbered lists</a></li><li><a href="#Heading14"># Indented Text</a></li><li><a href="#Heading15"># Definition List</a></li></ol></li><li><a href="#Heading16"># Images</a></li><li><a href="#Heading17"># Preformatted Text</a></li><li><a href="#Heading18"># Miscellaneous rules</a></li><li><a href="#Heading19"># HTML</a></li><li><a href="#Heading20"># Questions</a></li></ol></div><h2 id="Heading1">Overview</h2><p>See also: WikiBugs/TextFormatting, MeatBall:TextFormattingRules and WikiMarkupLanguage.</p><h2 id="Heading2"># Tips and Hints</h2><p>The following <b>text</b> is an overview of the UseModWiki text formatting rules.</p><p>Wiki Text Formatting Rules: simple <b>editing</b> is one of the major benefits of using a wiki. Users can edit pages without knowing HTML, and still use many formatting features of HTML. Most wikis define a set of formatting rules to convert plain text into HTML. Some wikis (like this one) also allow some HTML &#x201c;tags&#x201d;, like &lt;b&gt;, &lt;i&gt;, and &lt;pre&gt; within a page. (Some wikis use raw HTML instead of special formatting rules.)</p><ul><li>For examples without all the explanatory text, see the TextFormattingExamples.</li><li><b>To see how any page is formatted, just follow the link &#x201c;Edit text of this page&#x201d; at the bottom of the page.</b></li><li>and to try these rules for yourself, please feel free to edit the SandBox page.</li></ul><p><strong>Q.</strong> Can anyone change this page?</p><p>:<strong>A.</strong> Yes, but please don&#x2019;t unless you&#x2019;re actually adding useful content.</p><h2 id="Heading3"># Basic Text Formatting</h2><p>Entering text on a wiki can be done simply. Follow these guidelines:</p><ul><li><strong>Carriage returns</strong> (ie pressing the <i>Enter</i> key) are significant in formatting a wiki page </li><li><strong>Multiple spaces</strong> and <strong>tabs</strong> are ignored</li><li>use '' (two single-quotes) for <strong>italics</strong>, ''' (three single-quotes) for <strong>bold</strong>, and ''''' (five single-quotes) for <strong>bold-italics</strong>. Alternatively, use tags &lt;b&gt;<b>bold</b>&lt;/b&gt; and &lt;i&gt;<i>italic</i>&lt;/i&gt;</li><li>Use tag &lt;tt&gt;<tt>for <strong>monospace text</strong></tt>&lt;/tt&gt; (tt stands for typewriter text)</li><li>The first character entered on a line often controls the formatting of the text on that line (shades of Fortran), in brief (see below and sub pages for details):<ul><li><tt>&#x201d; &#x201c;</tt> space causes text to appear in a <tt><strong>monospaced font</strong> where spaces are significant</tt></li><li><tt>&#x201d;:&#x201d;</tt> colon causes <strong>text to be indented</strong></li><li><tt>&#x201d;=&#x201d;</tt> equals - followed by a space - creates a <strong>heading</strong>, a trailing <tt>&#x201d;=&#x201d;</tt> - preceded by a space - is required</li><li><tt>&#x201d;*&#x201d;</tt> asterisk creates a <strong>bulleted list</strong></li><li><tt>&#x201d;#&#x201d;</tt> hash creates a <strong>numbered list</strong></li><li><tt>&#x201d;;&#x201d;</tt> semicolon creates a <strong><i>definition</i> list</strong>, a <tt>&#x201d;:&#x201d;</tt> colon is required subsequently on the same line</li><li><tt>&#x201d;----&#x201d;</tt> four hyphens creates a <strong>horizontal line</strong></li><li><tt>&#x201d;||&#x201d;</tt> vertical bar creates a <strong>table</strong> (requires a table patch for versions prior to 1.0, eg WikiPatches/TableSyntaxCommonMarkup). </li></ul></li></ul><dl class="quote"><dt /><dd>Repetition of the first character on the line generally increases the indentation or emphasis </dd></dl><ul><li>Leave a single blank line between <strong>paragraphs</strong>.</li><li><strong>Suppress wiki formatting</strong> and linking through escaped WikiWiki text &#x2013; &lt;nowiki&gt;WikiWiki&lt;/nowiki&gt;</li><li><strong>Insert an image</strong> using a full URL, eg <tt>http://usemod.com/wiki.gif</tt></li></ul><p>[#additional]</p><h2 id="Heading4"># Additional Text Formatting Rules</h2><ul><li>/WikiTextFormatting</li><li>/WikiLists</li><li>/WikiHeadings</li><li>/TableOfContents</li><li>/WikiImages</li><li>/WikiLines</li><li>/WikiTables</li><li>TableFormatting</li></ul><h2 id="Heading5"># Pages, URL, and &lt;nowiki&gt;InterWiki&lt;/nowiki&gt; Links</h2><p>See InterWiki, too.</p><h3 id="Heading6"># Pages</h3><p>You can link to a page by removing the spaces between two or more words, and starting each word with a capital letter. For instance, WikiName and TextFormattingExamples are samples of page links.</p><p>People abhorring PascalCase can use a <em>free link</em>: surround text with two pairs of square brackets like [[Sample Free Link]]. This allows all-downcase or atomic capitalized names as well as strange names including punctuation.</p><h3 id="Heading7"># URLs</h3><p>Plain URL link: <a class="url http" href="http://www.usemod.com/cgi-bin/mb.pl?SandBox">http://www.usemod.com/cgi-bin/mb.pl?SandBox</a> &#x2013; http://www.usemod.com/cgi-bin/mb.pl?SandBox</p><p>Named URL link: <a class="url http outside" href="http://www.usemod.com/cgi-bin/mb.pl?SandBox">Sandbox</a> &#x2013; [http://www.usemod.com/cgi-bin/mb.pl?SandBox Sandbox]</p><h3 id="Heading8"># [#anchors] URLs Using Anchors</h3><pre> [http:/cgi-bin/mb.pl?SandBox#anchor Buried Treasure]  -- &lt;nowiki&gt;[http:/cgi-bin/mb.pl?SandBox#anchor Buried Treasure]&lt;/nowiki&gt;</pre><p>(Tip: you should be able to use relative addressing eg <a class="url http" href="http:/wiki.pl?SandBox#Anchor">http:/wiki.pl?SandBox#Anchor</a>)</p><p>To set an anchor:</p><ul><li>[#anchor] &#x2013; [#anchor]</li></ul><h3 id="Heading9"># On-Site URLS</h3><p>To make on-site links you must respecify the protocol e.g.:</p><p>*<a class="url http outside" href="http:/wiki.gif">like this local link</a> &#x2013; [http:/wiki.gif like this local link] *<a class="url http outside" href="http:../wiki.gif">this relative link</a> &#x2013; [http:../wiki.gif this relative link] *<a class="url http outside" href="http:#anchor">this anchor on the current page does not seem to work</a> &#x2013; [http:#anchor this anchor on the current page does not seem to work] :Problem is local; this #anchor syntax works for me without any issues. --[[CParker]] :It doesn&#x2019;t work because the syntax is incorrect. You need to use <code>[http:/cgi-bin/wiki.pl?page#anchor link-text]</code> instead of <code>[http:#anchor link-text]</code>. --AndrewTurner</p><p>Full relative urls do not seem to work.</p><p><em>There is a problem with this. This generates links which looks like this in the source: &lt;a href="http:/wiki.gif"&gt;. This is, however, not a correct relative URL, according to <a class="url http outside" href="http://www.faqs.org/rfcs/rfc1808.html">RFC1808</a> (see Section 5.2, last example). It seems that netscape 7 does not interpret such links as intended, for example.</em></p><h3 id="Heading10"># &lt;nowiki&gt;InterWiki&lt;/nowiki&gt;</h3><p>InterWiki link: UseMod:InterWiki &#x2013; UseMod:InterWiki</p><p>You can separate links from adjacent text with spaces or the special &#x201c;&#x201d; (two double-quotes) delimiter. The &#x201c;&#x201d; delimiter is <i>not</i> displayed - it is useful for cases like plural forms of page links (such as UseModWiki""s). In nearly all cases, trailing punctuation is ignored, so you can safely make links like <a class="url http" href="http://www.usemod.com/">http://www.usemod.com/</a>, without the trailing comma being part of the link. You can also use FreeLinks.</p><h2 id="Heading11"># Lists</h2><h3 id="Heading12"># Simple lists</h3><pre class="real">* Text for a bulleted list item.
+	** Text for second-level list.
+	*** Text for third level, etc.
+	</pre><p>&#x2026;which looks like: </p><ul><li>Text for a bulleted list item.<ul><li>Text for second-level list.<ul><li>Text for third level, etc.</li></ul></li></ul></li></ul><h3 id="Heading13"># Numbered lists</h3><pre class="real"># Text for a numbered list item.
+	## Text for second-level list.
+	### Text for third level, etc.
+	## Another Text for the second level.
+	</pre><p>&#x2026;which looks like: </p><ol><li>Text for a numbered list item.<ol><li>Text for second-level list.<ol><li>Text for third level, etc.</li></ol></li><li>Another Text for the second level.</li></ol></li></ol><h3 id="Heading14"># Indented Text</h3><pre class="real">: Text to be indented (quote-block)
+	:: Text indented more
+	::: Text indented to third level
+	</pre><p>&#x2026;which looks like: </p><dl class="quote"><dt /><dd>Text to be indented (quote-block)<dl class="quote"><dt /><dd>Text indented more<dl class="quote"><dt /><dd>Text indented to third level</dd></dl></dd></dl></dd></dl><h3 id="Heading15"># Definition List</h3><p>Term with indented definition: [without a blank line between term and definition] </p><pre class="real">;Term:Definition (indented)
+	;;Term (indented):Definition (indented two levels)
+	;;;Term (indented twice):Definition (indented to third level)
+	</pre><p>&#x2026;which looks like: ;Term:Definition (indented) ;;Term (indented):Definition (indented two levels)</p><p>;;;Term (indented twice):Definition (indented to third level)</p><h2 id="Heading16"># Images</h2><p>Just provide the URL, and the image will be inserted inline.</p><p><img class="url http" src="http://www.usemod.com/wiki.gif" alt="http://www.usemod.com/wiki.gif" /></p><p>These extensions are recognized: gif, jpg, png, bmp, jpeg, ico and tiff.</p><p>Note case sensitivity: capitalized extensions such as .GIF, .PNG, .JPG, etc. do NOT work. Some digital cams capitalize image names automatically, so you have to edit them before linking them into your wiki. &#x2013; Celine</p><p>If you have a choice, results are usually best with png for computer generated images, and JPEG for photographic images.</p><h2 id="Heading17"># Preformatted Text</h2><p>Individual lines can be displayed as preformatted (fixed-width or &#x201c;typewriter&#x201d;-font) text by placing one or more spaces at the start of the line. Other wiki formatting (like links) will be applied to this kind of preformatted text.</p><p>Additionally, multi-line sections can be marked as pre-formatted text using lines starting with &lt;pre&gt; (to start pre-formatted text), and &lt;/pre&gt; (to end preformatted text). The &lt;pre&gt; and &lt;/pre&gt; tags are not displayed. Wiki links and other formatting is not done within a preformatted section. (If you want wiki formatting, use spaces at the start of the line instead of the &lt;pre&gt; and &lt;/pre&gt; tags.)</p><p>For instance: </p><pre class="real">Pre-formatted section here.  No other link =link=
+	  or format processing
+	
+	is done on pre-formatted sections.
+	
+	For instance, UseModWiki is not a link here.
+	</pre><p>and:</p><pre>   This is the starting-spaces version of
+	   preformatted text.  Note that links like
+	   UseModWiki still work.</pre><h2 id="Heading18"># Miscellaneous rules</h2><ul><li>To quote text without applying the wiki formatting rules, enclose it within a &lt;nowiki&gt; &#x2026; &lt;/nowiki&gt; section. Within a nowiki section, only HTML-quoting of special characters (&lt;&gt;&amp;) will occur - no other formatting rules will be applied.</li><li>A line which ends in a backslash character (\) will be joined with the next line before most formatting rules are applied. This can be useful for breaking up long sections of text in line-sensitive sections (like lists or indented text).</li><li>If raw-HTML sections are enabled (they are disabled by default), you can enter raw HTML code within an &lt;html&gt; &#x2026; &lt;/html&gt; section. Note that <b>no</b> quoting is done, so you will need to use sequences like &amp;lt; if you want to display a &lt; character.</li><li>Most of the formatting rules are order-independent. On rare occasions, the order of processing may be important. The rules are processed in the following order: raw HTML sections, HTML quoting, nowiki tags, backslash line joining, preformatted sections, paragraphs, lists and indented text, horizontal lines, italic/bold text, URLs, and finally ordinary WikiName links. [No longer fully accurate for 0.88, needs updating.]</li><li>To redirect one wiki page to another, use the following syntax:&lt;pre&gt;#REDIRECT TargetPage #REDIRECT TargetPage/SubPage&lt;/pre&gt;</li></ul><h2 id="Heading19"># HTML</h2><ul><li>Encoding the &#x201c;&lt;&#x201d; less than, &#x201c;&gt;&#x201d; greater than, and &#x201c;&amp;&#x201d; ampersand characters is optional.</li><li>Characters such as &lt;, &copy; and &infin; may be encoded on pages as: \ &#x201c;&amp;lt;&#x201d;, &#x201c;&amp;copy;&#x201d; and &#x201c;&amp;infin;&#x201d; respectively.\ See <a class="url http" href="http://www.w3.org/TR/html4/sgml/entities.html">http://www.w3.org/TR/html4/sgml/entities.html</a>. [UseMod:DougConley dcon]</li></ul><h2 id="Heading20"># Questions</h2><p><strong>Q.</strong> I don&#x2019;t know whether this is intentional, but you can create an image which links to a url using [url image_url] e.g.</p><p><a class="url http outside" href="http://www.usemod.com/cgi-bin/wiki.pl">http://usemod.com/wiki.gif</a></p><p>:<strong>A.</strong> This feature is intentional, and it was added for the 1.0 release of UseModWiki. I simply hadn&#x2019;t updated the documentation yet.</p><p><strong>Problem With Underscores in Links to Pages:</strong></p><p><strong>Q.</strong> Say I create a page called &#x201c;My_New_Page&#x201d; &#x2013; when viewing it, the underscores are changed to spaces, etc.</p><p>But I can&#x2019;t seem to link to it using a page link. If I link to MyNewPage it&#x2019;s shown with a questionmark as a nonexistant page. Fair enough, it <em>doesn&#x2019;t</em> exist. But if I link to it as &#x201c;My_New_Page&#x201d; that doesn&#x2019;t get picked up as a page link. Any thoughts?</p><p>:<strong>A.</strong> Try [[My_New_Page]] (&#x201c;My_New_Page&#x201d; in double square brackets). Look at the explanation of FreeLinks.</p><p>Nonexistent pages, like SampleUndefinedPage, will be displayed with a question mark link. The question mark link indicates the page doesn&#x2019;t exist yet--follow the link to create and edit the page. [The sample page used here is a special example page--you <i>can&#x2019;t</i> define it.]</p><p><strong>Q. </strong> How can I create a comment in UseModWiki? I want to place a comment in a Wiki, not shown on the generated HTML page.</p><p>:<strong>A.</strong> There is no way to add invisible comments in UseModWiki. (Some other wikis allow HTML-style comments, but not UseModWiki.) &#x2013; CliffordAdams</p><dl class="quote"><dl class="quote"><dt /><dd>Not strictly true - if you allow raw html ($RawHtml =1; <b>NB security risk</b>) you can then put &lt;html&gt;&lt;!-- coment in here --&gt;&lt;/html&gt; &#x2013; Rob Stone</dd><dt /><dd>Futher to that i&#x2019;ve made a simple change adding one line (~ line 1690 immediately before the &lt;tt&gt; (MeatBall) line   ::::s/\&amp;amp;lt;\!--(.*?)--\&amp;amp;gt;/&lt;\!-- $1 --&gt;/gis; #RFS</dd></dl></dl><p>:::This seems to work fine for coments - Is there an issue i am missing ?&#x2013; Rob Stone</p><p>A company has a name ending in a plus sign, such as &#x201c;foo+&#x201d;. How can I make that into a link? If I use the doubled brackets [[foo+]], it doesn&#x2019;t come out right.</p><p><strong>Q.</strong> If a link has a &#x2019;[&#x2019; and &#x2019;]&#x2019; character, how do I link it to wiki? e.g. www.anywebpage.com/[test].doc</p><p>:<strong>A.</strong> un-escaped  &#x2019;[&#x2019; and &#x2019;]&#x2019; characters are not valid in URIs <a class="url http outside" href="http://www.ietf.org/rfc/rfc2396.txt">RFC2396 2.4.3</a>. Maybe %encoding them (%5b and %5d) in the URL would work?</p><p><strong>Q.</strong> I have just got UseMod working on my Windows 2K machine, with Apache, but the InterWiki feature doesn&#x2019;t seem to work. For example, when I type <tt> UseMod:InterWiki </tt>, it assumes I want to create two new pages, called UseMod and InterWiki respectively. How do I enable the InterWiki functionality?</p><p>:<strong>A.</strong> <em>Have you added an Intermap file to your data directory, as discussed in InterWikiDocumentation?</em></p><p><strong>Q.</strong> Referencing an uploaded file with a camel-case-name produces defunct link. Is there a workaround?</p><p>:<strong>A.</strong> See WikiBugs/CamelCaseImageUploadCausesProblemsWithDisplay</p><p><strong>Q.</strong> Has anyone considered removing the underscore &#x2019;_&#x2019; character from the page name. So that these: &#x2019;[[Many_Times_Before]]&#x2019; &#x2019;[[Many Times Before]]&#x2019; and ManyTimesBefore would all go to the same page? Also, is the behavior of free links with spaces intentional (it diplays an outer set of brackets)?</p><p>:<strong>A.</strong> To remove underscore characters from page names, modify the function FreeToNormal (on or about line 3057). My version follows. It not only removes underlines as suggested (as that appeals to me), but always capitalizes the first character (as the current code has a slight bug in it that resolves [[ many times before]] to [[many_Times_Before]] rather than [[Many_Times_Before]]. By simply moving the ucfirst call to <i>after</i> the check for leading spaces, this is resolved. &#x2013; DarochDad</p><pre class="real">sub FreeToNormal {
+	  my ($id) = @_;
+	
+	  $id =~ s/ /_/g;
+	  if (index($id, '_') &gt; -1) {  # Quick check for any space/underscores
+	    $id =~ s/__+/_/g;
+	    $id =~ s/^_//;
+	    $id =~ s/_$//;
+	    if ($UseSubpage) {
+	      $id =~ s|_/|/|g;
+	      $id =~ s|/_|/|g;
+	    }
+	  }
+	  $id = ucfirst($id)  if ($UpperFirst || $FreeUpper); #moved -- DarochDad
+	  if ($FreeUpper) {
+	    # Note that letters after ' are *not* capitalized
+	    if ($id =~ m|[-_.,\(\)/][a-z]|) {    # Quick check for non-canonical case
+	      $id =~ s|([-_.,\(\)/])([a-z])|$1 . uc($2)|ge;
+	    }
+	  }
+	  $id =~ s/_//g; # Remove _ characters -- DarochDad
+	  return $id;
+	}
+	</pre><p>:<strong>A.</strong> Hmm, I can&#x2019;t reproduce this: [[ many times before]] [[many_Times_Before]] [[Many_Times_Before]]. [[ sample free link]] [[sample_Free_Link]] [[Sample_Free_Link]] &#x2013; MarkusLude</p><p><strong>Q:</strong> Is there an equivalent to named URL links for uploaded files? I would prefer to see [Document_A] or [important document] instead of upload:Document_A when linking a document?</p><p>:<strong>A:</strong> There&#x2019;s no an equivalent by design; unless you want to hack the script and sintax. If you make that, there won&#x2019;t be possible export to other usemod based wikis (unless you want to write some snippets in order to make possible conversion) --JuanmaMP</p>
+diff-minor: 
+ip: 127.0.0.1
+ts: 1251136010
+minor: 
+host: venus-vista
+username: 
+revision: 5
+diff-major: 1
+summary: == Overview == <toc>  See also: WikiBugs/TextFormatting, MeatBall:TextFormattingRules and WikiMarkupLanguage. == # Tips and Hints  == . . .
+languages: 
+lastmajor: 5
+keep-ts: 1251136010

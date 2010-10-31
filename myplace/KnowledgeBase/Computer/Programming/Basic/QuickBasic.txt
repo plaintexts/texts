@@ -1,0 +1,35 @@
+====== Microsoft QuickBasic ======
+Created Sunday 28 October 2007
+
+Microsoft QuickBASIC (also QB or incorrectly, "QBasic", which is a different system) is an Integrated Development Environment (or IDE) and Compiler for the BASIC programming language that was developed by Microsoft. QuickBasic runs mainly on DOS, though there was a short-lived version for Mac OS. It is loosely based on GW-BASIC but adds user-defined types, improved programming structures, better graphics and disk support and a compiler in addition to the interpreter. Microsoft marketed QuickBASIC as the introductory level for their BASIC Professional Development System.
+Contents
+
+	* 1 History
+	* 2 Current Uses
+	* 3 Successors
+	* 4 Sources
+
+[edit] History
+
+Microsoft released the first version of QuickBASIC on August 18, 1985 stored on a single 5.25" floppy disk. Since version 2.0 QuickBASIC contained an Integrated Development Environment (IDE). Users could edit directly in its onscreen text editor.
+
+Although still supported optionally in QuickBASIC line numbers were no longer needed. Program jumps also worked with named labels. Later versions also added control structures such as multiline conditional statements and loop blocks.
+
+Microsoft's "PC BASIC Compiler" was included for compiling programs into DOS executables. The editor included an interpreter which allowed the programmer to run the program being edited without leaving the editor, as of version 4.0. The interpreter was used to debug a program before creating an executable file. Unfortunately there were some small, subtle differences between the interpreter and the compiler, so that sometimes a program that ran perfectly well in the interpreter would fail after compilation, or would even not compile at all.
+
+The last version of QuickBASIC was version 4.5 (1988), although development of the Microsoft BASIC Professional Development System (PDS) continued until its last release of version 7.1 in October 1990 (at the same time, the QuickBASIC packaging was silently changed so that the disks use the same compression used for BASIC PDS 7.1.[1]). The Basic PDS 7.x version of the IDE was called QuickBASIC Extended (QBX), and it only ran on DOS, unlike the rest of Basic PDS 7.x, which also ran on OS/2. The successor to QuickBASIC and Basic PDS was Visual Basic for DOS 1.0, shipped in Standard and Professional versions. Later versions of Visual Basic did not include DOS versions, as Microsoft concentrated on Windows applications.
+
+A subset of QuickBASIC 4.5, named QBasic, was included with DOS 5 and later versions, replacing the GW-BASIC included with previous versions of DOS. Compared to QuickBASIC, QBasic is limited to an interpreter only, lacks a few functions, can only handle programs of a limited size, and lacks support for separate program modules. Since it lacks a compiler, it cannot be used to produce executable files, although its program source code can still be compiled by a QuickBASIC 4.5, PDS 7.x or VBDOS 1.0 compiler, if available.
+
+For the Macintosh Operating System QuickBASIC 1.00 was launched in 1988. It was supported only in System 6 and 7 and required a Macintosh with more than 1 MB RAM[2].
+
+[edit] Current Uses
+
+QuickBASIC continues to be used in some schools, usually as part of an introduction to programming, though is fast becoming replaced by more popular compilers.
+
+[edit] Successors
+	This section may stray from the topic of the article into the topic of another article, FreeBASIC.
+Please help improve this section or discuss this issue on the talk page. (help)
+
+Microsoft's Visual Basic was the successor of QuickBASIC. Several commercial compilers were developed including PowerBasic, and Xbasic, with varying degrees of compatibility. Several open source and freeware BASIC compilers have also been developed. FreeBASIC is an open-source 32-bit BASIC compiler available free of charge, with the syntax similar to that of QuickBASIC.
+

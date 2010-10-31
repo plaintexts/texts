@@ -1,0 +1,101 @@
+====== DebianHowTo ======
+Created Sunday 10 February 2008
+
+=== A short introduction about Compiz ===
+
+From Wikipedia:
+
+"Compiz is one of the first compositing window managers for the X Window System that is able to take advantage of OpenGL-acceleration. The integration allows it to perform compositing effects in window management, such as a minimization effect and a cube workspace. Compiz conforms to the ICCCM standard and as such can substitute for the default Metacity in GNOME or KWin in KDE. Compiz brings some of the features found in competitors, such as Exposé in Apple's Mac OS X and a new Alt-Tab application-switcher, similar to the one found in Microsoft's Windows Vista. Compiz is built on the Composite extension to X and the GLX_EXT_texture_from_pixmap extension to OpenGL. Compiz was released by Novell in January 2006 in the wake of a new Xgl version."
+
+"...Compiz works with modifications on the standard X.Org server, with AIGLX enabled. With AIGLX, Intel cards can also be used with Compiz. Even mobile cards work there."
+
+In September 2006, X.org 7.1 (AIGLX merged) and Compiz were accepted into Debian unstable and further into testing. It is currently maintained by the Debian XStrikeForce.
+
+=== Debian compiz + AIGLX HOWTO ===
+
+First, you should verify if your video card is supported. Check the list of supported cards below (on other cards, Compiz would need Xgl):
+
+	* Intel i830 to i945 graphic cards
+	* ATI Radeon cards up to X800 series
+	* NVIDIA graphic cards are supported in the 9xxx-series proprietary driver 
+
+We will need to fetch some packages from testing or unstable, so point Debian official Unstable repository in your "/etc/apt/sources.list". (deb http://ftp.debian.org/debian unstable main) and "apt-get update".
+
+Install the following packages:
+
+	* xorg compiz 
+
+and
+
+	* libgl1-mesa-dri 
+
+Add the following options to the corresponding sections in the file /etc/X11/xorg.conf:
+
+# Dedicated "Extensions" section (may not be present already)
+Section "Extensions"
+        Option "Composite" "enable"
+EndSection
+
+# Section "Device" of you graphic card
+Section "Device"
+        # Already contains
+        # ...
+        # Identifier "..."
+        # Driver     "..."
+        # ...
+        # Add this option :
+        Option "XAANoOffscreenPixmaps" "true"
+EndSection
+
+Nvidia user may also need:
+
+Section "Device"
+        Option "AllowGLXWithComposite" "true"
+EndSection
+
+Section "Screen"
+        Option "AddARGBGLXVisuals" "True"
+EndSection
+
+Section "Module"
+        #Load "dri"
+        #Load "GLcore"
+EndSection
+
+Restart your X.org server and login into GNOME. Open a terminal and issue the following command:
+
+compiz --replace
+
+If everything is correct you will be able to use all compiz resources.
+You may want to start your compiz automatically with GNOME:
+Add "compiz --replace" to "Desktop -> Preferences -> Sessions -> Startup Programs".
+
+=== Limitations ===
+
+The water effect uses GL_ARB_fragment_program, which not currently work properly with the open source ATI drivers under AIGLX in X.org 7.1.
+
+=== Troubleshooting ===
+
+If something fail you could check /var/log/Xorg.0.log and search for possible problems with DRI and GLX. You also should verify if AIGLX was successfully loaded.
+
+=== Default hot keys ===
+
+	* Switch desktops on cube: Ctrl + Alt + Left/Right Arrow
+	* Switch desktops on cube - with active window following: Ctrl + Shift + Alt + Left/Right Arrow
+	* Rotate cube manually: Ctrl + Alt + left-click
+	* Zoom-in once: Super-key + right-click
+	* Zoom-in manually: Super-key + wheel mouse up
+	* Zoom-out manually: Super-key + wheel mouse down
+	* Move window: Alt + left-click
+	* Slow-motion: Shift + F10
+	* Transparency: Put mouse cursor over the window then press Alt + wheel mouse down
+	* Expose effect: Ctrl + Alt + Up Arrow or Point the mouse in top right at screen
+	* Take screenshot: Super-key + left-click drag 
+
+=== External Links	 ===
+
+[[http://technowizah.com/2006/10/debian-how-to-aiglx-compiz.html|	Debian HOW-TO : AIGLX + Compiz]]
+	[[http://www.go-compiz.org/|Compiz Official page]]
+[[http://www.compiz.biz/|	Compiz Community Forum]]
+[[http://nixser.com/2007/06/04/debian-compiz-on-kde-installation-how-to/|	Debian: Compiz on KDE Installation How-To]]
+

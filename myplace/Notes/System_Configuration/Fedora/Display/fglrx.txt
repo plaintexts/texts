@@ -1,0 +1,21 @@
+====== Fglrx ======
+Created Thursday 01/02/2007
+
+I'v installed the// Ati video card driver (fglrx)// from //livna// repository. Runing "//glxinfo"// showed that direct rendering is disabled, and runing "//LIBGL_DEBUG=verbose glxinfo//", i get the following messages.
+
+//libGL: XF86DRIGetClientDriverName: 8.23.7 fglrx (screen 0)//
+//libGL: OpenDriver: trying /usr/lib/dri/fglrx_dri.so//
+//libGL error: dlopen /usr/lib/dri/fglrx_dri.so failed (/usr/lib/dri/fglrx_dri.so: undefined symbol: __glXFindDRIScreen)//
+//libGL error: unable to find driver: fglrx_dri.so//
+//display: :0  screen: 0//
+//direct rendering: No//
+
+It seems that the fglrx library files placed in a wrong place.
+
+=== Solution: ===
+
+//cd /usr/lib//
+**1.Backup the orginal file**
+//mv libGL.so.1.2 libGL.so.1.2.saved//
+**2.Relink**
+//ln -s /usr/lib/ati-fglrx/libGL.so.1.2 /usr/lib/libGL.so.1.2//

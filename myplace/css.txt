@@ -1,0 +1,692 @@
+/* indexbw.css */
+
+/*
+
+Copyright (c) 2002 Juhapekka "naula" Tolvanen
+juhtolv (at) iki (dot) fi
+http://iki.fi/juhtolv
+http://iki.fi/juhtolv/css-download/
+
+This stylesheet is free, but comes WITHOUT ANY WARRANTY; you can copy,
+redistribute and/or modify this under the terms of either of these two
+licences:
+
+the GNU Free Documentation License, Version 1.2 or any later version published
+by the Free Software Foundation; with no Invariant Sections, with no
+Front-Cover Texts, and with no Back-Cover Texts
+
+OR
+
+the Design Science License.
+
+I also enact these two (2) amendments:
+
+1)
+Document using one or more of these files as its stylesheet can be under
+any licence (or under no licence at all). So, you do not need to release
+your WWW-page or other document under GNU FDL and/or DSL, if it uses one
+or more of these files as its stylesheet.
+
+2)
+Any Stylesheet is allowed to include these stylesheets via
+import-mechanism, no matter what is its licence. So, you do not need
+to release your stylesheet under GNU FDL and/or DSL, if it uses one
+or more of these files as its imported stylesheet.
+
+
+A copy of the GNU FDL  is available here:
+http://www.gnu.org/copyleft/fdl.html
+
+A copy of the DSL is available here:
+http://www.dsl.org/copyleft/dsl.txt
+
+*/
+
+/* Tell NS4 to ignore these styles.... */
+/*/*/
+
+
+/* Fonts and colors for block level elements*/
+/* sans-serif */
+
+p, blockquote, blockquote p, ul, ol, dl, li, ul li, ul li p, li p, dt, dd, TABLE, table.border, TH, TD, td.border, .tiny, div.author, .navbartop, .navbarbottom, .navbar {
+  font-family: "DejaVu Sans", "Arev Sans", "Bitstream Vera Sans", "Vera Sans", "Arial Unicode MS", "Lucida Grande", "Lucida Sans Unicode", "Myriad Pro", "Myriad", Freesans, "Free Helvetian", "URW Nimbus Sans L", "Nimbus Sans L", NimbusSanL, URWNimbusSanL, Swiss, "Swiss 721 SWA", "Swiss 721", Helvetica, Helvetic, Helv, Arial, "TITUS Cyberbit Basic", "Code 2000", "Code 2001", "Code 2002", sans-serif ;
+}
+
+p, blockquote, blockquote p, li, TABLE, table.border, TH, TD, td.border, .navbartop, .navbarbottom, .navbar {
+        font-size: 1em;
+}
+
+div.author, div.author a {
+        font-size: 1em;
+}
+
+p, blockquote, blockquote p, ul, ol, dl, li, ul li, ul li p, li p, dt, dd, .tiny {
+        background: #ffffff none;
+        color: #000000 ;
+}
+
+/* monospace */
+
+pre, textarea {
+        font-family: "DejaVu Sans Mono", "Arev Sans Mono", "Bitstream Vera Sans Mono", Fixed, "Everson Mono Unicode", Freemono, "Free Courier", "URW Nimbus Mono L", "URW Nimbus Mono", "Nimbus Mono", "Nimbus Mono L", "NimbusMonL", "Courier SWA", Courier, "Courier New", monospace; 
+        font-size: 1em;
+}
+
+/* Fonts and colors for text level elements*/
+/* sans-serif */
+
+a, strong {
+            font-family: "DejaVu Sans", "Arev Sans", "Bitstream Vera Sans", "Vera Sans", "Arial Unicode MS", "Lucida Grande", "Lucida Sans Unicode", "Myriad Pro", "Myriad", Freesans, "Free Helvetian", "URW Nimbus Sans L", "Nimbus Sans L", NimbusSanL, URWNimbusSanL, Swiss, "Swiss 721 SWA", "Swiss 721", Helvetica, Helvetic, Helv, Arial, "TITUS Cyberbit Basic", "Code 2000", "Code 2001", "Code 2002", sans-serif ;
+            font-size: 1em;
+}
+
+/* monospace */
+
+code, var, kbd, samp, tt, address, .prompt, .stdin, .flag, .stdout, .stderr {
+  font-family: "DejaVu Sans Mono", "Arev Sans Mono", "Bitstream Vera Sans Mono", Fixed, "Everson Mono Unicode", Freemono, "Free Courier", "URW Nimbus Mono L", "URW Nimbus Mono", "Nimbus Mono", "Nimbus Mono L", "NimbusMonL", "Courier SWA", Courier, "Courier New", monospace; 
+        font-size: 1em;
+}
+
+pre a, a tt, tt a, address a {
+  font-family: "DejaVu Sans Mono", "Arev Sans Mono", "Bitstream Vera Sans Mono", Fixed, "Everson Mono Unicode", Freemono, "Free Courier", "URW Nimbus Mono L", "URW Nimbus Mono", "Nimbus Mono", "Nimbus Mono L", "NimbusMonL", "Courier SWA", Courier, "Courier New", monospace; 
+        font-size: 1em;
+}
+
+/***********************************************************/
+
+/* Basic blocks */
+
+body {
+       color: #000000;
+       background-color: #ffffff;
+       font-size: 1.03em;
+       font-family: "DejaVu Sans", "Arev Sans", "Bitstream Vera Sans", "Vera Sans", "Arial Unicode MS", "Lucida Grande", "Lucida Sans Unicode", "Myriad Pro", "Myriad", Freesans, "Free Helvetian", "URW Nimbus Sans L", "Nimbus Sans L", NimbusSanL, URWNimbusSanL, Swiss, "Swiss 721 SWA", "Swiss 721", Helvetica, Helvetic, Helv, Arial, "TITUS Cyberbit Basic", "Code 2000", "Code 2001", "Code 2002", sans-serif ;
+       background-image: url(./pix/ryppy.jpg) ;
+       background-repeat: repeat ;
+}
+
+pre {
+        white-space: pre;
+        border: 1px solid #000000;
+        color: #000000;
+        background: #f3fff3 none;
+        padding: 0.7em 0.7em 0.7em 0.7em;
+        margin-left: 1.9em;
+        margin-right: 1.9em;
+        margin-top: 0.4em;
+        margin-bottom: 0.4em;
+}
+
+p {
+        margin-left: 2.7em;
+        margin-right: auto;
+        margin-top: 1.0em;
+        margin-bottom: 1.0em;
+        padding-left: 1.7em;
+        padding-right: 1em;
+        padding-top: 0.3em;
+        padding-bottom: 0.3em;
+        border: none;
+        max-width: 45em;
+}
+
+blockquote {
+        border: 3px solid #000000;
+        margin-left: 4.7em;
+        padding: 0.1em 0.1em 0.1em 0.1em;
+        max-width: 50em;
+}
+
+blockquote p {
+        margin-left: 1em;
+        margin-right: 1em;
+        margin-top: 1em;
+        margin-bottom: 1em;
+        padding-left: 0.7em;
+        padding-right: 0.7em;
+        padding-top: 0.3em;
+        padding-bottom: 0.3em;
+        border: none;
+        max-width: 45em;
+}
+
+
+/* Lists */
+
+dt
+{
+        font-weight: bolder;
+}
+
+
+ul, ol, dl {
+        border: none;
+        margin-left: 2.7em;
+        padding-left: 1.8em;
+        max-width: 50em;
+        padding-top: 1em;
+        padding-bottom: 1em;
+}
+
+li {
+        max-width: 50em;
+}
+
+li ul, li ol, li dl, li * ul, li * ol, li * dl,
+.oikea * li ul, .oikea * li ol, .oikea * li dl, .oikea * li * ul, .oikea * li * ol, .oikea * li * dl,
+.vasen * li ul, .vasen * li ol, .vasen * li dl, .vasen * li * ul, .vasen * li * ol, .vasen * li * dl,
+.keski3 * li ul, .keski3 * li ol, .keski3 * li dl, .keski3 * li * ul, .keski3 * li * ol, .keski3 * li * dl,
+.oikea3 * li ul, .oikea3 * li ol, .oikea3 * li dl, .oikea3 * li * ul, .oikea3 * li * ol, .oikea3 * li * dl,
+.vasen3 * li ul, .vasen3 * li ol, .vasen3 * li dl, .vasen3 * li * ul, .vasen3 * li * ol, .vasen3 * li * dl
+{
+        border: none;
+        margin-left: 0em;
+        margin-top: 0em;
+        margin-bottom: 0em;
+        padding-top: 0em;
+        padding-bottom: 0em;
+        padding-left: 1em;
+}
+
+.oikea p, .vasen p, .vasen3 p, .keski3 p, .oikea3 p
+{
+        margin-left: 0em;
+        margin-right: auto;
+        margin-top: 1em;
+        margin-bottom: 1.0em;
+        padding-left: 1em;
+        padding-right: 1em;
+        padding-top: 1em;
+        padding-bottom: 1em;
+        max-width: 45em;
+}
+
+.oikea dl, .vasen dl, .vasen3 dl, .keski3 dl, .oikea3 dl,
+.oikea ol, .vasen ol, .vasen3 ol, .keski3 ol, .oikea3 ol,
+.oikea ul, .vasen ul, .vasen3 ul, .keski3 ul, .oikea3 ul 
+{
+        margin-left: 0em;
+        margin-right: auto;
+        margin-top: 1em;
+        margin-bottom: 1.0em;
+        padding-left: 1.7em;
+        padding-right: 1em;
+        padding-top: 1em;
+        padding-bottom: 1em;
+        max-width: 45em;
+}
+
+/***********************************************************/
+/* Headings */
+
+/* Clearing */
+
+h1 { clear: both; }
+h2, h3, h4, h5, h6 { clear: left; }
+
+/* Color (foreground and background)*/
+
+h1, h2, h3, h4, h5, h6 {
+        color: #000000;
+        background: #ffffff;
+}
+
+
+h1, h1 a, h2, h2 a {
+        font-family: "DejaVu Serif", "Arev Serif", "Bitstream Vera Serif Bold", "Bitstream Vera Serif", "Vera Serif",  "Junicode", "Gentium", "GentiumAlt", "Free Bookman", "URWBookmanL Bold", "URW Bookman L Bold", "URW Bookman L", "URWBookmanL", "ITC Bookman", Bookman, "Free Schoolbook", "CenturySchL", "Century Schoolbook L", "URW Century Schoolbook L", "Century Schoolbook Bold", "Century Schoolbook Bold BT", "Century Schoolbook Bold SWA", "Century Schoolbook Bold", "New Century Schoolbook Bold", "Century Schoolbook SWA", "Monotype Century Schoolbook", "Century Schoolbook", "New Century Schoolbook", "New Century Schlbk", "Schoolbook", "TITUS Cyberbit Basic", "Code 2000", "Code 2001", "Code 2002", serif;
+}
+
+h3, h3 a, h4, h4 a {
+        font-family: "Free Paladin", "URWPalladioL Bold", "URW Palladio L Bold", "Linotype Palatino Bold", "Palatino Linotype Bold", "Palatino Bold", "URW Palladio L", "URWPalladioL", "URW Palladio", "URWPalladio", Palladio,  "Linotype Palatino", "Palatino Linotype", Palatino, "Palatino 2", "Zapf Calligraphic 801", "Zapf Calligraphic", "Book Antiqua", "TITUS Cyberbit Basic", "Code 2000", "Code 2001", "Code 2002", serif ;
+}
+
+
+h5, h5 a, h6, h6 a {
+        font-family: "Charis SIL", "CS Bitstream Charter Bold", "Bitstream Charter BT Bold", "Bitstream Charter BT Roman Bold", "Charter BT Roman Bold", "Bitstream Charter Bold", "CharterBT Bold",  "Charter BT Bold", "ITC Charter Bold", "Charter Bold", "Bitstream Charter BT", "Bitstream Charter BT Roman", "Charter BT Roman", "Bitstream Charter",  "CharterBT",  "Charter BT", "ITC Charter", Charter, Freeserif, "Doulos SIL", "Free Times", Thryomanes, "Nimbus Roman No 4", "NimbusRomNo9L", "Nimbus Roman No 9 L", "Nimbus Roman No 9", "Dutch SWA", "Dutch 801 Roman BT", "Dutch 801 BT", "Dutch 809 BT", Dutch, Times, "Times Roman", "Times New Roman", "Bitstream Cyberbit", "Bitstream Cyberbase", "TITUS Cyberbit Basic", "Code 2000", "Code 2001", "Code 2002", serif;
+}
+
+
+/* Bolding */
+
+h1, h1 a, h2, h2 a, h3, h3 a, h4, h4 a, h5, h5 a, h6, h6 a { font-weight: bold; }
+
+/* No borders for headings */
+
+/* Font-size */
+/*
+h1 { font-size: 2.00em; }
+h2 { font-size: 1.80em; }
+h3 { font-size: 1.70em; }
+h4 { font-size: 1.55em; }
+h5 { font-size: 1.35em; }
+h6 { font-size: 1.15em; }
+*/
+/* Spacing */
+
+h1 {
+        margin-left: 0.1em;
+        margin-right: auto;
+        margin-top: 1.0em;
+        margin-bottom: 1.0em;
+        padding-left: 0.1em;
+        padding-right: 0.1em;
+        padding-top: 0.3em;
+        padding-bottom: 0.3em;
+}
+
+h2 {
+        margin-left: 0.2em;
+        margin-right: auto;
+        margin-top: 0.9em;
+        margin-bottom: 0.9em;
+        padding-left: 0.2em;
+        padding-right: 0.2em;
+        padding-top: 0.25em;
+        padding-bottom: 0.25em;
+}
+
+h3 {
+        margin-left: 0.4em;
+        margin-right: auto;
+        margin-top: 0.8em;
+        margin-bottom: 0.8em;
+        padding-left: 0.3em;
+        padding-right: 0.3em;
+        padding-top: 0.2em;
+        padding-bottom: 0.2em;
+}
+
+h4 {
+        margin-left: 0.7em;
+        margin-right: auto;
+        margin-top: 0.7em;
+        margin-bottom: 0.7em;
+        padding-left: 0.4em;
+        padding-right: 0.4em;
+        padding-top: 0.15em;
+        padding-bottom: 0.15em;
+}
+
+h5 {
+        margin-left: 1.1em;
+        margin-right: auto;
+        margin-top: 0.6em;
+        margin-bottom: 0.6em;
+        padding-left: 0.5em;
+        padding-right: 0.5em;
+        padding-top: 0.1em;
+        padding-bottom: 0.1em;
+}
+
+h6 {
+        margin-left: 1.6em;
+        margin-right: auto;
+        margin-top: 0.5em;
+        margin-bottom: 0.5em;
+        padding-left: 0.6em;
+        padding-right: 0.6em;
+        padding-top: 0.05em;
+        padding-bottom: 0.05em;
+}
+
+/***********************************************************/
+
+/* Letters */
+
+strong {font-weight: bold;}
+
+/* Use these with <span> inside <pre> */
+
+.prompt, .stdin, .flag, .stdout, .stderr {
+        background: #f3fff3 none;
+}
+
+.prompt {color: #0044aa;}
+.stdin {color: #ff0000;}
+.flag {color: #008800;}
+.stdout {color: #333333;}
+.stderr {color: #cc0099;}
+
+/* Links */
+
+
+a:link, a:link strong {
+  color: #0000cc;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:visited, a:visited strong {
+  color: #660099;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:active, a:active strong {
+  color: #3333ff;
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+a:hover, a:hover strong {
+  color: #cc0000;
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+/* Tables */
+
+TABLE, table.border {
+        border: 1px solid #000000;
+        color: #000000;
+        background: #ffffff none ;
+}
+
+TH, th.border, TD, td.border {
+        border: 1px solid #000000;
+}
+
+TH, th.border {
+        font-weight :  bold;
+        background: #999999 none;
+        color: #000000;
+}
+
+TD, td.border {
+        background: #ffffff none;
+        color: #000000;
+}
+
+/* Misc text blocks */
+
+/* Centering done right*/
+.center { text-align: center; }
+
+.clearboth { clear: both; }
+
+hr {
+        background: #ffffff none ;
+        border-color: #000000;
+        border-style: solid;
+        border-width: 2px;
+        clear: left;
+        color: #000000;
+        height: 1px;
+        line-height: 1px;
+        margin-bottom: 2em;
+        margin-left: 0px;
+        margin-right: 0px;
+        margin-top: 2em;
+        padding-bottom: 0px;
+        padding-left: 0px;
+        padding-right: 0px;
+        padding-top: 0px;
+}
+
+.tiny {
+        font-size: 0.9em;
+}
+
+.styleswitch {
+        font-size: 0.9em;
+        margin-left: 0.1em;
+        margin-right: auto;
+        margin-top: 0.1em;
+        margin-bottom: 0.1em;
+        padding-left: 0.5em;
+        padding-right: 0.5em;
+        padding-top: 0.3em;
+        padding-bottom: 0.3em;
+        max-width: 60em;
+}
+
+.navbartop {
+        width: 100%;
+}
+.navbartop, .navbarbottom, .navbar {
+        border: 1px solid #000000;
+        background: #ffffff none;
+        color: #000000 ;
+        text-align: center;
+}
+
+
+.vasen3, .oikea3, .keski3 {
+        border: 1px solid #000000;
+        background: #cccccc none;
+        color: #000000 ;
+        font-size: 1em;
+        float: left;
+        width: 33%;
+}
+
+
+.vasen3, .oikea3 {
+        width: 35%;
+}
+
+.keski3 {
+        width: 45%;
+}
+
+.sarakkeet2left {
+        border: 1px solid #000000;
+        background: #cccccc none;
+        color: #000000 ;
+        font-size: 1em;
+        float: left;
+        clear: left;
+        width: 69%;
+        max-width: 50em;
+}
+
+.sarakkeet2left h2, .sarakkeet2left h3, .sarakkeet2left h4, .sarakkeet2left hr,
+.vasen h2, .oikea h2,
+.vasen h3, .oikea h3,
+.vasen h4, .oikea h4,
+.vasen hr, .oikea hr
+{
+        clear: both;
+}
+
+.vasen, .oikea {
+        border: 1px solid #000000;
+        width: 30%;
+        background: #cccccc none;
+        color: #000000;
+        font-size: 1em;
+}
+
+.vasen {
+        float: left;
+        clear: left;
+        margin-right: 1em; 
+}
+
+.oikea {
+        float: right;
+        clear: right;
+        margin-right: auto;
+}
+
+.right {
+        float: right;
+}
+
+.left {
+        float: left;
+}
+
+
+li {line-height: 1.3em}
+
+
+div.author {
+        float: right; 
+        clear: right;
+        text-align: right;
+        background: #f0f0f0;
+        color: #000000;
+        margin-top: 1em;
+        padding: 1em 1em 1em 1em;
+}
+
+
+/* Forms
+
+form {
+        background: #cccccc none;
+        color: #000000;
+        //border: 1px solid #000000;
+        margin-top: 0.5em;
+        margin-bottom: 0.5em;
+        margin-right: auto;
+        margin-left: 0.5em;
+        padding-left: 0.1em;
+        padding-right: 0.1em;
+        padding-top: 0.1em;
+        padding-bottom: 0.1em;
+}
+*/
+
+button {
+        min-width: 4em;
+        min-height: 2em;
+}
+
+label {
+        background: #ffffff none;
+        color: #000000;
+        font-size: 1.05em;
+        font-weight: bold;
+}
+
+fieldset {
+        background: #ffffff none;
+        color: #000000;
+        border: 1px solid #000000;
+        margin-top: 0.5em;
+        margin-bottom: 0.5em;
+        margin-right: 0.5em;
+        margin-left: 0.5em;
+        padding: 0.5em 0.5em 0.5em 0.5em;
+}
+
+legend {
+        background: #ffffff none;
+        color: #000000;
+        border: 1px solid #000000;
+        margin-top: 0.5em;
+        margin-bottom: 0.5em;
+        margin-right: 0.5em;
+        margin-left: 0.5em;
+        font-size: 1.1em;
+        font-weight: bold;
+        display: inline;
+        padding: 0.5em 0.5em 0.5em 0.5em;
+}
+
+form fieldset p label {
+        background: #ffffff none;
+        color: #000000;
+        font-size: 1.1em;
+        font-weight: bold;
+}
+
+
+input, textarea, select, button {
+        background: #cccccc ;
+        color:  #000000 ;
+        padding: 0.1em 0.1em 0.1em 0.1em;
+}
+
+
+input:focus, textarea:focus, select:focus, button:focus,
+input:focus, textarea:focus, select:focus, button:focus
+{
+        color:  #000000 ;
+        background: #eeeeee ;
+        padding: 0.1em 0.1em 0.1em 0.1em;
+}
+
+/* This does not work yet */
+
+option:focus,
+option:focus:active,
+option:active,
+option:active:focus,
+select option:focus,
+select option:focus:active,
+select option:active,
+select option:active:focus,
+form * select option:focus,
+form * select option:focus:active,
+form * select option:active,
+form * select option:active:focus,
+body * form * select option:focus,
+body * form * select option:focus:active,
+body * form * select option:active,
+body * form * select option:active:focus,
+html body * form * select option:focus,
+html body * form * select option:focus:active,
+html body * form * select option:active,
+html body * form * select option:active:focus
+{
+        color:  #eeeeee ;
+        background: #000000 ;
+        padding: 0.1em 0.1em 0.1em 0.1em;
+}
+
+/* */
+
+.vertspace {
+        border: none;
+        line-height: 1em;
+        margin-left: 1em;
+        margin-right: 1em;
+        margin-top: 1em;
+        margin-bottom: 1em;
+        padding-left: 0em;
+        padding-right: 1em;
+        padding-top: 0.1em;
+        padding-bottom: 0.1em;
+        background: transparent none ;
+}
+
+/* Misc stuff for Netscape 4.* */
+
+.huijaus {
+        border-width: 0px;
+        height: 0px;
+        line-height: 0px;
+        margin-left: 0px;
+        margin-right: 0px;
+        margin-top: 0px;
+        margin-bottom: 0px;
+        padding-left: 0px;
+        padding-right: 0px;
+        padding-top: 0px;
+        padding-bottom: 0px;
+        background: transparent none ;
+}
+
+.hidden {
+        display: none;
+        text-align: center;
+        background: #fffffe none ;
+        color: #ffffff;
+}
+
+---------<META>---------
+flags: 0
+ip: 192.168.1.25
+ts: 1274643275
+minor: 
+host: myplace.hell
+username: xiaoranzzz
+revision: 4
+summary: 
+languages: 
+lastmajor: 4
+keep-ts: 1274643275

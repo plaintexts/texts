@@ -1,0 +1,12 @@
+====== 通俗 ======
+Created Sunday 12/08/2007
+
+* 武侠
+* 侦探
+* 科幻
+* 魔幻
+* 玄幻---------<META>---------
+revision: 1
+flags: 0
+blocks: <p><span class="post_title">通俗 </span><br /><span class="footer">Created Sunday 12/08/2007</span><br /></p><ul><li>武侠<br /></li><li>侦探<br /></li><li>科幻<br /></li><li>魔幻<br /></li><li>玄幻</li></ul>
+ts: 1250977779

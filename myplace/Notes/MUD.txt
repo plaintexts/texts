@@ -1,0 +1,13 @@
+====== MUD ======
+Created Tuesday 07 July 2009
+
+[[.MUDLIB|MUDLIB]]
+
+[[.MUDOS|MUDOS]]
+
+
+---------<META>---------
+Revision 2, Last updated Tue May 25 01:55:01 2010, by xiaoranzzz@myplace.hell
+ts: 1274723701
+lastmajor: 2
+keep-ts: 1274723701

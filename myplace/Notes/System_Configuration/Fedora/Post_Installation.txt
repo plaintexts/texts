@@ -1,0 +1,23 @@
+====== Post Installation ======
+Created Wednesday 10/01/2007
+
+Normally everything just works, in order to enjoy some entertainments ,additional steps must take.That means to install a few packages which released under no free license or the like.
+
+* Step 1 : Maybe a better packages installer could save some time.
+
+* As default,Fedora provides a package manager called **yum** and two GUI interface for it ,**pirut** and **pup**. At this moment, yum still works a little slower as well as two GUI applications. There are other two applications based on yum available, **gnome-yum** and **yumex**.
+* **Gnome-yum** was removed from the Extras repository in Fedora 6, but still can be download from [[http://gnome-yum.sourceforge.net|Gnome Interface for yum.]]
+* **yumex** is available in the Extras repository, could simply be installed from the command line : __yum install yumex__ .
+
+* Step 2 : Choose another packages manager.
+
+* Personally I preferred the smart package manager.
+* Install it : yum install smart smart-gui	
+* 	
+
+
+
+
+
+
+

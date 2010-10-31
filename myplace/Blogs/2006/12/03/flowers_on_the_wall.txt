@@ -1,0 +1,28 @@
+====== flowers on the wall ======
+Created 2006-10-11 19:20:00
+Updated 2006-12-03 15:49:00
+
+
+== Comments: ==
+
+* **re: flowers on the wall**
+呵呵，还是Pulp Fiction 里的插曲啊。完整版比电影里的好听
+**BruceBack**,2006-10-11 23:42:00
+
+* **re: flowers on the wall**
+没品位啊.至少也应该听听<八荣八耻>什么的.
+**R.O.Y**,2006-10-12 01:42:00
+
+* **re: flowers on the wall**
+晓然，在fedora里的 高亮绿的文件名是可执行程序，运行它是要不要其他什么命令？我直接输入系统说没这个命令。
+**三哥**,2006-10-13 10:32:00
+
+* **re: flowers on the wall**
+默设的命令搜索路径不包含当前路径，所以即使在当前目录下的命令，也要打"./文件名"执行,如"./configure"
+**xrLiN**,2006-10-13 16:04:00
+
+---------<META>---------
+ts: 1251012655
+username: xiaoranzzz
+revision: 1
+languages: 

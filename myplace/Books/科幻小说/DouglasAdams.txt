@@ -1,0 +1,19 @@
+Douglas Noel Adams (11 March 1952 – 11 May 2001) was an English writer, dramatist, and musician. He is best known as the author of The Hitchhiker's Guide to the Galaxy, which started life in 1978 as a BBC radio comedy before developing into a "trilogy" of five books that sold over 15 million copies in his lifetime, as well as a television series, several stage plays, comics, a computer game, and in 2005 a feature film. 
+See WikiPedia:DouglasAdams for more.
+
+[[.宇宙尽头的餐馆]]
+---------<META>---------
+flags: 01010
+blocks: <p>Douglas Noel Adams (11 March 1952 – 11 May 2001) was an English writer, dramatist, and musician. He is best known as the author of The Hitchhiker&#x2019;s Guide to the Galaxy, which started life in 1978 as a BBC radio comedy before developing into a &#x201c;trilogy&#x201d; of five books that sold over 15 million copies in his lifetime, as well as a television series, several stage plays, comics, a computer game, and in 2005 a feature film. See WikiPedia:DouglasAdams for more.</p><p>[[.宇宙尽头的餐馆]]</p>
+diff-minor: 
+ip: 127.0.0.1
+ts: 1251010192
+minor: 
+host: venus-vista
+username: 
+revision: 3
+diff-major: 1
+summary: Douglas Noel Adams (11 March 1952 – 11 May 2001) was an English writer, dramatist, and musician. He is best known as the author of The Hitchhiker's . . .
+languages: 
+lastmajor: 3
+keep-ts: 1251010192

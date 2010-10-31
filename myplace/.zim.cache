@@ -1,0 +1,113 @@
+zim: version 0.23
+: 1207067549 /
+:Blogs: 1192577395 > :Blogs:2006年 :Blogs:2005年 :Blogs:旧旧作 :Blogs:2007年 :Blogs:旧作
+:Home 1207067509 > :Works :Notes :Learning :KnowledgeBase :Reviews :Blogs :Resources :Reference
+:KnowledgeBase: 1192577395 > :KnowledgeBase:Computer
+:Learning: 1192577391 > :Learning:文学理论
+:Notes: 1192577391 > :Notes:System_Configuration :Notes:Games :Notes:Softwares
+:Reference: 1192577395 > :Reference:小说
+:Resources: 1192577391 > :Resources:Software
+:Works: 1207067536 > :Works:SystemAdmin
+:Blogs: 1192577394 /
+:Blogs:2007年: 1192577395 > :Blogs:2007年:医院记事
+:Blogs:旧作: 1192577394 > :Blogs:旧作:子虹 :Blogs:旧作:梦记录 :Blogs:旧作:梦记录一 :Blogs:旧作:梦记录二 :Blogs:旧作:一人一半
+:KnowledgeBase: 1207655948 /
+:KnowledgeBase:Computer: 1207655948 > :KnowledgeBase:Computer:Culture :KnowledgeBase:Computer:Programming :KnowledgeBase:Computer:OS
+:Learning: 1192577391 /
+:Learning:文学理论 1192577392 > :Learning:文学理论:世界 :Learning:文学理论:欣赏者 :Learning:文学理论:艺术家 :Learning:文学理论:文学创作论 :Learning:文学理论:文学观念论 :Learning:文学理论:作品 :Learning:文学理论:文学源流论 :Learning:文学理论:文学接受论
+:Notes: 1208331193 /
+:Notes:Games: 1192577392 > :Notes:Games:Wine
+:Notes:Softwares: 1202611980 > :Notes:Softwares:Compiz :Notes:Softwares:QEMU :Notes:Softwares:System_Tools :Notes:Softwares:Gnome :Notes:Softwares:Wine :Notes:Softwares:DiskImage
+:Notes:System_Configuration: 1208331193 > :Notes:System_Configuration:Fedora :Notes:System_Configuration:X11 :Notes:System_Configuration:fstab :Notes:System_Configuration:WhatIs :Notes:System_Configuration:DOS7
+:Reference: 1192577391 /
+:Reference:小说: 1192577391 > :Reference:小说:现代 :Reference:小说:通俗 :Reference:小说:情色 :Reference:小说:经典
+:Resources: 1192577395 /
+:Resources:Software: 1192577395 > :Resources:Software:Fedora_Repositories
+:Works: 1207067639 /
+:Works:SystemAdmin: 1207067634 > :Works:SystemAdmin:Packages
+:Blogs:2007年: 1207656099 /
+:Blogs:2007年:医院记事 1207656099 > 
+:Blogs:旧作: 1193775351 /
+:Blogs:旧作:一人一半 1192577394 > 
+:Blogs:旧作:子虹 1192577394 > 
+:Blogs:旧作:梦记录 1192577394 > 
+:Blogs:旧作:梦记录一 1192577394 > 
+:Blogs:旧作:梦记录二 1192577394 > 
+:KnowledgeBase:Computer: 1207656008 /
+:KnowledgeBase:Computer:Culture: 1207655999 > :KnowledgeBase:Computer:Culture:Pronunciation_of_Software_Names
+:KnowledgeBase:Computer:OS: 1192577390 > :KnowledgeBase:Computer:OS:MS-DOS
+:KnowledgeBase:Computer:Programming: 1193528555 > :KnowledgeBase:Computer:Programming:Basic
+:Notes:Games: 1192577392 /
+:Notes:Games:Wine: 1192577392 > :Notes:Games:Wine:Wow
+:Notes:Softwares: 1208204560 /
+:Notes:Softwares:Compiz: 1202611995 > :Notes:Softwares:Compiz:DebianHowTo
+:Notes:Softwares:DiskImage 1192577393 > 
+:Notes:Softwares:Gnome: 1192577393 > :Notes:Softwares:Gnome:Trouble_Shoot
+:Notes:Softwares:QEMU 1192577393 > 
+:Notes:Softwares:System_Tools: 1192577393 > :Notes:Softwares:System_Tools:GParted
+:Notes:Softwares:Wine: 1208204560 > :Notes:Softwares:Wine:Input_Method :Notes:Softwares:Wine:Dll :Notes:Softwares:Wine:中文化
+:Notes:System_Configuration: 1208331228 /
+:Notes:System_Configuration:DOS7: 1192577392 > :Notes:System_Configuration:DOS7:MSDOS.SYS
+:Notes:System_Configuration:Fedora: 1192577392 > :Notes:System_Configuration:Fedora:Display :Notes:System_Configuration:Fedora:Post_Installation
+:Notes:System_Configuration:fstab 1204444879 > 
+:Notes:System_Configuration:WhatIs: 1208331221 > :Notes:System_Configuration:WhatIs:shm
+:Notes:System_Configuration:X11: 1208011395 > :Notes:System_Configuration:X11:Looks
+:Reference:小说: 1192577391 /
+:Reference:小说:情色: 1192577391 > :Reference:小说:情色:乱派
+:Reference:小说:通俗 1192577391 > 
+:Resources:Software: 1192577395 /
+:Resources:Software:Fedora_Repositories 1192577395 > 
+:Works:SystemAdmin: 1209050598 /
+:Works:SystemAdmin:Packages: 1209050598 > :Works:SystemAdmin:Packages:2008-04-02 :Works:SystemAdmin:Packages:2008-04-01
+:KnowledgeBase:Computer:Culture: 1207656041 /
+:KnowledgeBase:Computer:Culture:Pronunciation_of_Software_Names 1207656041 > 
+:KnowledgeBase:Computer:OS: 1192577390 /
+:KnowledgeBase:Computer:OS:MS-DOS: 1192577390 > :KnowledgeBase:Computer:OS:MS-DOS:Version
+:KnowledgeBase:Computer:Programming: 1193532004 /
+:KnowledgeBase:Computer:Programming:Basic: 1193532004 > :KnowledgeBase:Computer:Programming:Basic:FreeBasic :KnowledgeBase:Computer:Programming:Basic:QBasic :KnowledgeBase:Computer:Programming:Basic:TurboBasic :KnowledgeBase:Computer:Programming:Basic:GW-BASIC :KnowledgeBase:Computer:Programming:Basic:VisualBasic :KnowledgeBase:Computer:Programming:Basic:QuickBasic :KnowledgeBase:Computer:Programming:Basic:BASICA
+:Notes:Games:Wine: 1192577392 /
+:Notes:Games:Wine:Wow 1192577392 > 
+:Notes:Softwares:Compiz: 1202612140 /
+:Notes:Softwares:Compiz:DebianHowTo 1202612140 > 
+:Notes:Softwares:Gnome: 1192577393 /
+:Notes:Softwares:Gnome:Trouble_Shoot: 1192577393 > :Notes:Softwares:Gnome:Trouble_Shoot:MimeInfoLost
+:Notes:Softwares:System_Tools: 1192577392 /
+:Notes:Softwares:System_Tools:GParted 1192577393 > 
+:Notes:Softwares:Wine: 1208204565 /
+:Notes:Softwares:Wine:Dll 1208204565 > 
+:Notes:Softwares:Wine:Input_Method 1192577393 > 
+:Notes:Softwares:Wine:中文化: 1208112217 > :Notes:Softwares:Wine:中文化:字体
+:Notes:System_Configuration:DOS7: 1192577392 /
+:Notes:System_Configuration:DOS7:MSDOS.SYS 1192577392 > 
+:Notes:System_Configuration:Fedora: 1192577392 /
+:Notes:System_Configuration:Fedora:Display: 1192577392 > :Notes:System_Configuration:Fedora:Display:fglrx
+:Notes:System_Configuration:Fedora:Post_Installation 1192577392 > 
+:Notes:System_Configuration:WhatIs: 1208331570 /
+:Notes:System_Configuration:WhatIs:shm 1208331570 > 
+:Notes:System_Configuration:X11: 1208013589 /
+:Notes:System_Configuration:X11:Looks: 1208013589 > :Notes:System_Configuration:X11:Looks:Cursors
+:Reference:小说:情色: 1192577391 /
+:Reference:小说:情色:乱派: 1192577391 > :Reference:小说:情色:乱派:阅读指南1.0版
+:Works:SystemAdmin:Packages: 1208623269 /
+:Works:SystemAdmin:Packages:2008-04-01 1208623269 > 
+:Works:SystemAdmin:Packages:2008-04-02 1207072973 > 
+:KnowledgeBase:Computer:OS:MS-DOS: 1204095905 /
+:KnowledgeBase:Computer:OS:MS-DOS:Version 1204095905 > 
+:KnowledgeBase:Computer:Programming:Basic: 1193532106 /
+:KnowledgeBase:Computer:Programming:Basic:BASICA 1193532038 > :KnowledgeBase:Computer:Programming:Basic :KnowledgeBase:Computer:Programming:Basic:DM-BASIC :KnowledgeBase:Computer:Programming:Basic:GW-BASIC
+:KnowledgeBase:Computer:Programming:Basic:FreeBasic 1193532038 > :KnowledgeBase:Computer:Programming:Basic :KnowledgeBase:Computer:Programming:Basic:QuickBasic
+:KnowledgeBase:Computer:Programming:Basic:GW-BASIC 1193532106 > 
+:KnowledgeBase:Computer:Programming:Basic:QBasic 1193532038 > :KnowledgeBase:Computer:Programming:Basic :KnowledgeBase:Computer:Programming:Basic:QuickBasic
+:KnowledgeBase:Computer:Programming:Basic:QuickBasic 1193532038 > 
+:KnowledgeBase:Computer:Programming:Basic:TurboBasic 1193532038 > :KnowledgeBase:Computer:Programming:Basic
+:KnowledgeBase:Computer:Programming:Basic:VisualBasic 1193532038 > :KnowledgeBase:Computer:Programming:Basic
+:Notes:Softwares:Gnome:Trouble_Shoot: 1192577393 /
+:Notes:Softwares:Gnome:Trouble_Shoot:MimeInfoLost 1192577393 > 
+:Notes:Softwares:Wine:中文化: 1208114748 /
+:Notes:Softwares:Wine:中文化:字体 1208114748 > 
+:Notes:System_Configuration:Fedora:Display: 1192577392 /
+:Notes:System_Configuration:Fedora:Display:fglrx 1192577392 > 
+:Notes:System_Configuration:X11:Looks: 1208014979 /
+:Notes:System_Configuration:X11:Looks:Cursors 1208014979 > 
+:Reference:小说:情色:乱派: 1192577391 /
+:Reference:小说:情色:乱派:阅读指南1.0版 1192577391 > 

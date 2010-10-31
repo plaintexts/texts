@@ -1,0 +1,9 @@
+====== Programming ======
+Created Sunday 28 October 2007
+
+[[.Basic|Basic]]
+---------<META>---------
+revision: 1
+flags: 010
+blocks: <p><span class="post_title">Programming </span><br /><span class="footer">Created Sunday 28 October 2007</span><br /></p><p>[[.Basic|Basic]]</p>
+ts: 1250977835

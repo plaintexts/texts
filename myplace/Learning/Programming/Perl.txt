@@ -1,0 +1,32 @@
+Playing with Perl
+=================
+
+CORE
+----
+* 用\x00-\xFF或\x{0000}-\x{FFFF}表示字符。
+
+FUNCTION
+--------
+
+* each
+用于取出HASH的一组值，或者取出ARRAY的两个值。例子：
+
+        while(my($key,$value) = echo %SETTING) {
+            print "$key = $value\n";
+        }
+
+MODULE
+------
+### JSON ###
+JSON - JSON (JavaScript Object Notation) encoder/decoder
+See to http://www.json.org/ and RFC4627(http://www.ietf.org/rfc/rfc4627.txt).
+
+* [[.StrawBerryPerl]]
+
+
+version information
+------- -----------
+Revision 13, Last updated Sat May 29 01:06:24 2010, by xiaoranzzz@myplace.hell
+ts: 1275066384
+lastmajor: 13
+keep-ts: 1275066384

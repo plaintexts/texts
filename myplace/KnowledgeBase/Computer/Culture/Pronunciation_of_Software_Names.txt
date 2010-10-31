@@ -1,0 +1,64 @@
+====== Pronunciation of Software Names ======
+
+Written by Jawad Niazi    
+Dec 09, 2004 at 07:50 PM
+
+I'm a big fan of languages; I see tremendous value in different human expression. Even with a language like English, a language I dream in, I'm told by my close friends I still pronounce things quite badly at times, often to hilarious effect. Blatant errors aside, language and its commonality can be crucial for community development; this is especially true for communities dealing with specific topics. Back in the day, in most of the Western world, scholars and scientists used Latin to communicate as an intellectual community.
+
+Today, "experts" use "jargon" not only to put out verbal neon signs that they know the language of the subject at hand, but also to differentiate between those who know and those who do not know. It's almost like a test, a rite of passage within a community... if you don't know the language, how can you know the subject? This article will examine how language is used in the Free and Open Source Software community and how you as a newcomer can more easily fit in by using the right pronunciations for the right terms.
+
+Written by Jawad Niazi
+
+The belief that knowledge of a subject is indicated by language is certainly debatable, but simply go to any tech website and try and find those who use only common vernacular; I believe you'll be hard-pressed to find such a place on today's Internet. Regardless of your take on it, language plays a huge role in any kind of community, but especially online where the written word is the only communication tool you have.
+The Open Source Community
+
+As of late, I have become a big fan of Free and Open Source Software (FOSS). Unfortunately, I don't live near anyone who shares the same sentiment, so lonely me doesn't actually know how any of the terms in this realm are pronounced! Thankfully the Internet exists so I can seek out and find those who also enjoy the fruits of Open Source. However, while websites and forums are nice, naturally they do not provide the same level of interaction as face-to-face encounters. It's times like these I wish the local cable company offered TechTV on their basic plan so I could experience the language of the topic phonetically.
+
+So this got me thinking on the topic of pronunciation... as a community of distance-separated individuals would we be using the same sounds to communicate if we were side by side? After all, the community of Free and Open Source users involves not only the developers that magically produce usable code but also the simple FOSS aficionados such as myself. Would our sounds be similar even when speaking English to one another? Could I go to a Linux Users Group (LUG) meeting or even a conference and not sound like a total idiot when discussing some of my favorite projects? Some might say that last part might be unavoidable, but to that I offer a (usually mispronounced) cuss word or two in their direction.
+
+I know some of you have seen zealots on the web go at each other's throats about the pronunciation of certain terms. How does this look to the outside world if we can't even agree on something so simple? If you are a new user, this all can be even more confusing if the name or reference to a single concept changes depending on who you interact with. Whatever level you fall into in terms of a user, that's just not kosher, baby.
+
+So to help you acclimate to the GNU/Linux world more quickly, I would like to offer a beginner's pronunciation guide for common Free and Open Source enthusiast terms. And as you all know, we here at thejemreport.com are all about etiquette.
+Tech Terms
+
+As I mentioned, I don't live near anyone that is interested in GNU/Linux, so when I come across Linux-related terms I just make a best guess at pronouncing them. Because of my (ahem) advanced intellect and subsequent system of mnemonics, I remember acronyms by creating words from them.
+
+For example, I pronounce my favorite Desktop Environment Xfce as ecks-fice. I'm not even going to pretend that's accurate or warranted, but it helps me remember. I'm so lazy, I call IBM eye-bum, and I'm not even going to mention how I pronounce iMac.
+
+1. So how about something as simple as Linux? I have always assumed it is pronounced lin-ucks. But I've been hearing people say lye-nucks. Does Linus pronounce his own name lye-nuss? I'm told by our forum Linus Torvalds himself settled the debate by stating that he says lin-ucks as in "linen" but also sees why people would pronounce it the other way. In the spirit of the movement, Mr. Torvalds does not dissuade people from using what works best for them.
+
+2. Is Unix pronounced exactly as written? When I was explaining to my mother that I will be studying Unix, she got a puzzled look on her face and began laughing at me. She being an academic but not a computer enthusiast, it finally dawned on me: mom was wondering why I wanted to study castrated people. Apparently this has been a long running joke with people in the know who've been associated with Unix for some time (old joke: some people use Unix and some people are eunuchs). Common pronunciation is yew-nicks.
+
+3. XFree rival, X.Org, is it zorg or ecks-dot-org? I know Xandros is Z-sounding. I've been told ecks-org can work too. I usually say ecks-dot-org in my head and I assume people will know what I'm talking about.
+
+4. I know Debian is deb-e-un and not dub-ee-an or deb-eye-an...but how do you say SuSE? Soo-suh according to the company.
+
+5. Kazaa? Is it ka-za or kuz-zaah? Buzz on the web indicates it's the latter, kuz-zaah. The PR representative of Sharman Networks (owners of Kazaa) Rich Chernela agrees.
+
+6. GNU? Guh-noo or jee-en-yew? This one is still up for debate. The founder of the Free Software Foundation, Richard M. Stallman (RMS), says it as a word but many people simply spell it out. For that matter, I also pronounce gtk-Gnutella as jee-tee-kay-noo-tel-lah.
+
+7. Xouvert, you ask? Zoo-vurt if you don't know what you're talking about, zoo-vair if you do. The creators of the project chose the name as a concatenation of X and the French word for "open."
+
+8. OO.org (as in OpenOffice.org, the office suite)? Hmm, this one is tricky, but I say ooh-dot-org just because it sounds sexy. Some folks may simply say Open Office.
+
+9. The Qt toolkit. I have just been informed that Qt is pronounced as the word cute (que-oot mono syllabic for non native speakers) and not kyu-tee by the developers at Trolltech.
+
+10. Here's an easy one: Gentoo. The popular GNU/Linux distribution is named after an actual animal, the Gentoo Penguin. Therefore, it is pronounced jen-too.
+
+11. Sylpheed, the email client. Per the project FAQ the name Sylpheed means "light weight." The first syllable comes from a medieval word for a wind spirit known as a Sylph. The proper pronunciation is probably sil-feed if using the Merriam-Webster sound guide for Sylph.
+
+12. Ximian? It's pronounced zim-ee-un.
+
+13. Here's one for the hardware people: Nvidia. I've heard nuh-vid-ee-ah, nuh-vid-ya, and en-vid-ya. The one I have heard journalists use is en-vid-ee-ah, which is also how I pronounce it.
+
+14. The Xfce window manager Thankfully, the project lead for Xfce, Olivier Fourdan, corrected me and wrote: "I just pronounce it like 'X-F-C-E' or 'X-F-See.' Also please note that the common spelling is 'Xfce.' 'XFce' was used for some time, but XFCE has been dropped since 1997 at least."
+Final Thoughts
+
+Hopefully some of the information gleaned from this article will help those in a similar situation as myself. My own little brother told me after his first year at college, "Hardly any two words hold the same meaning for people speaking the exact same language!" Wise words indeed, but by simply saying the same sounds when using a common language with other users we'll be better at communicating ideas to one another face-to-face. It has also been pointed out that no matter how many pronunciation guides exist, there will always be large differences if say, an Australian and a Canadian were to pronounce the same word in English. I will have to concede this may always be the case (due to differing dialects), but at least now some standards have been set so we can all attempt to say the same sounds. And more importantly, no more looking like an idiot at a gathering of users!
+
+Discuss this article or get technical support on our forum.
+
+Copyright 2004 Jawad Niazi. Verbatim copying and redistribution of this entire article are permitted without royalty in any medium provided this notice is preserved.
+
+
+http://www.thejemreport.com/mambo/content/view/123/

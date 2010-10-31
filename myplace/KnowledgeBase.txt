@@ -1,0 +1,9 @@
+====== KnowledgeBase ======
+Created Monday 15 October 2007
+
+[[.Computer|Computer]]
+---------<META>---------
+revision: 1
+flags: 010
+blocks: <p><span class="post_title">KnowledgeBase </span><br /><span class="footer">Created Monday 15 October 2007</span><br /></p><p>[[.Computer|Computer]]</p>
+ts: 1250977831

@@ -1,0 +1,94 @@
+====== DiskImage ======
+Created Sunday 07 October 2007
+
+==== Create disk image ====
+
+**1)Using dd**
+
+dd if=/dev/zero of=disk.img bs=1024 count=10240
+(Create a 10Mb disk image, named disk.img)
+
+dd if=/dev/zero of=disk.img count=0 seek=10240
+(Create a 10Mb disk image, named disk.img which is a sparse file that implicitly full of 10mb of zeroes, but takes no disk space)
+
+see http://wiki.linuxquestions.org/wiki/Dd
+
+**2)Using qemu-img**
+
+qemu-img create -f raw disk.img 10M
+(Create a 10Mb disk image,named disk.img which is a sparse file as well.)
+
+__Usage:__
+qemu-img command [command options]
+
+__Command syntax:__
+  create [-e] [-b base_image] [-f fmt] filename [size]
+  commit [-f fmt] filename
+  convert [-c] [-e] [-f fmt] filename [-O output_fmt] output_filename
+  info [-f fmt] filename
+
+__Command parameters:__
+  'filename' is a disk image filename
+  'base_image' is the read-only disk image which is used as base for a copy on
+    write image; the copy on write image only stores the modified data
+  'fmt' is the disk image format. It is guessed automatically in most cases
+  'size' is the disk image size in kilobytes. Optional suffixes 'M' (megabyte)
+    and 'G' (gigabyte) are supported
+  'output_filename' is the destination disk image filename
+  'output_fmt' is the destination format
+  '-c' indicates that target image must be compressed (qcow format only)
+  '-e' indicates that the target image must be encrypted (qcow format only)
+
+__Supported format: __
+parallels qcow2 vvfat vpc bochs dmg cloop vmdk qcow cow host_device raw
+
+==== Mount disk image ====
+
+To mount a partition of disk image, firstly we need to setup a loopback device for it, using __losetup__
+
+__losetup Usage:__
+**	losetup [ options ] {-f|loop_device} file                # setup**
+	 where options include
+	    --offset <num>, -o <num>
+	        start at offset <num> into file.
+	    --pass-fd <num>, -p <num>
+	        read passphrase from file descriptor <num>
+	        instead of the terminal.
+	    --encryption <cipher>, -e <cipher>
+	        encrypt with <cipher>.
+	        Check /proc/crypto or /proc/crypto/cipher for available ciphers.
+	    --nohashpass, -N
+	        Don't hash the password given.  (previous versions hash, non-debian doesn't.
+	    --keybits <num>, -k <num>
+	        specify number of bits in the hashed key given
+	        to the cipher.  Some ciphers support several key
+	        sizes and might be more efficient with a smaller
+	        key size.  Key sizes < 128 are generally not
+	        recommended
+	        
+Usually,We only use the '--offset' option, which specify the partition offset of the disk image.
+A parttion offset could be calculated as (__unitSize*StartBlock__).
+
+just type fdisk -ul <device>. The option -ul means list the partitions on the device and assume a unit size of 512 byte. 
+This looks something like this:
+
+//fdisk -ul disk.img//
+
+//Disk /dev/sda: 256 MB, 256376832 bytes//
+//8 heads, 62 sectors/track, 1009 cylinders, total 500736 sectors//
+//Units = sectors of 1 * 512 = 512 bytes//
+
+//   Device Boot      Start         End      Blocks   Id  System//
+//disk.img1   *          62       19839        9889    4  FAT16 <32M//
+//disk.img2           19840      231135      105648   83  Linux//
+//disk.img3          231136      442431      105648   83  Linux//
+//disk.img4          442432      471199       14384   83  Linux//
+
+if we wanted to mount the first partition we'd have an offset of 512*62 = 31744. The second partition has an offset of 512*19840 = 10158080.
+Now we can mount the partition.For example if we want to mount the second partition,we can do it as:
+
+losetup -o 10158080 [[/dev/loop0]] disk.img
+mount -t ext3 [[/dev/loop0]] [[/mnt]]
+
+
+

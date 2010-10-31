@@ -1,0 +1,55 @@
+====== Perl 小记 ======
+Created 2008-03-31 08:23:00
+Updated 2008-03-31 08:46:00
+
+
+xiaoranzzz@myplace# find /share/perl/ -type f | wc -l
+132
+xiaoranzzz@myplace#
+ 小计了一下，接触Perl以来，写了并且保存着的脚本，共有132个。
+
+ 这两天重新快速过了一遍小骆驼书(Learning Perl)，留意到以下几点：
+
+列表的shift和unshift操作 使用 strict Pragma 改变默认的输出句柄 哈希的each、exists函数 正则表达式的/s、/x、/m修饰符 正则表达式的词锚定 正则表达式的非贪婪的数量词 特殊变量$^I 正则表达式的非捕捉用的括号 循环控制的redo操作 循环控制标签块 部分求值的逻辑操作符 Sort的排序子程序 利用 eval 捕获错误 数组 slice 哈希 slice  这个迅速而强悍，不太优美，有点懒性子的语言，令人愉快。
+
+== Comments: ==
+
+* **re: Perl 小记**
+最新报道，奥运火炬传接途中，刘翔在道旁解手时火炬不慎掉坑里，现各方正极力封锁消息漏出国外。
+**BruceBack**,2008-04-01 09:35:00
+
+* **re: Perl 小记**
+还好我不是愤青～～
+**xrLiN**,2008-04-02 17:48:00
+
+* **re: Perl 小记**
+喔 
+
+小然 
+**呱唧**,2008-04-02 20:14:00
+
+* **re: Perl 小记**
+什么日子你知道的了.
+
+这语言不了解，玩这个很耗时吧。近期升级到firefox 3 beta 5打开你博客总算顺畅了
+**BruceBack**,2008-04-04 06:42:00
+
+* **re: Perl 小记**
+～～我看见时已经2号......所以，我是经过重重防火墙走访国内国外各个新闻网站之后，决定不理会你~
+
+我用Beta4上你的MSNSpace依然痛苦，当然痛苦的程度还比不上新浪的Blog和NBA新闻
+**xrLiN**,2008-04-04 20:50:00
+
+* **re: Perl 小记**
+NBA新闻，好遥远的事...... 我最多在网易主页顺便一瞥，搞笑啊，火箭22连胜接着连败。
+
+所以才想换个blog，百度的速度较有保证，blogbus版面干净些.... 再看吧
+**BruceBack**,2008-04-05 02:23:00
+
+---------<META>---------
+revision: 1
+flags: 0101010
+blocks: <p><span class="post_title">Perl 小记 </span><br /><span class="footer">Created 2008-03-31 08:23:00</span><br /><span class="footer">Updated 2008-03-31 08:46:00</span><br /></p><p>xiaoranzzz@myplace# find /share/perl/ -type f | wc -l<br />132<br />xiaoranzzz@myplace#<br /> 小计了一下，接触Perl以来，写了并且保存着的脚本，共有132个。</p><p> 这两天重新快速过了一遍小骆驼书(Learning Perl)，留意到以下几点：</p><p>列表的shift和unshift操作 使用 strict Pragma 改变默认的输出句柄 哈希的each、exists函数 正则表达式的/s、/x、/m修饰符 正则表达式的词锚定 正则表达式的非贪婪的数量词 特殊变量$^I 正则表达式的非捕捉用的括号 循环控制的redo操作 循环控制标签块 部分求值的逻辑操作符 Sort的排序子程序 利用 eval 捕获错误 数组 slice 哈希 slice  这个迅速而强悍，不太优美，有点懒性子的语言，令人愉快。</p><p><h2>Comments:</h2></p><ul><li><strong>re: Perl 小记</strong><br />最新报道，奥运火炬传接途中，刘翔在道旁解手时火炬不慎掉坑里，现各方正极力封锁消息漏出国外。<br /><strong>BruceBack</strong>,2008-04-01 09:35:00</li><li><strong>re: Perl 小记</strong><br />还好我不是愤青～～<br /><strong>xrLiN</strong>,2008-04-02 17:48:00</li><li><strong>re: Perl 小记</strong><br />喔 </li></ul><p>小然 <br /><strong>呱唧</strong>,2008-04-02 20:14:00</p><ul><li><strong>re: Perl 小记</strong><br />什么日子你知道的了.</li></ul><p>这语言不了解，玩这个很耗时吧。近期升级到firefox 3 beta 5打开你博客总算顺畅了<br /><strong>BruceBack</strong>,2008-04-04 06:42:00</p><ul><li><strong>re: Perl 小记</strong><br />～～我看见时已经2号&#x2026;&#x2026;所以，我是经过重重防火墙走访国内国外各个新闻网站之后，决定不理会你~</li></ul><p>我用Beta4上你的MSNSpace依然痛苦，当然痛苦的程度还比不上新浪的Blog和NBA新闻<br /><strong>xrLiN</strong>,2008-04-04 20:50:00</p><ul><li><strong>re: Perl 小记</strong><br />NBA新闻，好遥远的事&#x2026;&#x2026; 我最多在网易主页顺便一瞥，搞笑啊，火箭22连胜接着连败。</li></ul><p>所以才想换个blog，百度的速度较有保证，blogbus版面干净些&#x2026;. 再看吧<br /><strong>BruceBack</strong>,2008-04-05 02:23:00</p>
+languages: 
+ts: 1251012655
+username: xiaoranzzz

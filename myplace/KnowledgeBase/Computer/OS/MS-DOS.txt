@@ -1,0 +1,10 @@
+====== MS-DOS ======
+Created Monday 15 October 2007
+
+[[.Version|Version]]
+---------<META>---------
+revision: 1
+flags: 010
+blocks: <p><span class="post_title">MS-DOS </span><br /><span class="footer">Created Monday 15 October 2007</span><br /></p><p>[[.Version|Version]]</p>
+ts: 1251140360
+username: xiaoranzzz

@@ -1,0 +1,169 @@
+== 修复Vista MBR ==
+
+=== bootsect.exe ===
+
+* 使用方法：
+<pre>
+bootsect {/help|/nt60|/nt52} {SYS|ALL|<DriveLetter>:} [/force] [/mbr]
+
+
+
+Boot sector restoration tool
+
+
+
+Bootsect.exe updates the master boot code for hard disk partitions in order to
+
+switch between BOOTMGR and NTLDR.  You can use this tool to restore the boot
+
+sector on your computer.
+
+
+
+/help   Displays these usage instructions.
+
+
+
+/nt52   Applies the master boot code that is compatible with NTLDR to SYS,
+
+        ALL, or <DriveLetter>.  The operating system installed on SYS, ALL, or
+
+        <DriveLetter> must be older than Windows Vista.
+
+
+
+/nt60   Applies the master boot code that is compatible with BOOTMGR to SYS,
+
+        ALL, or <DriveLetter>.  The operating system installed on SYS, ALL, or
+
+        <DriveLetter> must be Windows Vista or Windows Server 2008.
+
+
+
+SYS     Updates the master boot code on the system partition used to boot
+
+        Windows.
+
+
+
+ALL     Updates the master boot code on all partitions.  ALL does not
+
+        necessarily update the boot code for each volume.  Instead, this
+
+        option updates the boot code on volumes that could be used as Windows
+
+        boot volumes, which excludes any dynamic volumes that are not
+
+        connected with an underlying disk partition.  This restriction is
+
+        present because boot code must be located at the beginning of a disk
+
+        partition.
+
+
+
+<DriveLetter> Updates the master boot code on the volume associated with this
+
+        drive letter.  Boot code will not be updated if either 1)
+
+        <DriveLetter> is not associated with a volume or 2) <DriveLetter> is
+
+        associated with a volume not connected to an underlying disk
+
+        partition.
+
+
+
+/force  Forcibly dismounts the volume(s) during the boot code update.  You
+
+        should use this option with caution.
+
+
+
+        If Bootsect.exe cannot gain exclusive volume access then the file
+
+        system may overwrite the boot code before the next reboot.
+
+        Bootsect.exe always attempts to lock and dismount the volume before
+
+        each update.  When /force is specified, a forced dismount is attempted
+
+        if the initial lock attempt fails.  A lock can fail, for example, if
+
+        files on the target volume are currently opened by other programs.
+
+
+
+        When successful, a forced dismount allows exclusive volume access and
+
+        a reliable boot code update even though the initial lock failed.  At
+
+        the same time, a forced dismount invalidates all open handles to files
+
+        on the target volume.  This could result in unexpected behavior from
+
+        the programs that opened these files.  Therefore, you should use this
+
+        option with caution.
+
+
+
+/mbr    Updates the Master Boot Record without changing the partition table on
+
+        sector 0 of the disk that contains the partition specified by SYS, ALL,
+
+        or drive letter.  When used with /nt52 option, the master boot record
+
+        is compatible with operating systems older than Windows Vista.  When
+
+        used with the /nt60 option, the master boot record is compatible with
+
+        Windows Vista or Windows Server 2008.
+
+
+
+Example:
+
+
+
+To apply the master boot code that is compatible with NTLDR to the volume
+
+labeled E:, use the following command:
+
+
+
+bootsect /nt52 E:
+
+
+</pre>
+* 来源：
+该工具位于Vista CD /boot目录之下。
+
+* 备注：
+在Vista下面运行该工具不一定能修复系统所在盘的MBR。
+
+== 激活 ==
+=== Vista loader v2.1.5 ===
+* 使用方法：
+运行程序目录下面的install.bat即可。
+
+* 备注：
+## Vista loader 是通过Bootmgr加载，因此安装之前如有必要应先修复Vista的MBR。
+## Vista loader 将启动信息写入第一扇区，因此通过Grub也可能启动：chainloader (hd0,0)+1
+## 如运行install.bat之后不准备立即重新启动，可预先修改程序目录下另一个文件（SetupComplete.cmd）。
+## v2.1.5的启动文件为vista，不读取menu.lst。之前版本的启动文件为grldr,并且读取menu.lst。在menu.lst中配置Vista启动项时，应加入acpi命令，以模拟OEM BIOS.
+
+---------<META>---------
+diff-minor: 
+flags: 0
+ip: 192.168.1.25
+ts: 1252697270
+minor: 
+host: myplace.hell
+username: xiaoranzzz
+revision: 2
+diff-major: 1
+summary: == 修复Vista MBR == === bootsect.exe === * 使用方法： <pre> bootsect {/help|/nt60|/nt52} {SYS|ALL|<DriveLetter>:} [/force] . . .
+languages: 
+lastmajor: 2
+keep-ts: 1252697270

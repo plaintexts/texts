@@ -1,0 +1,243 @@
+
+<toc>
+
+The rest of this page describes the default rules.
+
+* [[Paragraphs]] to get you started
+* [[Local Links]] like the ones in these list above
+* [[Inline Images]] like http://www.emacswiki.org/pics/heart.png
+* [[URLs]] like http://example.org/
+* [[Bullet List]] like this list you're looking at
+* [[Numerical Escapes]] for the advanced HTML geeks
+* [[Transclusion Rules]] for the advanced wiki geeks
+11
+There are many other more rarely used formatting features, such as
+[[Permanent Anchors]], [[Including RSS Feeds]], [[Including Searches]],
+[[Transclusion]]
+
+You can also create your own rules. See [[New Text Formatting Rules]].
+
+[::Paragraphs]
+
+The most important rules are very simple:
+
+# Empty lines separate paragraphs.
+# Paragraphs may span several lines.
+
+
+'''With these simple rules, you can already start writing text.'''
+
+[::Local Links]
+
+Local pages are linked using various link patterns.
+
+See [[Link Pattern]] for how to enable and disable some of the features,
+if you have access to the config file.
+
+'''Words in double square brackets are links to local
+pages.'''  These square brackets will not be rendered if the page
+exists, since this links to a local page.  Note that usual punctuation
+characters are not allowed in free links.
+
+<pre>
+[[Text Formatting Rules]]
+</pre>
+
+Result:
+
+[[Text Formatting Rules]]
+
+'''CamelCase words are the traditional links to local pages.'''
+
+Example:
+
+<pre>
+CamelCase
+</pre>
+
+Result:
+
+(disabled on this wiki, option $WikiLinks set to 0)
+
+To prevent the word from being linked, prefix it with an exclamation-mark (!).
+
+Example:
+
+<pre>
+!CamelCase
+</pre>
+
+Result:
+
+(no effect on this wiki, since $WikiLinks is set to 0)
+
+This only works reliably when the first upper-case character is an ASCII character (A-Z) and
+there is another upper-case ASCII character in the word, because Oddmuse doesn't rely on installed
+locales.
+
+Examples that will not work:
+
+<pre>
+ÖlFörderung
+SchwerÖl
+</pre>
+
+[::Inline Images]
+
+'''Words in double square brackets will inline images on local
+pages if prefixed with "image:".'''  These square brackets will not be rendered if the page exists, since this links to a local page.
+See [[File Upload]] for more information on uploading images to pages.
+
+Example:
+
+<pre>
+[[image:Zürich By Night]]
+</pre>
+
+Result:
+
+[[image:Zürich By Night]]
+
+[::URLs]
+
+'''Plain URLs get hyperlinked.'''
+
+Example:
+
+<pre>
+http://www.emacswiki.org/
+</pre>
+
+Result:
+
+http://www.emacswiki.org/
+
+'''Plain URLs ending in an image suffix will inline the image'''.
+
+Example:
+
+<pre>
+http://www.emacswiki.org/emacs_logo.png
+</pre>
+
+Result:
+
+http://www.emacswiki.org/emacs_logo.png
+
+'''Plain URLs in square brackets turn into numbered links, looking like
+footnotes.'''
+
+Example:
+
+<pre>
+[http://www.emacswiki.org/]
+</pre>
+
+Result:
+
+[http://www.emacswiki.org/]
+
+'''Plain URLs plus some text in square brackets result in the text
+being linked to the URL.'''  The square brackets will remain visible in order
+to distinguish these links from links to local pages if you do not provide your own [[Cascading Style Sheet]].
+
+Example:
+
+<pre>
+[http://www.emacswiki.org/ Emacs Wiki]
+</pre>
+
+Result:
+
+[http://www.emacswiki.org/ Emacs Wiki]
+
+[::Bullet List]
+
+'''List items start with one or more asterisks (*) and a space.'''
+The number of asterisks indicates the indentation level.
+An empty line ends the list.
+
+Example:
+
+<pre>
+* One item
+* Another item
+** One More
+</pre>
+
+Result:
+
+* One item
+* Another item
+** One More
+
+[::Numerical Escapes]
+
+The [[Usemod Markup Extension]] contains a rule for definition lists.
+It looks as follows:
+
+<pre>
+; term: definition
+</pre>
+
+If you want the term to include a colon, you have to use numerical escapes.
+The colon has the ASCII code 58, therefore you can write the following:
+
+<pre>
+; foo&#58;bar: example
+</pre>
+
+Result:
+
+; foo&#58;bar: example
+
+The following escapes are possible:
+
+# Numerical escapes using decimal numbers, eg. &amp;#58; for a colon
+# Numerical escapes using hexadecimal numbers, eg. &amp;#x3a; for a colon
+# The named entities amp, lt, and gt are also allowed, eg. &amp;amp; for a &
+
+[::Transclusion Rules]
+
+; ##<include ...>##: Includes other named pages.  See [[Transclusion]].
+; ##<journal ...>##: Includes other pages whose title follows a particular pattern.  See [[Journal Pages]].
+; ##<rss ...>##: Include RSS feeds.  See [[Including RSS Feeds]].
+; ##<search ...>##: Include search results.  See [[Searching]].
+
+== Miscellaneous ==
+
+; ##<<<<<<<##: This indicates the beginning of a conflict.  You should never have to use this rule yourself.  It only exists so that conflicts are easy to see on a page.  See [[Edit Conflicts]].
+
+----
+
+The text formatting rules for links are listed on a separate page.  See [[Link Pattern]].
+---------<META>---------
+flags: 01010101010101010101010101010101010101010101010101010101010101010101010
+blocks: <p>The rest of this page describes the default rules.</p><ul><li>[[Paragraphs]] to get you started</li><li>[[Local Links]] like the ones in these list above</li><li>[[Inline Images]] like <img class="url http" src="http://www.emacswiki.org/pics/heart.png" alt="http://www.emacswiki.org/pics/heart.png" /></li><li>[[URLs]] like <a class="url http" href="http://example.org/">http://example.org/</a></li><li>[[Bullet List]] like this list you&#x2019;re looking at</li><li>[[Numerical Escapes]] for the advanced HTML geeks</li><li>[[Transclusion Rules]] for the advanced wiki geeks 11 There are many other more rarely used formatting features, such as [[Permanent Anchors]], [[Including RSS Feeds]], [[Including Searches]], [[Transclusion]]</li></ul><p>You can also create your own rules. See [[New Text Formatting Rules]].</p><p>[::Paragraphs]</p><p>The most important rules are very simple:</p><ol><li>Empty lines separate paragraphs.</li><li>Paragraphs may span several lines.</li></ol><p><strong>With these simple rules, you can already start writing text.</strong></p><p>[::Local Links]</p><p>Local pages are linked using various link patterns.</p><p>See [[Link Pattern]] for how to enable and disable some of the features, if you have access to the config file.</p><p><strong>Words in double square brackets are links to local pages.</strong> These square brackets will not be rendered if the page exists, since this links to a local page. Note that usual punctuation characters are not allowed in free links.</p><pre class="real">[[Text Formatting Rules]]
+	</pre><p>Result:</p><p>[[Text Formatting Rules]]</p><p><strong>CamelCase words are the traditional links to local pages.</strong></p><p>Example:</p><pre class="real">CamelCase
+	</pre><p>Result:</p><p>(disabled on this wiki, option $WikiLinks set to 0)</p><p>To prevent the word from being linked, prefix it with an exclamation-mark (!).</p><p>Example:</p><pre class="real">!CamelCase
+	</pre><p>Result:</p><p>(no effect on this wiki, since $WikiLinks is set to 0)</p><p>This only works reliably when the first upper-case character is an ASCII character (A-Z) and there is another upper-case ASCII character in the word, because Oddmuse doesn&#x2019;t rely on installed locales.</p><p>Examples that will not work:</p><pre class="real">ÖlFörderung
+	SchwerÖl
+	</pre><p>[::Inline Images]</p><p><strong>Words in double square brackets will inline images on local pages if prefixed with &#x201c;image:&#x201d;.</strong> These square brackets will not be rendered if the page exists, since this links to a local page. See [[File Upload]] for more information on uploading images to pages.</p><p>Example:</p><pre class="real">[[image:Zürich By Night]]
+	</pre><p>Result:</p><p>[[image:Zürich By Night]]</p><p>[::URLs]</p><p><strong>Plain URLs get hyperlinked.</strong></p><p>Example:</p><pre class="real">http://www.emacswiki.org/
+	</pre><p>Result:</p><p><a class="url http" href="http://www.emacswiki.org/">http://www.emacswiki.org/</a></p><p><strong>Plain URLs ending in an image suffix will inline the image</strong>.</p><p>Example:</p><pre class="real">http://www.emacswiki.org/emacs_logo.png
+	</pre><p>Result:</p><p><img class="url http" src="http://www.emacswiki.org/emacs_logo.png" alt="http://www.emacswiki.org/emacs_logo.png" /></p><p><strong>Plain URLs in square brackets turn into numbered links, looking like footnotes.</strong></p><p>Example:</p><pre class="real">[http://www.emacswiki.org/]
+	</pre><p>Result:</p><p>[http://www.emacswiki.org/]</p><p><strong>Plain URLs plus some text in square brackets result in the text being linked to the URL.</strong> The square brackets will remain visible in order to distinguish these links from links to local pages if you do not provide your own [[Cascading Style Sheet]].</p><p>Example:</p><pre class="real">[http://www.emacswiki.org/ Emacs Wiki]
+	</pre><p>Result:</p><p><a class="url http outside" href="http://www.emacswiki.org/">Emacs Wiki</a></p><p>[::Bullet List]</p><p><strong>List items start with one or more asterisks (*) and a space.</strong> The number of asterisks indicates the indentation level. An empty line ends the list.</p><p>Example:</p><pre class="real">* One item
+	* Another item
+	** One More
+	</pre><p>Result:</p><ul><li>One item</li><li>Another item<ul><li>One More</li></ul></li></ul><p>[::Numerical Escapes]</p><p>The [[Usemod Markup Extension]] contains a rule for definition lists. It looks as follows:</p><pre class="real">; term: definition
+	</pre><p>If you want the term to include a colon, you have to use numerical escapes. The colon has the ASCII code 58, therefore you can write the following:</p><pre class="real">; foo&amp;#58;bar: example
+	</pre><p>Result:</p><dl><dt>foo&#58;bar</dt><dd>example</dd></dl><p>The following escapes are possible:</p><ol><li>Numerical escapes using decimal numbers, eg. &amp;#58; for a colon</li><li>Numerical escapes using hexadecimal numbers, eg. &amp;#x3a; for a colon</li><li>The named entities amp, lt, and gt are also allowed, eg. &amp;amp; for a &amp;</li></ol><p>[::Transclusion Rules]</p><dl><dt><code>&lt;include ...&gt;</code></dt><dd>Includes other named pages. See [[Transclusion]].</dd><dt><code>&lt;journal ...&gt;</code></dt><dd>Includes other pages whose title follows a particular pattern. See [[Journal Pages]].</dd><dt><code>&lt;rss ...&gt;</code></dt><dd>Include RSS feeds. See [[Including RSS Feeds]].</dd><dt><code>&lt;search ...&gt;</code></dt><dd>Include search results. See [[Searching]].</dd></dl><h2 id="Heading1">Miscellaneous</h2><dl><dt><code>&lt;&lt;&lt;&lt;&lt;&lt;&lt;</code></dt><dd>This indicates the beginning of a conflict. You should never have to use this rule yourself. It only exists so that conflicts are easy to see on a page. See [[Edit Conflicts]].</dd></dl><hr /><p>The text formatting rules for links are listed on a separate page. See [[Link Pattern]].</p>
+diff-minor: 
+ip: 127.0.0.1
+ts: 1251135922
+minor: 
+host: venus-vista
+username: 
+revision: 3
+diff-major: 1
+summary: The rest of this page describes the default rules. * Paragraphs to get you started * Local Links like the ones in these list above * . . .
+languages: 
+lastmajor: 3
+keep-ts: 1251135922

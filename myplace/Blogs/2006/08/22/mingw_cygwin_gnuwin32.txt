@@ -1,0 +1,56 @@
+====== mingw,cygwin,gnuwin32 ======
+Created 2006-05-17 00:01:00
+Updated 2006-08-22 16:49:00
+安装MinGW 无配置安装MSYS及MSYSDTK 编辑了/MSYS.bat 加入chdir，使可以在目录外运行。 通过命令行参数%~dp0得到MSYS的路径。 删除其他命令行参数相关的动作。 将命令行参数%~dp1设置为环境变量MSYSINITDIR以备Shell初始目录之用。 将默认的Shell从rxvt改为sh。增加了/LoadMSYS.bat及/LoadMSYS.reg 作用：扩展命令行参数为完全路径名,将参数传送给MSYS.BAT。 将LoadMSYS.bat放在系统PATH下面，使在任何目录下都可以调用。 编辑注册表ROOT下面的*项和Folder项，以支持鼠标右健直接调用。 导出注册表项为LoadMSYS.reg，以备用。编辑了/etc/fstab 设置MinGW目录的Mount Point为/mingw 设置MINGW/INFO的Mount Point为/info 创建COMMAND目录，将Mount Point设为/usr/local/bin,以存放用MinGW Gcc编译的程序。 设置了其他一些常用目录的Mount Point。编辑了/etc/profile export PATH：加入/Mingw/bin。 export INFOPATH：目录用;号隔开,作info搜索之用。 如果$MSYSINITDIR不为空，则改变为初始目录(CD之)。编辑了$HOME/.vimrc 配置复制自win32版的gvim。 加入syntax on:语法高亮。 加入set nu:显示行号。 加入set guifont:设置字体（console版本无效)总结 MinGW:许多unix源码，很难在不修改的情况下直接编译 MinGW:作为windows native programe（不依赖emulation layer），可以胜任 MSYS:对宽字符的支持较差 FREEWARE下载时只选择必需的程序包 与MSYS近似的许多配置 编辑了/etc/bash.bashrc export PATH export INFOPATH 与MinGW不同，目录间用:号隔开export MANPATH设置常用目录的Mount Point Cygwin无/etc/fstab文件，Mount Point通过命令行mount命令设置，设置在下次重启之后仍有效。编译了新版本的Gcc及Gdb 编译了新版本的make 编译了termcap 编译了less 总结 大多数unix源码都可以顺利编译 对宽字符集支持较好 编译的程序大多数依赖CygDLL 非常丰富的程序库 FREEWAREtermcap 在MSYS/MinGW环境下编译成功less 需要termcap 在MSYS/MinGw环境下无法编译 提示找不到langinfo.h 下载了libgw32c的lib版,修改makefile,main.c,filename.c之后,编译成功，但运行时出现错误。 在Cygwin环境下编译成功 用VC97编译成功libgw32c 在MSYS/MinGw环境下无法编译 错误极多在Cygwin环境下无法编译 错误极多连接bin版某些程序可以编译 运行时出现错误 以编译less为例wget 用VC97编译成功总结 源代码大多在MSYS/MinGW下无法成功编译 源代码对Microsoft VC友好 源代码对Cygwin/MinGW友好 作为独立的工具程式较有价值 FREEWARE总结之总结 这两三天，加上以前几天，仿佛很忙。./configure,make,make install,make clean,make distclean,info XXX，上网看文档，下载源代码。归结起来，没做什么有价值的事。就算积累了一些经验。经验不外是记忆，记忆不外是先进先出，然后完了。所以做了以上一点记号。哎，大脑内存不断磨损，还是复制到外存贮器上安全一点，算是备份。
+
+== Comments: ==
+
+* **re: 简记**
+ok 谢谢
+**David Zou**,2006-05-17 09:27:00
+
+* **re: 简记**
+你在玩linux?
+**三哥**,2006-05-17 14:08:00
+
+* **re: 简记**
+本来想玩的，红帽子最新出了Fedora的第５版。不过还是有一些东西不在Windows下做不了，像看书，有一些图书格式没有好的阅读器，还有听MP3，还没有功能完善的播放器。想要装两个系统，现在硬盘又不够......上面写的那三个都是编程相关的，在学C和C++
+**xrLiN**,2006-05-17 21:17:00
+
+* **re: 简记**
+不错不错，回去后我也玩玩Linux。这几天忙晕了
+**G Lin**,2006-05-18 03:25:00
+
+* **re: 简记**
+噗咚(不懂)----------青蛙掉水里了 
+**呱唧-假牙掉了**,2006-05-22 10:48:00
+
+* **re: 简记**
+你干嘛不去死啊
+**R.O.Y**,2006-05-22 14:40:00
+
+* **re: 简记**
+@呱唧-假牙掉了 
+
+青蛙掉水里什么事也没有，你是狐狸，噗咚～ 
+
+挂了～
+**xrLiN**,2006-05-24 04:31:00
+
+* **re: 简记**
+我现在是没什么时间玩了５５５，和你说的一样自由死于工作日．
+**三哥**,2006-05-24 17:44:00
+
+* **re: 简记**
+呵呵，很想看看三哥现在的摸样呢。有时间的话QQ上聊视屏吧。
+**刘小亮**,2006-05-25 14:04:00
+
+* **re: 简记**
+我又不是黄花闺女有什么好看的.当然还是比你帅.
+**三哥**,2006-05-25 16:23:00
+
+---------<META>---------
+ts: 1251012655
+username: xiaoranzzz
+revision: 1
+languages: 

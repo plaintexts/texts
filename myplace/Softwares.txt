@@ -1,0 +1,35 @@
+Linux
+=====
+
+Booting
+-------
+* [[.grub4dos|grub4dos]]
+* [[.syslinux|syslinux]]
+
+Windows
+=======
+
+Booting
+-------
+* [[.grub4dos|grub4dos]]
+* [[.syslinux|syslinux]]
+* [[.bootsect|bootsect]]
+** For repairing Vista and Xp bootsector as well as MBR.
+** This program is from microsoft, can be located under directory /boot in windows vista installation  CD.
+
+Disks
+-----
+* [[.PiriformDefraggler|PiriformDefraggler]]
+** Lite, free, easy to use.
+
+System Tweaking
+---------------
+* [[.PiriformCCleaner|PiriformCCleaner]]
+** Lite, free, easy to use for cleaning up the system.
+
+version information
+------- -----------
+Revision 2, Last updated Sat May 29 01:22:15 2010, by xiaoranzzz@myplace.hell
+ts: 1275067335
+lastmajor: 2
+keep-ts: 1275067335

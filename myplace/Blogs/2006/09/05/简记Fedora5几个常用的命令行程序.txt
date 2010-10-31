@@ -1,0 +1,50 @@
+====== 简记Fedora5几个常用的命令行程序 ======
+Created 2006-09-05 01:11:00
+Updated 2006-09-05 14:53:00
+rm用于删除文件及文件夹比较有用的选项-f 不询问，强制性删除。-R 递归删除。我主要用于删除文件夹。注:rmdir 只能删除空文件夹。find用于查找，并执行批量处理比较有用的选项-name确定文件名称。可用wildcards.
+
+例如：find /usr/bin -name "*zip"-exec用于执行命令。查找到的文件名代替符号为{}以;号结尾。在终端中输入时，前面加上\
+
+例如：find . -name "*.txt" -exec rm {} \;将删除当前目录及子目录下所有以.txt结尾的文件df显示磁盘空间使用情况。ln用于创建链接。比较有用的选项-s用于创建软链接。（硬链接好像很少使用）例如：ln -s temp /tmp/将在当前目录下创建指向/tmp的软链接。tar打包、解压比较用用的选项-c打包
+
+-x解压-f指定文件名-v显示信息例如：
+
+tar -xvf foo.tar.gz
+
+tar -cvf foo.tar.gz "test/*"
+
+less,more,cat显示文本info,man查看帮助文档type查询命令的来源。
+
+例如：type ll
+
+whereis查询命令的可执行程序路径、源代码路径及文档路径例如：whereis tarwhich查询命令的完全路径例如：which vim
+
+yum用于软件包的安装、删除、升级全名是Yellowdog Updater Modified比较有用的选项install,remove,update安装，删除，升级后接软件包名称例如：yum install "mplayer"例如：yum install "mplayer-plugin-*"例如：yum remove "xmms*"例如：yum update "gnochm"info查询软件包例如：yum info "gstreamer*"grouplist列出软件组groupinstall,groupremove,groupupdate软件组的安装，删除，升级例如：yum groupinstall "KDE (K Desktop Environment)"
+
+== Comments: ==
+
+* **re: 简记Fedora5几个常用的命令行程序**
+看来只有三哥才能看懂了。 
+
+对了，你是通过哪个网址访问到我的博客的?
+**R.O.Y**,2006-09-05 01:23:00
+
+* **re: 简记Fedora5几个常用的命令行程序**
+2个地址都能访问。
+**三哥**,2006-09-05 08:19:00
+
+* **re: 简记Fedora5几个常用的命令行程序**
+给yum定格中文名吧，就叫“被改良的黄狗升级者”。有没有能够列出已安装软件列表的的命令。
+**三哥**,2006-09-05 13:02:00
+
+* **re: 简记Fedora5几个常用的命令行程序**
+有个命令：yum list installed 
+
+yum有另外两个图形界面我用了觉得不错。一个是gnoyum,全名为Gnome interface for yum；另一个是yumex,全名为yum Extender.默认是没有安装，可以用yum install gnoyum yumex安装这两个东西。之后在Gnome菜单的系统工具（英文界面里叫System Tools）里面可以看到.
+**xrLiN**,2006-09-05 14:32:00
+
+---------<META>---------
+ts: 1251012655
+username: xiaoranzzz
+revision: 1
+languages: 

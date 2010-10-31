@@ -1,0 +1,13 @@
+* chvt
+** Chang virtual console
+---------<META>---------
+flags: 0
+ip: 192.168.1.25
+ts: 1274004766
+minor: 
+host: myplace.hell
+username: xiaoranzzz
+revision: 1
+summary: * chvt ** Chang virtual console 
+languages: 
+lastmajor: 1

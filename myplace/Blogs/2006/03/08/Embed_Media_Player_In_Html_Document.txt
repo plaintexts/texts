@@ -1,0 +1,45 @@
+====== Embed Media Player In Html Document ======
+Created 2006-03-08 21:52:00
+Updated 2006-03-08 21:52:00
+
+
+To embed an object in HTML document, the object class ID is required. The class ID for Windows Media Player 7, 9 and 10 is clsid:6BF52A52-394A-11D3-B153-00C04F79FAA6.
+
+Insert the following code into your HTML document to embed Windows Media Player 7 and later:
+
+<OBJECT id="VIDEO" width="320" height="240" 
+ style="position:absolute; left:0;top:0;"
+ CLASSID="CLSID:6BF52A52-394A-11d3-B153-00C04F79FAA6"
+ type="application/x-oleobject">
+ 
+ <PARAM NAME="URL" VALUE="your file or url">
+ <PARAM NAME="SendPlayStateChangeEvents" VALUE="True">
+ <PARAM NAME="AutoStart" VALUE="True">
+ <PARAM name="uiMode" value="none">
+ <PARAM name="PlayCount" value="9999">
+</OBJECT>
+
+In the URL parameter, you can specify a URL (for streaming) or a local file.
+
+If you are using a , you should include the video file in your application. Including video reduce bandwidth usage and bring a better user experience. 
+
+Most important parameters supported by Windows Media Player 7 and later: 
+
+ParameterDefaultDescriptionautoStarttrueSpecifies or retrieves a value indicating whether the current media item begins playing automatically.balanceSpecifies the current stereo balance.
+
+Values range from ?00 to 100.baseURLSpecifies the base URL used for relative path resolution with URL script commands that are embedded in media items.captioningIDSpecifies the name of the element displaying the captioning.currentMarkerSpecifies the current marker number.currentPositionSpecifies the current position in the media item in seconds.defaultFrame-Specifies the name of the frame used to display a URL.enableContextMenutrueSpecifies a value indicating whether to enable the context menu, which appears when the right mouse button is clicked.enabledfalseSpecifies whether the Windows Media Player control is enabled.fullScreenfalseSpecifies whether video content is played back in full-screen mode.InvokeURLstrueSpecifies a value indicating whether URL events should launch a Web browser.MutefalseSpecifies if audio is muted.PlayCount1Specifies the number of times a media item will play. Minimum value of one.Rate1.0Specifies the playback rate.
+
+0.5 equates to half the normal playback speed, 2 equates to twice.stretchToFitfalseSpecifies whether video displayed by the control automatically sizes to fit the video window, when the video window is larger than the dimensions of the video image.uiModefullSpecifies which controls are shown in the user interface.
+
+Possible values: invisible, none, mini, full.URL-Specifies the name of the media item to play.
+
+You can specify a local filename or a URL.VolumeLast settingZero specifies no volume and 100 specifies full volume.windowlessVideofalseSpecifies or retrieves a value indicating whether the Windows Media Player control renders video in windowless mode.
+
+When windowlessVideo is set to true, the Player control renders video directly in the client area, so you can apply special effects or layer the video with text.
+
+Supported by Windows Media Player for Windows XP or later.
+---------<META>---------
+ts: 1251012655
+username: xiaoranzzz
+revision: 1
+languages: 

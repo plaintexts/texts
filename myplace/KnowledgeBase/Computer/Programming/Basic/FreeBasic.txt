@@ -1,0 +1,60 @@
+====== FreeBasic ======
+Created Sunday 28 October 2007
+From Wikipedia, the free encyclopedia
+
+Paradigm 	Procedural
+Appeared in 	2004
+Developer 	The FreeBASIC Development Team
+Latest release 	0.18.1 Intermediate/ 2007-08-13
+Typing discipline 	Static
+Dialects 	[[BASIC]]
+Influenced by 	[[BASIC:QuickBasic|QuickBASIC]], C
+OS 	DOS, Linux, Windows
+License 	GNU GPL, Standard libraries licensed under the GNU LGPL
+Website 	http://www.freebasic.net
+
+FreeBASIC is a free/open source (GPL), 32-bit [[BASIC]] compiler for Microsoft Windows, protected-mode DOS (DOS extender), Linux, and Xbox. FreeBASIC is a self-hosting compiler, being roughly 100k lines of code.
+
+It makes use of the GNU binutils programming tools as backends and can produce console and graphical/GUI executables, besides dynamic and static libraries. FreeBASIC fully supports the use of C libraries and partially C++ library support. This allows the programmer to use and also create libraries for C and many other languages.
+Contents
+
+	* 1 Syntax
+	      o 1.1 Compatibility
+	      o 1.2 Hello, World!
+	* 2 Graphics Library
+	* 3 Future Development
+	* 4 External links
+
+ Syntax
+
+FreeBASIC syntax attempts to stay as close to the BASIC syntax as possible, specifically that of QuickBASIC. Although the syntax attempts to stay compatible with its predecessor, FreeBASIC follows modern standards and coding practices. Standard procedural features, along with object oriented styled features such as types as objects, operator overloading, function overloading, namespaces, etc., have been added in FreeBASIC.
+
+FreeBASIC's lines end when the end-of-line characters are found, or with a colon. Because of this, lines don't have to have a special character (such as the semicolon in C) to notify the compiler of the end of line. Multiple lines of code between linebreaks can be done by explicitly ending a line with a colon.
+
+FreeBASIC supports block commenting along with end of line remarks. Full line comments are made with a single quote character ', while blocks of commented code begin with /' and end with '/.
+
+Compatibility
+
+Due to FreeBASIC being a successor to the [[QuickBASIC|QuickBasic]] Programming Language, syntax changes had to be made during development to keep FreeBASIC compatible with modern utilities, and to allow advanced programming features. Wanting to both keep the compiler moving forward to be GCC compliant, and able to keep QuickBASIC compatible syntax, -lang options were created.
+
+- When choosing Language Set FB (-lang fb as a command-line argument), all of the new modern features that FreeBASIC offers are available. However, "hackish" features from QuickBASIC that were incompatible with modern programming practices are no longer allowed.
+
+- Language Set Deprecated (-lang deprecated) allows syntax from the previous version of FreeBASIC to be allowed. Certain compiler changes may cause breaks in syntax (as FreeBASIC is still in BETA development), and -lang deprecated was added to allow people a working solution while they port their code over to the most recent FreeBASIC version.
+
+- Language Set QB (-lang qb) allows as close as possible to [[QuickBasic|QB]]-like syntax on a modern system. FreeBASIC's quick development to modern programming practice led to conflicts with the QB-like syntax that was allowed. -lang qb disables modern features for those who wish to port an older program to the compiler, without limiting the compiler's development on forward. Syntax rules, such as allowing implicit variables, suffixes, gosub/return, numeric labels, etc., are permitted in this lang option.
+
+ Hello, World!
+
+print "Hello, World!"
+
+ Graphics Library
+
+FreeBASIC has a built-in 2D, software graphics library to be QuickBASIC compatible, which provides the user with simple graphics primitives (such as rectangles, lines, and circles), blitting, and additional features which weren't present in QuickBASIC's graphical library. The library itself is not OS dependent, so code is portable across platforms with the library.
+
+Although the Graphics Library is built-in, it is only included if you choose to use it, which is done simply by including a call to the FBgfx Screen command. Common libraries such as OpenGL + Creating a Window with your API (Windows, Linux, Etc.) for hardware acceleration can be used without interfering with the FreeBASIC Graphics Library.
+
+ Future Development
+
+FreeBASIC continues to make development progression towards its goal of being a GCC front-end[1], which would allow many features found in C++ and other object oriented language, portability to nearly any modern system, and advanced optimization techniques.
+
+With the release of version 0.17 object oriented programming (OOP) was introduced, adding types and structures. Further implementations are expected.

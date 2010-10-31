@@ -1,0 +1,102 @@
+==chmsee==
+<pre>
+CHMSEE(1)                                                            CHMSEE(1)
+
+
+
+NAME
+       chmsee — A chm file viewer written in GTK
+
+SYNOPSIS
+       chmsee [FILE]
+
+       chmsee --help
+
+       chmsee --version
+
+DESCRIPTION
+       chmsee is a viewer for Compiled HTML Help (CHM) files. It, can show the
+       contents tree if one is available, print the current page  and  do  the
+       usual history stunts. It allows you to change fonts, use bookmarks.
+
+SEE ALSO
+       xchm (1).
+
+AUTHOR
+       This  manual  page  was written by LI Daobing <lidaobing@gmail.com> for
+       the Debian system (but may be used by others).  Permission  is  granted
+       to  copy, distribute and/or modify this document under the terms of the
+       GNU General Public License, Version 2 any later  version  published  by
+       the Free Software Foundation.
+
+
+       On  Debian systems, the complete text of the GNU General Public License
+       can be found in /usr/share/common-licenses/GPL.
+
+
+
+
+                                                                     CHMSEE(1)
+
+</pre>
+==cs2w==
+<pre>
+CS2W(1)                          User Commands                         CS2W(1)
+
+
+
+NAME
+       cs2w - Extract CHM for web browsing.
+
+SYNOPSIS
+       cs2w [-C dir] [-T tpl] chmfile
+
+DESCRIPTION
+       Extract CHM for web browsing.
+
+       Example:   cs2w   -C   /var/www/freebsd_handbook   -T   /usr/share/chm‐
+       see/cs2w/template a.chm
+
+OPTIONS
+       -C, --dir
+              extract to this target directory, default is current  directory.
+
+       -T, --tpl
+              web  template directory, default is ‘/usr/share/chmsee/cs2w/tem‐
+              plate’.
+
+       -h, --help
+              display this help and exit
+
+       -V, --version
+              print version information and exit
+
+DEPENDENCIES
+       this utility is written totally in python and with python-chm  package,
+       then  the  python-chm  package  has  dependency with the libchm runtime
+       library, so you should install them first.
+
+REPORTING BUGS
+       Report bugs to crquan@gmail.com
+
+COPYRIGHT
+       Copyright © 2007  rankle_ <crquan@gmail.com>
+       This is free software; see the source for copying conditions. There  is
+       NO  warranty;  not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR
+       PURPOSE.
+
+
+
+cs2w 0.0.1                         July 2007                           CS2W(1)
+</pre>
+---------<META>---------
+flags: 0
+ip: ::ffff:127.0.0.1
+ts: 1252436748
+minor: 
+host: ::ffff:127.0.0.1
+username: xiaoranzzz
+revision: 1
+summary: ==chmsee== <pre> CHMSEE(1)                                                            CHMSEE(1) NAME        chmsee — A chm file . . .
+languages: 
+lastmajor: 1

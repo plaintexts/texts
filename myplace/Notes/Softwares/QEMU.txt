@@ -1,0 +1,60 @@
+====== QEMU ======
+Created Monday 24 September 2007
+
+QEMU is a generic and open source machine emulator and virtualizer.
+
+==== Homepage ====
+
+http://fabrice.bellard.free.fr/qemu/index.html
+
+==== Usage ====
+
+=== • 1.Create the disk image file ===
+Using qemu-img.For example, 
+	//qemu-img create -f raw msdos.img 400M//
+Create a disk image file "msdos.img" with 400M disk space.
+
+=== • 2.Download some boot-able disk image file. ===
+A bootable cdrom,floppy,disk image file is required for booting the virtual machine.
+
+=== • 3.Power on the machine ===
+No configuration file is required.Just specified the arguments to "qemu".For example,
+	//qemu -hda msdos.img -cdrom ms-dosv622.iso -boot d//
+Boot the machine from cdrom("ms-dosv622.iso"),using "msdos.img" as the first hard disk.
+
+==== Tips: ====
+
+Qemu comes with a QEMU accelerator named "kqemu".Because it's quite host system depented.
+Usually it required manual installing.
+In a Debian Gnu/Linux system, the following steps is suggested.
+
+* 1.//aptitude install kqemu-common kqemu-source//
+* 2.//module-assistant update//
+* 3.//module-assistant prepare kqemu//
+* 4.//module-assistant autoinstall kqemu//
+* 5.If udev is used,then :
+	sbin/modprobe kqemu
+	echo 'KERNEL=="kqemu", NAME="%k", MODE="0666"' > /etc/udev/rules.d/60-kqemu.rules
+Or manaully:
+	sbin/modprobe kqemu major=250
+	mknod /dev/kqemu c 250 0
+	chmod 666 /dev/kqemu	
+•6.make kqemu auto load in boot time:
+	echo "kqemu" >>/etc/modules
+
+
+==== Reference: ====
+
+http://fabrice.bellard.free.fr/qemu/kqemu-doc.html
+
+
+
+
+
+
+
+
+
+
+
+

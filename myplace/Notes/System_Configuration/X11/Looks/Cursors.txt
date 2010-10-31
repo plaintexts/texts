@@ -1,0 +1,60 @@
+====== Cursors ======
+Created Saturday 12 April 2008
+
+
+== Installation options ==
+
+There are three basic ways to install the themes:
+
+	1. System-wide:
+**	/usr/share/cursors/xorg-x11**
+
+	2. System-wide in the local directory
+** 	/usr/local/share/cursors/xorg-x11**
+
+	3. For one user only
+**        ~/.icons/**	
+
+User-specific settings override local settings, which override system-wide settings.
+
+**Installing the theme**
+
+To install a theme, download the theme and unpack it. You should have a directory structure like the following:
+
+	* theme_name
+	      o index.theme
+	      o cursors
+	            + cursor files…
+
+Move the entire theme_name directory to the installation destination: **/usr/share/cursors/xorg-x11/,** **/usr/local/share/cursors/xorg-x11/**, or **~/.icons/**.
+
+== Choosing a default theme ==
+
+There’s a concept of a **default theme**. The default theme is located in the **default/ **subdirectory of wherever you’ve installed your theme. This is how the system decides which theme to use — it uses the “default” theme. It reads the index.theme file and looks at it.
+
+If you installed your theme system-wide or system-wide local, you need to edit the /usr/share/cursors/xorg-x11/default/index.theme or the /usr/local/share/cursors/xorg-x11/default/index.theme file. Specify the default theme should inherit from the theme you want to use. For example, here is the default X11 theme if you haven’t specified anything else:
+
+[Icon Theme]
+Inherits=core
+
+That file tells X11 to use the core cursor theme — the one built right into X11 itself. If you want to use the neutral theme instead, edit the file thusly:
+
+[Icon Theme]
+Inherits=neutral
+
+If you installed the theme in your ~/.icons/ directory, you can do several different things:
+
+* Rename the theme directory from theme_directory to **default**.
+* Leave your themes in their original directories, and make a default directory and create in it a single file called **index.theme** with the contents as shown just above.
+* Leave your themes in their original directories, and make a symlink named default to the theme directory. For instance,// ln -sfnT ~/.icons/redhat9cursors/ ~/.icons/default.// 
+
+**Or,anotherway,the Xresources**
+
+Place the following two lines to the Xresources file,either** /etc/X11/Xresources** or **~/.Xresource**
+
+//Xcursor.theme: CursorThemeName//
+//Xcursor.size: 32//
+
+
+
+

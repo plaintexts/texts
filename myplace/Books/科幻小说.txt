@@ -1,0 +1,14 @@
+
+[[.DouglasAdams]]
+---------<META>---------
+flags: 010
+blocks: <p>[[.DouglasAdams]]</p>
+ip: 127.0.0.1
+ts: 1251009153
+minor: 
+host: venus-vista
+username: xiaoranzzz
+revision: 1
+summary:  .DouglasAdams
+languages: 
+lastmajor: 1

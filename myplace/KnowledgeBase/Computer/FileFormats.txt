@@ -1,0 +1,13 @@
+* [[.dda|dda]] - Direct Access Archive
+---------<META>---------
+flags: 010
+ip: ::ffff:127.0.0.1
+ts: 1252424051
+minor: 
+host: ::ffff:127.0.0.1
+username: xiaoranzzz
+revision: 6
+summary: <toc> == [[.dda|dda]] - Direct Access Archive ==
+languages: 
+lastmajor: 6
+keep-ts: 1252424051

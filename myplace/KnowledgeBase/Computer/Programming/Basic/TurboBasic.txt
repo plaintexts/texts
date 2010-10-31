@@ -1,0 +1,34 @@
+====== Turbo BASIC ======
+Created Sunday 28 October 2007
+
+Turbo BASIC
+From Wikipedia, the free encyclopedia
+
+Turbo BASIC is a [[BASIC]] compiler and dialect originally created by Robert 'Bob' Zale and bought from him by Borland. When Borland decided to stop publishing it, Zale bought it back from them, renamed it to PowerBASIC and set up PowerBASIC Inc. to continue support and development of it. It is still sold today.
+
+This software is from the 1987-88 period and features the Borland "black screen" similar to Turbo Pascal 4.0, Turbo C 1.0/1.5, and Turbo Prolog 1.1. Borland did not adopt its trademark "blue screen" integrated development environment until the 1989 period when Turbo C 2.0, Turbo C++ 1.1, etc. were released. By this time, Turbo Basic and Turbo Prolog were no longer being sold.
+
+Unlike most BASIC implementations of this period, Turbo BASIC was a full compiler which generated native code for DOS. Other implementations were either interpreters, or relied heavily on a runtime library. The integrated development environment could run a BASIC program inside itself (see sample below) for traditional BASIC debugging, or generate a DOS EXE file which was completely stand-alone and could be run on other systems without the Turbo BASIC product or runtime libraries.
+
+Code sample
+
+The following program is an example of the ALGOL-like BASIC dialect that Turbo Basic supported. Unlike traditional BASIC, which used line numbers and had limited control structures and no support for ALGOL-like subroutines, modern BASIC dialects starting at this period were extended to make the language compatible with modern structured programming theory by discarding the line numbers and adding the control structures and subroutine definitions needed by structured programming.
+
+ INPUT "What is your name:", A$
+ PRINT "Hello "; A$
+ DO
+   S$ = ""
+   INPUT "How many stars do you want to print"; S
+   FOR I = 1 TO S
+     S$ = S$ + "*"
+   NEXT I
+   PRINT S$
+   DO 
+     INPUT "Do you want to print more stars"; Q$
+   LOOP WHILE LEN(Q$) = 0
+   Q$ = LEFT$(Q$, 1)
+ LOOP WHILE (Q$ = "Y") OR (Q$ = "y")
+ PRINT "Goodbye "; A$
+
+
+Like the other Borland products of this era, the code executes within the integrated development environment.

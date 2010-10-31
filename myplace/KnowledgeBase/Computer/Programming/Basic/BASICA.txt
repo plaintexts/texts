@@ -1,0 +1,28 @@
+====== BASICA ======
+Created Sunday 28 October 2007
+
+Microsoft BASICA
+From Wikipedia, the free encyclopedia
+
+Microsoft BASICA (short for "Advanced BASIC") is a simple disk-based [[BASIC]] interpreter written by Microsoft for PC-DOS. BASICA allows use of the ROM-resident BASIC included with early models of IBM's PC while DOS is loaded (the ROM BASIC itself runs when nothing is loaded when booting) and adds functionality such as file access and storage of programs on disk. It does not run on non-IBM PCs and even on later IBM models, since those lack the requisite ROM BASIC.
+
+Lineage
+
+BASICA's development environment is very similar to that of the Dartmouth Time Sharing System associated with [[DM-BASIC|Dartmouth BASIC]]. In both, a user enters instructions at a prompt. If an instruction begins with a line number (used to sequence the instructions and as a label), it is stored as part of the current program. If not, it is executed immediately.
+
+BASICA's successor was [[GW-BASIC|Microsoft GW-BASIC]], which was very similar but did not use any ROM-based BASIC routines and thus can run on virtually any IBM-compatible system.
+---------<META>---------
+flags: 0101010
+blocks: <p><span class="post_title">BASICA </span><br /><span class="footer">Created Sunday 28 October 2007</span><br /></p><p>Microsoft BASICA<br />From Wikipedia, the free encyclopedia<br /><br />Microsoft BASICA (short for &#x201c;Advanced BASIC&#x201d;) is a simple disk-based [[BASIC]] interpreter written by Microsoft for PC-DOS. BASICA allows use of the ROM-resident BASIC included with early models of IBM&#x2019;s PC while DOS is loaded (the ROM BASIC itself runs when nothing is loaded when booting) and adds functionality such as file access and storage of programs on disk. It does not run on non-IBM PCs and even on later IBM models, since those lack the requisite ROM BASIC.<br /><br />Lineage<br /><br />BASICA&#x2019;s development environment is very similar to that of the Dartmouth Time Sharing System associated with [[DM-BASIC|Dartmouth BASIC]]. In both, a user enters instructions at a prompt. If an instruction begins with a line number (used to sequence the instructions and as a label), it is stored as part of the current program. If not, it is executed immediately.<br /><br />BASICA&#x2019;s successor was [[GW-BASIC|Microsoft GW-BASIC]], which was very similar but did not use any ROM-based BASIC routines and thus can run on virtually any IBM-compatible system.</p>
+diff-minor: 
+ip: 192.168.1.25
+ts: 1250978130
+minor: 
+host: venus-vista
+username: xiaoranzzz
+revision: 5
+diff-major: 1
+summary: 
+languages: 
+lastmajor: 5
+keep-ts: 1250978130

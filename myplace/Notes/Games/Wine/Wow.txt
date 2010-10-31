@@ -1,0 +1,22 @@
+====== Wow ======
+Created Thursday 01/02/2007
+
+**1.DisabledExtensions **
+
+//regedit//
+
+Find //HKEY_CURRENT_USER\Software\Wine\//
+
+Highlight the wine folder in the left hand pane by clicking left on it. The icon should change to an open folder
+
+Click right on the wine folder and select [NEW] then [KEY]
+
+Replace the text "New Key #1" with //OpenGL//
+
+Click right in the right hand pane and select [NEW] then [String Value]
+
+Replace "New Value #1" with "//DisabledExtensions//"
+(Notice it's case sensitive)
+
+Then double click anywhere on the line, a dialog box will open.
+In the value field type "//GL_ARB_vertex_buffer_object//" (without the quotes).

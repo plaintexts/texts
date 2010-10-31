@@ -1,0 +1,7 @@
+====== Fedora ======
+Created Wednesday 10/01/2007
+
+[[.Post Installation|Post Installation]]
+
+[[.Display|Display]]
+

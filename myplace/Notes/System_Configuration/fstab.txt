@@ -1,0 +1,21 @@
+====== Fstab ======
+Created Sunday 02 March 2008
+
+ Swap and Hibernation problem
+
+Ubunutu uses unique IDs (UUIDs) to identify partitions. The advantage of this is you do not have to differentiate between sda and hda devices. So if upgrading to modern libata drivers will work without having to rewrite hda devices to sda ones.
+
+However feisty seems to have a problem with this naming method and swap partitions on some installations. Do $ sudo free to check if your swap partition is used. If the line with swap it it just returns three times "0", your swap partition is not being used and you are most probably affected by bug 66637. The problem is that your system generates a new UUID for your swap partition on every reboot. Your old settings in the fstab then cannot be used anymore and your system does not use any swap. Without swap hibernate (suspend to disk) does not work either (standby/suspend to RAM still does).
+
+Follow these instructions to fix this
+
+   1. determine your swap with $ sudo fdisk -l. In my case it was /dev/sda2
+   2. do mkswap on your swap partition and record the uuid which this command outputs, e.g. $ sudo mkswap /dev/sda2
+   3. now use this UUID to put into fstab: Look for the line with the swap partition and replace the old UUID with the new one: $ sudo gedit /etc/fstab
+   4. add the same UUID intu your resume file: __$ sudo gedit /etc/initramfs-tools/conf.d/resume__; the file should only look like this: __"RESUME=UUID=<the-swap-partition-uuid>"__
+   5. do $ update-initramfs -u
+   6. update your grub configuration; edit it with __$ sudo gedit /boot/grub/menu.lst__ and look for the line that says __"# defoptions=quiet splash"__ and change it to__ "# defoptions=quiet splash resume=<the-swap-partition-uuid>"__
+   7. reboot normally. After this test with $ sudo free or with $ swapon -s if your swap is now activated
+   8. Now you can test hibernate, too. 
+
+Thanks to various people on the bug thread. 

@@ -1,0 +1,23 @@
+The Project
+
+The Syslinux Project covers lightweight bootloaders for MS-DOS FAT filesystems (SYSLINUX), network booting (PXELINUX), bootable "El Torito" CD-ROMs (ISOLINUX), and Linux ext2/ext3 filesystems (EXTLINUX). The project also includes MEMDISK, a tool to boot legacy operating systems (such as DOS) from nontraditional media; it is usually used in conjunction with PXELINUX and ISOLINUX.
+
+More info about SYSLINUX, PXELINUX, ISOLINUX, and EXTLINUX can be found on their respective pages; however, since the three have a lot in common, the common documentation is on the SYSLINUX page for now.
+
+The Syslinux Project is now maintained in a public git repository. See Development for details.
+
+There is a general mailing list that carries SYSLINUX announcements as well as discussion. If you have a problem it is a very good idea to browse the archives for information.
+
+If you're interested in helping out with the SYSLINUX Project, please see the help wanted page, or just help out with the Wiki! 
+---------<META>---------
+flags: 0
+ip: 192.168.1.25
+ts: 1274105945
+minor: 
+host: myplace.hell
+username: 
+revision: 3
+summary: 
+languages: 
+lastmajor: 3
+keep-ts: 1274105945

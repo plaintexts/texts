@@ -1,0 +1,12 @@
+====== Input Method ======
+Created Thursday 01/02/2007
+
+**1. SCIM Problem**
+
+I'm using the newest version of wine (0.9.29). With scim enabled, it just does not work.
+The solution : export XMODIFIERS="" , or turn off scim entirely.
+Relative Url:
+
+1. http://moto.debian.org.tw/viewtopic.php?t=11008
+2. http://forum.ubuntu.org.cn/viewtopic.php?p=181459
+

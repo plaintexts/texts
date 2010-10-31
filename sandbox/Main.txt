@@ -1,0 +1,12 @@
+hello world
+
+hello world again
+
+hello world again and again
+
+version information
+------- -----------
+Revision 8, Last updated Tue May 25 00:55:58 2010, by xiaoranzzz@myplace.hell
+ts: 1274720158
+lastmajor: 8
+keep-ts: 1274720158

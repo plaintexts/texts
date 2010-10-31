@@ -1,0 +1,24 @@
+== 海南省图书馆（读秀学术搜索。 超星电子书下载）  （09-7-28更新） ==
+http://www.hilib.com
+{{{
+证号：00000019
+证 号: 00000029
+证 号: 00000011
+密码都是123456
+}}}
+http://218.77.187.89:8080/authentication?type=2&ssotoken=2c90bc90236dfffd0123865979f80fdd
+
+---------<META>---------
+diff-minor: 
+flags: 0
+ip: 192.168.1.25
+ts: 1252103628
+minor: 1
+host: myplace.hell
+username: xiaoranzzz
+revision: 3
+diff-major: 
+summary: 
+languages: 
+lastmajor: 2
+keep-ts: 1252103628

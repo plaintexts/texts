@@ -1,0 +1,21 @@
+====== Computer ======
+Created Monday 15 October 2007
+
+[[.OS|Operating System]]
+
+[[.Programming|Programming]]
+
+[[.Culture|Culture]]
+
+[[.FileFormats|File Formats]]
+---------<META>---------
+flags: 010101010
+ip: ::ffff:127.0.0.1
+ts: 1252423775
+minor: 1
+host: ::ffff:127.0.0.1
+username: xiaoranzzz
+revision: 2
+summary: 
+languages: 
+keep-ts: 1252423775

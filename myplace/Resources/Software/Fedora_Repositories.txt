@@ -1,0 +1,27 @@
+====== Fedora Repositories ======
+Created Saturday 06/01/2007
+
+* Core
+:: http://download.fedora.redhat.com/pub/fedora/linux/core/6/i386/os/repodata/
+* Updates
+* Extras
+:: http://download.fedora.redhat.com/pub/fedora/linux/extras/6/i386/repodata/
+* Livna
+* Freshrpms
+* Atrpms
+* Rpmforge
+---------<META>---------
+flags: 0
+blocks: <p><span class="post_title">Fedora Repositories </span><br /><span class="footer">Created Saturday 06/01/2007</span><br /></p><ul><li>Core </li></ul><dl class="quote"><dl class="quote"><dt /><dd><a class="url http" href="http://download.fedora.redhat.com/pub/fedora/linux/core/6/i386/os/repodata/">http://download.fedora.redhat.com/pub/fedora/linux/core/6/i386/os/repodata/</a> </dd></dl></dl><ul><li>Updates</li><li>Extras </li></ul><dl class="quote"><dl class="quote"><dt /><dd><a class="url http" href="http://download.fedora.redhat.com/pub/fedora/linux/extras/6/i386/repodata/">http://download.fedora.redhat.com/pub/fedora/linux/extras/6/i386/repodata/</a> </dd></dl></dl><ul><li>Livna</li><li>Freshrpms</li><li>Atrpms</li><li>Rpmforge</li></ul>
+diff-minor: 
+ip: 127.0.0.1
+ts: 1251140587
+minor: 
+host: venus-vista
+username: xiaoranzzz
+revision: 3
+diff-major: 1
+summary: 
+languages: 
+lastmajor: 3
+keep-ts: 1251140587

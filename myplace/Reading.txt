@@ -1,0 +1,24 @@
+====== Reading ======
+Created Monday 02 February 2009
+
+[[.小说|小说]]
+
+[[.Programming|Programming]]
+
+[[.EbookTect|EbookTect]]
+
+[[.Software|Software]]
+
+[[.DebianRef|Debian Reference]]
+---------<META>---------
+flags: 01010101010
+ip: 192.168.1.25
+ts: 1274005521
+minor: 
+host: myplace.hell
+username: xiaoranzzz
+revision: 5
+summary: 
+languages: 
+lastmajor: 5
+keep-ts: 1274005521

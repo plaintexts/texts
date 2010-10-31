@@ -1,0 +1,11 @@
+====== Operation System ======
+Created Monday 15 October 2007
+
+[[.MS-DOS|MSDOS]]
+
+---------<META>---------
+revision: 1
+flags: 010
+blocks: <p><span class="post_title">Operation System </span><br /><span class="footer">Created Monday 15 October 2007</span><br /></p><p>[[.MS-DOS|MSDOS]]</p>
+ts: 1251140359
+username: xiaoranzzz

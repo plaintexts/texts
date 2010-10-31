@@ -1,0 +1,16 @@
+[[.001-010|一 至 十]]
+---------<META>---------
+flags: 010
+blocks: <p>[[.001-010|一 至 十]]</p>
+diff-minor: 
+ip: 127.0.0.1
+ts: 1251011760
+minor: 
+host: venus-vista
+username: 
+revision: 3
+diff-major: 1
+summary: .第一回
+languages: 
+lastmajor: 3
+keep-ts: 1251011760

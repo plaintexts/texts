@@ -1,0 +1,40 @@
+====== MUDOS ======
+Created Tuesday 07 July 2009
+
+**ualarm**
+
+旧版本MUDOS使用ualarm触发时间事件，如heart_beat。在现代linux中，ualarm与旧版本不兼容，会导致时间事件失败。必须将时间间隔设在1000，000微秒(usec)以下。
+新版本如FluffOS无此问题，但是时间间隔似乎仍须设在1000,000以下，不然heart_beat仍无反应（至少短时间内）。
+
+
+**local_options**
+
+* fluffos
+	* 必须为fluffos定义以下宏于configure.h,否则旧mudlib的master载入之后出现Segments fault.
+//		#define SIZEOF_INT 4//
+//		#define SIZEOF_PTR 4//
+//		#define SIZEOF_SHORT 2//
+//		#define SIZEOF_FLOAT 4//
+//		#define SIZEOF_LONG 4//
+//		#define UINT32 unsigned long//
+//		#define INCL_MYSQL_MYSQL_H//
+//		#define CONFIGURE_VERSION   5//
+
+
+**兼容性**
+
+* MUDOS V22prv11有tail()，之后版本无。
+* Fluffos 的 include/runtime_config.h __MUD_PORT__ 与 MUDOS 不兼容。
+* Fluffos 的 include/runtime_config.h 中 缺少 __SAVE_BINARIES_DIR_ 宏。MUDOS将之定义为CFG_STR(6)。
+
+**Package**
+
+* RWLIB 有两个Package为一些Mudlib所用。
+	*  ansi
+	*  arith_operator (大数操作)
+*   大多数国内MUDLIB使用PACKAGE_UID
+---------<META>---------
+Revision 1, Last updated Tue May 25 01:56:05 2010, by xiaoranzzz
+ts: 1274723765
+lastmajor: 
+keep-ts: 

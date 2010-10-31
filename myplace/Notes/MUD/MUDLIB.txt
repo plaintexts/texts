@@ -1,0 +1,23 @@
+====== MUDLIB ======
+Created Tuesday 07 July 2009
+
+
+**关于private**
+
+加在函数面前，表示私有。
+加在变理面前，同Static。
+
+某些MUDLIB为一些基础Object定义了private function，被继承之后，这些function不能通过call_out访问。
+
+**关于call_out**
+call_out 有两种形式，函数引用，或函数名字符串。如：
+	call_out((:quit:),30);
+	call_out("quit",30);
+函数名字符串形式不能访问私有函数。
+函数引用形式必须事先声明。
+
+---------<META>---------
+Revision 4, Last updated Tue May 25 01:57:33 2010, by xiaoranzzz@myplace.hell
+ts: 1274723853
+lastmajor: 4
+keep-ts: 1274723853

@@ -1,0 +1,24 @@
+====== GParted ======
+Created Monday 01/01/2007
+
+Shrinking a partition which's used up 28Gib,from 65Gib to 29.5Gib lasted about 2 hours.
+Detail below:
+
+
+//Shrink /dev/hda5 from 65.00 GiB to 29.32 GiB  01:43:02    ( SUCCES )//
+//calibrate /dev/hda5  00:00    ( SUCCES )//
+//calculate new size and position of /dev/hda5  00:00    ( SUCCES )//
+//check filesystem on /dev/hda5 for errors and (if possible) fix them  00:37    ( SUCCES )//
+//shrink partition from 65.00 GiB to 29.32 GiB  00:01    ( SUCCES )//
+//check filesystem on /dev/hda5 for errors and (if possible) fix them  00:06    ( SUCCES )//
+//calculate new size and position of /dev/hda5  00:00    ( SUCCES )//
+//check filesystem on /dev/hda5 for errors and (if possible) fix them  00:08    ( SUCCES )//
+//move filesystem to the right  01:07:36    ( SUCCES )//
+//move partition to the right  00:00    ( SUCCES )//
+//check filesystem on /dev/hda5 for errors and (if possible) fix them  00:07    ( SUCCES )//
+//grow filesystem to fill the partition  00:28    ( SUCCES )//
+//========================================//---------<META>---------
+revision: 1
+flags: 01010
+blocks: <p><span class="post_title">GParted </span><br /><span class="footer">Created Monday 01/01/2007</span><br /></p><p>Shrinking a partition which's used up 28Gib,from 65Gib to 29.5Gib lasted about 2 hours.<br />Detail below:<br /><br /><em>Shrink /dev/hda5 from 65.00 GiB to 29.32 GiB 01:43:02 ( SUCCES )</em><br /><em>calibrate /dev/hda5 00:00 ( SUCCES )</em><br /><em>calculate new size and position of /dev/hda5 00:00 ( SUCCES )</em><br /><em>check filesystem on /dev/hda5 for errors and (if possible) fix them  00:37 ( SUCCES )</em><br /><i>shrink partition from 65.00 GiB to 29.32 GiB  00:01    ( SUCCES )</i><br /><em>check filesystem on /dev/hda5 for errors and (if possible) fix them  00:06 ( SUCCES )</em><br /><em>calculate new size and position of /dev/hda5 00:00 ( SUCCES )</em><br /><em>check filesystem on /dev/hda5 for errors and (if possible) fix them  00:08 ( SUCCES )</em><br /><i>move filesystem to the right  01:07:36    ( SUCCES )</i><br /><i>move partition to the right  00:00    ( SUCCES )</i><br /><em>check filesystem on /dev/hda5 for errors and (if possible) fix them  00:07 ( SUCCES )</em><br /><i>grow filesystem to fill the partition  00:28    ( SUCCES )</i><br /><i>========================================</i></p>
+ts: 1250973630

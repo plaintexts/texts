@@ -1,0 +1,20 @@
+摇摇晃晃
+----
+
+<journal>
+---------<META>---------
+flags: 010
+blocks: <p>摇摇晃晃 </p><hr />&lt;journal&gt;
+diff-minor: <p><strong>Added:</strong></p>
+	<div class="new"><p>&gt; 摇摇晃晃<br />&gt; ----</p></div>
+ip: ::ffff:127.0.0.1
+ts: 1251109954
+minor: 
+host: ::ffff:127.0.0.1
+username: xiaoranzzz
+revision: 2
+diff-major: 1
+summary: <journal>
+languages: 
+lastmajor: 2
+keep-ts: 1251109954

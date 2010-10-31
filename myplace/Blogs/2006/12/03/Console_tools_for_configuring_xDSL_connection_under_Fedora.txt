@@ -1,0 +1,24 @@
+====== Console tools for configuring xDSL connection under Fedora ======
+Created 2006-12-03 19:15:00
+Updated 2006-12-03 19:55:00
+Configure:/sbin/adsl-setupActivate:/sbin/ifupexample:/sbin/ifup ppp0Unactivate:/sbin/ifdownexample:/sbin/ifdown ppp0Stop:/sbin/adsl-stopStart:/sbin/adsl-startView status:/sbin/adsl-status
+
+After partly upgraded Fedora 5 to Fedora 6, a few components don't work out properly, including the system-config-network. I spent quite a while searching and researching, finally figured out the text commands above. So made it a note.
+
+== Comments: ==
+
+* **re: Console tools for configuring xDSL connection under Fedora**
+你的Fedora 自带的软件有没有一个Xmgrace 绘图软件？主要绘制数学曲线
+**BruceBack**,2006-12-05 07:28:00
+
+* **re: Console tools for configuring xDSL connection under Fedora**
+有的，叫grace,Xmgrace是它的图形界面，也包含在里面。 
+
+直接用yum install grace就行，要root权限,不是root用户的话，先用su(switch user?)。
+**xrLiN**,2006-12-05 16:27:00
+
+---------<META>---------
+ts: 1251012655
+username: xiaoranzzz
+revision: 1
+languages: 

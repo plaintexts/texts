@@ -1,0 +1,81 @@
+====== Version ======
+Created Monday 15 October 2007
+
+* MS-DOS 1.0 - May 1982 – first release for IBM PC compatibles marketed under different brands
+* MS-DOS 2.0 - March 1983 – introduced subdirectories, handle-based file operations, command input/output redirection, and pipes. Microsoft decided to use backslashes as pathname separators rather than slashes as on Unix apparently due to the latter character being used as the switch character in most DOS and CP/M programs. Adds support for hard drives and 360KB floppy disks
+      o MS-DOS 2.11 - March 1984 – non-English language and date format support
+      o MS-DOS 2.25 - October 1985 – better support for Japanese Kanji, and Korean character sets, shipped to western Pacific countries only
+* MS-DOS 3.0 - August 1984 – added support for PC AT: 1.2 MB floppy disks and hard disk partitions of up to 32MB, one primary and one "logical drive" in an "extended partition"
+      o MS-DOS 3.1 - November 1984 – support for Microsoft networking
+      o MS-DOS 3.2 - January 1986 – support for 3.5 inch, 720 kB floppy disk drives
+      o MS-DOS 3.3 - August 1987 – supported multiple logical drives
+* MS-DOS 4.0 - June 1988 – derived from IBM's codebase rather than Microsoft's. generally regarded as an unpopular release. Included a CUI MS-DOS Shell.
+o MS-DOS 4.01 - December 1988 – bug-fix release
+* MS-DOS 5.0 - June 1991 – improved memory management, QBasic programming environment which supported a full-screen text editor, QBasic programming language, online help, and file transfer facility licensed from Rupp Technology (FastLynx)
+* MS-DOS 6.0 - March 1993 – added DoubleSpace disk compression, disk defragmentation, a better backup utility, anti-virus, undelete, InterLnk/InterSvr file transfer, QBasic supported full-screen help, and other features; the MS-DOS Shell gained a task switcher
+      o MS-DOS 6.2 - November 1993 – added Scandisk, DoubleSpace Undelete, and various bug fixes
+      o MS-DOS 6.21 - February, 1994 – following Stac Electronics lawsuit, removed DoubleSpace disk compression
+      o MS-DOS 6.22 - June 1994 – last official stand-alone version. DoubleSpace replaced with non-infringing but compatible DriveSpace tool (COMMAND.COM is 54645 bytes)
+* MS-DOS 7.0 - August 1995 – shipped embedded in Windows 95. Included Logical block addressing and Long File Name (LFN) support. MS-DOS Editor version 2 supported multiple files and editing binary files.
+      o MS-DOS 7.1 - August 1996 – shipped embedded in Windows 95B (OSR2) (and Windows 98 in June 1998). Added support for FAT32 file system
+* MS-DOS 8.0 - September 2000 – shipped embedded in Windows Me. Last version of MS-DOS. Removes SYS command, ability to boot to command line and other features
+
+Referto:http://en.wikipedia.org/wiki/List_of_Microsoft_DOS_versions
+
+
+The history of MS-DOS is surprisingly long. It started off as QDOS (Quick and Dirty Operating System) which was developed by Seattle Computer Products to run on IBM's new PC. This list is fairly comprehensive although a number of the more obscure versions of DOS have been omitted.
+
+<pre>
+Version 	Date 	Comments
+1.0 	1981 	The original version of MS-DOS. This was a renamed version of QDOS which had been purchased by an upstart company called Microsoft.
+1.25 	1982 	This added support for double-sided disks. Previously the disk had to be turned over to use the other side
+2.0 	1983 	This added support for IBM's 10 MB hard disk, directories and double-density 5.25" floppy disks with capacities of 360 KB
+2.11 	1983 	Support for foreign and extended characters was added.
+3.0 	1984 	Support for high-density (1.2 MB) floppy disks and 32 MB hard disks was added.
+3.1 	1984 	Network support was added.
+3.3 	1987 	This release was written to take advantage of IBM's PS/2 computer range. It added support for high density 3.5" floppy disks, more than one partition on hard disks (allowing use of disks bigger than 32 MB) and code pages.
+4.0 	1988 	This version provided XMS support, support for partitions on hard disks up to 2 GB and a graphical shell. It also contained a large number of bugs and many programs refused to run on it.
+4.01 	1989 	The bugs in version 4.0 were fixed.
+5.0 	1991 	This was a major upgrade. It allowed parts of DOS to load itself in the high memory area and certain device drivers and TSRs to run in the unused parts of the upper memory area between 640K and 1024K. This version also added support for IBM's new 2.88 MB floppy disks. An improved BASIC interpreter and text editor were included, as was a disk cache, an undelete utility and a hard-disk partition-table backup program. After the problems with MS-DOS 4, it also provided a utility to make programs think they were running on a different version of MS-DOS.
+5.0a 	1992/3 	This was a minor bug fix which dealt with possibly catastrophic problems with UNDELETE and CHKDSK. 
+6.0 	1993 	This was a catch-up with Novell's DR-DOS 6. It added a disk-compression utility called DoubleSpace, a basic anti-virus program and a disk defragmenter. It also finally included a MOVE command, an improved backup program, MSBACKUP and multiple boot configurations. Memory management was also improved by the addition of MEMMAKER. A number of older utilities, such as JOIN and RECOVER were removed. The DOS Shell was released separately as Microsoft felt that there were too many disks.
+6.2 	1993 	Extra security was built into DoubleSpace following complaints of data loss. A new disk checker, SCANDISK, was also introduced, as well as improvements to DISKCOPY and SmartDrive.
+6.21 	1993 	Following legal action by Stac Electronics, Microsoft released this version which had DoubleSpace removed. It came with a voucher for an alternative disk compression program.
+6.22 	1994 	Microsoft licenced a disk-compression package called DoubleDisk from VertiSoft Systems and renamed it DriveSpace, which was included in this version.
+7.0 	1995 	This version is part of the original version of Windows 95. It provides support for long filenames when Windows is running, but removes a large number of utilities, some of which are on the Windows 95 CD in the \other\oldmsdos directory.
+7.1 	1997 	This version is part of OEM Service Release 2 and later of Windows 95. The main change is support for FAT 32 hard disks, a more efficient and robust way of storing data on large drives.
+</pre>
+refer to:http://www.nukesoft.co.uk/msdos/dosversions.shtml
+---------<META>---------
+flags: 01010101010101010
+blocks: <p><span class="post_title">Version </span><br /><span class="footer">Created Monday 15 October 2007</span><br /></p><ul><li>MS-DOS 1.0 - May 1982 – first release for IBM PC compatibles marketed under different brands</li><li>MS-DOS 2.0 - March 1983 – introduced subdirectories, handle-based file operations, command input/output redirection, and pipes. Microsoft decided to use backslashes as pathname separators rather than slashes as on Unix apparently due to the latter character being used as the switch character in most DOS and CP/M programs. Adds support for hard drives and 360KB floppy disks o MS-DOS 2.11 - March 1984 – non-English language and date format support o MS-DOS 2.25 - October 1985 – better support for Japanese Kanji, and Korean character sets, shipped to western Pacific countries only</li><li>MS-DOS 3.0 - August 1984 – added support for PC AT: 1.2 MB floppy disks and hard disk partitions of up to 32MB, one primary and one "logical drive" in an "extended partition" o MS-DOS 3.1 - November 1984 – support for Microsoft networking o MS-DOS 3.2 - January 1986 – support for 3.5 inch, 720 kB floppy disk drives o MS-DOS 3.3 - August 1987 – supported multiple logical drives</li><li>MS-DOS 4.0 - June 1988 – derived from IBM's codebase rather than Microsoft's. generally regarded as an unpopular release. Included a CUI MS-DOS Shell. o MS-DOS 4.01 - December 1988 – bug-fix release</li><li>MS-DOS 5.0 - June 1991 – improved memory management, QBasic programming environment which supported a full-screen text editor, QBasic programming language, online help, and file transfer facility licensed from Rupp Technology (FastLynx)</li><li>MS-DOS 6.0 - March 1993 – added DoubleSpace disk compression, disk defragmentation, a better backup utility, anti-virus, undelete, InterLnk/InterSvr file transfer, QBasic supported full-screen help, and other features; the MS-DOS Shell gained a task switcher o MS-DOS 6.2 - November 1993 – added Scandisk, DoubleSpace Undelete, and various bug fixes o MS-DOS 6.21 - February, 1994 – following Stac Electronics lawsuit, removed DoubleSpace disk compression o MS-DOS 6.22 - June 1994 – last official stand-alone version. DoubleSpace replaced with non-infringing but compatible DriveSpace tool (COMMAND.COM is 54645 bytes)</li><li>MS-DOS 7.0 - August 1995 – shipped embedded in Windows 95. Included Logical block addressing and Long File Name (LFN) support. MS-DOS Editor version 2 supported multiple files and editing binary files. o MS-DOS 7.1 - August 1996 – shipped embedded in Windows 95B (OSR2) (and Windows 98 in June 1998). Added support for FAT32 file system</li><li>MS-DOS 8.0 - September 2000 – shipped embedded in Windows Me. Last version of MS-DOS. Removes SYS command, ability to boot to command line and other features</li></ul><p>Referto:<a class="url http" href="http://en.wikipedia.org/wiki/List_of_Microsoft_DOS_versions">http://en.wikipedia.org/wiki/List_of_Microsoft_DOS_versions</a></p><p>The history of MS-DOS is surprisingly long. It started off as QDOS (Quick and Dirty Operating System) which was developed by Seattle Computer Products to run on IBM's new PC. This list is fairly comprehensive although a number of the more obscure versions of DOS have been omitted.</p><pre class="real">Version 	Date 	Comments
+	1.0 	1981 	The original version of MS-DOS. This was a renamed version of QDOS which had been purchased by an upstart company called Microsoft.
+	1.25 	1982 	This added support for double-sided disks. Previously the disk had to be turned over to use the other side
+	2.0 	1983 	This added support for IBM's 10 MB hard disk, directories and double-density 5.25" floppy disks with capacities of 360 KB
+	2.11 	1983 	Support for foreign and extended characters was added.
+	3.0 	1984 	Support for high-density (1.2 MB) floppy disks and 32 MB hard disks was added.
+	3.1 	1984 	Network support was added.
+	3.3 	1987 	This release was written to take advantage of IBM's PS/2 computer range. It added support for high density 3.5" floppy disks, more than one partition on hard disks (allowing use of disks bigger than 32 MB) and code pages.
+	4.0 	1988 	This version provided XMS support, support for partitions on hard disks up to 2 GB and a graphical shell. It also contained a large number of bugs and many programs refused to run on it.
+	4.01 	1989 	The bugs in version 4.0 were fixed.
+	5.0 	1991 	This was a major upgrade. It allowed parts of DOS to load itself in the high memory area and certain device drivers and TSRs to run in the unused parts of the upper memory area between 640K and 1024K. This version also added support for IBM's new 2.88 MB floppy disks. An improved BASIC interpreter and text editor were included, as was a disk cache, an undelete utility and a hard-disk partition-table backup program. After the problems with MS-DOS 4, it also provided a utility to make programs think they were running on a different version of MS-DOS.
+	5.0a 	1992/3 	This was a minor bug fix which dealt with possibly catastrophic problems with UNDELETE and CHKDSK. 
+	6.0 	1993 	This was a catch-up with Novell's DR-DOS 6. It added a disk-compression utility called DoubleSpace, a basic anti-virus program and a disk defragmenter. It also finally included a MOVE command, an improved backup program, MSBACKUP and multiple boot configurations. Memory management was also improved by the addition of MEMMAKER. A number of older utilities, such as JOIN and RECOVER were removed. The DOS Shell was released separately as Microsoft felt that there were too many disks.
+	6.2 	1993 	Extra security was built into DoubleSpace following complaints of data loss. A new disk checker, SCANDISK, was also introduced, as well as improvements to DISKCOPY and SmartDrive.
+	6.21 	1993 	Following legal action by Stac Electronics, Microsoft released this version which had DoubleSpace removed. It came with a voucher for an alternative disk compression program.
+	6.22 	1994 	Microsoft licenced a disk-compression package called DoubleDisk from VertiSoft Systems and renamed it DriveSpace, which was included in this version.
+	7.0 	1995 	This version is part of the original version of Windows 95. It provides support for long filenames when Windows is running, but removes a large number of utilities, some of which are on the Windows 95 CD in the \other\oldmsdos directory.
+	7.1 	1997 	This version is part of OEM Service Release 2 and later of Windows 95. The main change is support for FAT 32 hard disks, a more efficient and robust way of storing data on large drives.
+	</pre><p>refer to:<a class="url http" href="http://www.nukesoft.co.uk/msdos/dosversions.shtml">http://www.nukesoft.co.uk/msdos/dosversions.shtml</a></p>
+diff-minor: 
+ip: 127.0.0.1
+ts: 1251140422
+minor: 
+host: venus-vista
+username: xiaoranzzz
+revision: 2
+diff-major: 1
+summary: 
+languages: 
+lastmajor: 2
+keep-ts: 1251140422

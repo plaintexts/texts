@@ -1,0 +1,10 @@
+*[[.Perl]]
+** http://upload.wikimedia.org/wikipedia/en/e/e0/Programming-republic-of-perl.png
+** Perl is a high-level, general-purpose, interpreted, dynamic programming language. Perl was originally developed by Larry Wall, a linguist working as a systems administrator for NASA, in 1987, as a general-purpose Unix scripting language to make report processing easier.[1][2] Since then, it has undergone many changes and revisions and become widely popular amongst programmers. Larry Wall continues to oversee development of the core language, and its upcoming version, Perl 6.
+
+Can't I ?
+---------<META>---------
+Revision 3, Last updated Tue May 25 01:53:01 2010, by xiaoranzzz@myplace.hell
+ts: 1274723581
+lastmajor: 3
+keep-ts: 1274723581

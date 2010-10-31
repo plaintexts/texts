@@ -1,0 +1,23 @@
+== CHM Book ==
+
+=== Decompiler ===
+
+==== Linux ====
+* [[Software:archmage|unchm]]
+** This tool comes from package [[Software:archmage|archmage]]. It will decompile CHM FILES, and create some indexing files, however it has some unknown problems with some unkownn CHM files.  
+* [[Software:chmsee|cs2w]]
+** This one comes from package [[Software:chmsee|chmsee]]. Also will create indexing files, works better than [[Software:archmage|unchm]], and supports some CHM files that [Software:archmage|unchm] can't not decompile.
+
+
+---------<META>---------
+flags: 01010101010
+ip: ::ffff:127.0.0.1
+ts: 1252436445
+minor: 
+host: ::ffff:127.0.0.1
+username: xiaoranzzz
+revision: 2
+summary: == CHM Book == * Decompiler ** Linux *** [Software:archmage|unchm] **** This tool comes from package "[Software:archmage|archmage]". It will . . .
+languages: 
+lastmajor: 2
+keep-ts: 1252436445

@@ -1,0 +1,18 @@
+====== Resources ======
+Created Saturday 06/01/2007
+
+* [[.Software|Software]]
+* [[.超星|超星]]
+---------<META>---------
+diff-minor: 
+flags: 01010
+ip: 192.168.1.25
+ts: 1252087023
+minor: 1
+host: myplace.hell
+username: xiaoranzzz
+revision: 2
+diff-major: 
+summary: 
+languages: 
+keep-ts: 1252087023

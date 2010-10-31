@@ -1,0 +1,13 @@
+My collection of books, copyright or copyleft.
+
+[[.科幻小说]]
+
+[[.还珠楼主]]
+
+
+version information
+------- -----------
+Revision 12, Last updated Sat May 29 01:20:48 2010, by xiaoranzzz@myplace.hell
+ts: 1275067248
+lastmajor: 12
+keep-ts: 1275067248

@@ -1,0 +1,27 @@
+====== System Configuration ======
+Created Wednesday 10/01/2007
+
+[[.Fedora|Fedora]]
+
+[[.DOS7|DOS7]]
+
+[[.fstab|fstab]]
+
+[[.X11|X11]]
+
+[[.WhatIs|WhatIs]]
+
+[[.WindowsVista|WindowsVista]]
+---------<META>---------
+diff-minor: 
+flags: 0101010101010
+ip: 192.168.1.25
+ts: 1252696140
+minor: 1
+host: myplace.hell
+username: xiaoranzzz
+revision: 2
+diff-major: 
+summary: 
+languages: 
+keep-ts: 1252696140

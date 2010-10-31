@@ -1,0 +1,13 @@
+学习
+====
+
+[[.五笔|五笔]]
+[[.文学理论|文学理论]]
+[[.Programming|程序设计]]
+
+version information
+------- -----------
+Revision 7, Last updated Sat May 29 01:15:52 2010, by xiaoranzzz@myplace.hell
+ts: 1275066952
+lastmajor: 7
+keep-ts: 1275066952

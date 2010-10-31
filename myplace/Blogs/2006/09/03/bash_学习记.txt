@@ -1,0 +1,238 @@
+====== bash 学习记 ======
+Created 2006-08-22 16:37:00
+Updated 2006-09-03 21:41:00
+以我写的一个Shell Script为例:
+
+用以转换文本的编码，如成功，则替换原文件。在Fedora 5,bash中测试通过。
+
+ 1
+
+#!/bin/bash
+
+ 2
+
+NORMAL="\033[0m"
+
+ 3
+
+BOLD="\033[1m"
+
+ 4
+
+RED="\033[91m"
+
+ 5
+
+YELLOW="\033[93m"
+
+ 6
+
+GREEN="\033[92m"
+
+ 7
+
+ 8
+
+ 9
+
+#Test for iconv
+
+10
+
+ICONV=`which iconv 2>/dev/null`
+
+11
+
+if [ !
+
+-x
+
+"$ICONV" ]; then
+
+12
+
+    echo -e $RED"\"iconv\" not found."$NORMAL
+
+13
+
+    echo "$0 exited."
+
+14
+
+exit
+
+15
+
+fi
+
+16
+
+17
+
+FILE=$3
+
+18
+
+OLDCHARSET=$1
+
+19
+
+NEWCHARSET=$2
+
+20
+
+21
+
+if [ -z $FILE ]; then
+
+22
+
+    echo -e $YELLOW"myiconv 0.2"$NORMAL
+
+23
+
+    echo "Convert charset of a file from to."
+
+24
+
+    echo "Be wared : !NO! backup"
+
+25
+
+    echo -e $GREEN"Usage: $0 (charset1) (charset2) (filename)"$NORMAL
+
+26
+
+    echo -e "     for available charset type "$YELLOW"iconv -l"$NORMAL
+
+27
+
+exit
+
+28
+
+fi
+
+29
+
+30
+
+31
+
+TMPFILE="/tmp/iconv.tmp"
+
+32
+
+rm -f "$TMPFILE"
+
+>
+
+/dev/null
+
+33
+
+LOG=/tmp/myiconv.log
+
+34
+
+35
+
+if [ -f $FILE ] ; then
+
+36
+
+    echo "Converting $FILE"
+
+37
+
+    echo -n "From $OLDCHARSET to $NEWCHARSET"
+
+38
+
+    MSG=`iconv --from=$OLDCHARSET
+
+--to=$NEWCHARSET
+
+"$FILE"
+
+-o "$TMPFILE"
+
+2>&1`
+
+39
+
+if [ -z "$MSG" ];then
+
+40
+
+        cp -f "$TMPFILE"
+
+"$FILE"
+
+>
+
+/dev/null
+
+41
+
+        echo -e $YELLOW"\t\t\t\tDone"$NORMAL
+
+42
+
+else
+
+43
+
+        echo "$OLDCHARSET to $NEWCHARSET Error \"$MSG\" in $FILE">>
+
+"$LOG"
+
+44
+
+        echo "Failed. See $LOG"
+
+45
+
+    fi
+
+46
+
+else
+
+47
+
+    echo -e $RED"Ignore $FILE"$NORMAL
+
+48
+
+fi 
+
+49
+
+50
+
+exit
+
+51
+
+1行：
+
+注释以#号开始。此处的注释，是说明该脚本应通过/bin/bash执行。如果shell支持，附加的功能是shell将调用/bin/bash对脚本进行解释、执行。2-6行：此处是ANSI颜色的Escape符号。10行：
+
+ICONV=`which iconv 2>/dev/null`,此处有两个注意的地方。变量名=`命令`:将命令的输出，赋给变量。2>/dev/null : 屏蔽了错误输出。2是代表stderr,>是输出重定向,/dev/null为NULL。11－15行：条件表达式的形式[ -z "$ICONV ] :$ICONV为空则返回True.echo -e : 回显允许Escape符号序列17－19行：$1,$2,$3：依次为腳本执行时的前三个参数，$0为脚本的完整路径.21行：[ -x $FILE ] :如$FILE存在，并为可执行文件，则返回True.[ ] : 是test命令的一个简便形式。因而此处也可写成 if test -x $FILE ;then...35行：[ -f $FILE ]：如$FILE存在，并为一般文件，则返回True.38行 :2<&1：将stderr导向stdout. 放于``之内，则将命令输出赋给变量MSG,可用于记录程序错误。A<B：将A导向B，Overwriting Mode.A<<B：将A导向B，Appending Mode.
+
+== Comments: ==
+
+* **re: bash 学习记**
+阿骚开始研究shell了啊，有前途~~
+**Nirva**,2006-08-25 14:05:00
+
+* **re: bash 学习记**
+阿骚开始研究shell了啊，有前途~~
+**Nirva**,2006-08-25 14:05:00
+
+---------<META>---------
+ts: 1251012655
+username: xiaoranzzz
+revision: 1
+languages: 

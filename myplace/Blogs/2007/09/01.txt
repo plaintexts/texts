@@ -1,0 +1,11 @@
+====== 2007/09/01 ======
+
+
+== Files: ==
+
+* [[.The_Evolution_of_a_Programmer|The Evolution of a Programmer]]
+---------<META>---------
+ts: 1251012655
+username: xiaoranzzz
+revision: 1
+languages: 

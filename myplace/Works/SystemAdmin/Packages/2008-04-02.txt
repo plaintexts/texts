@@ -1,0 +1,11 @@
+
+== 00:15:34 ==
+
+* Setting up __elza__ (1.4.3-12)
+* Setting up __geany__ (0.13-1)
+* Setting up __libgtk2-ex-simple-list-perl__ (0.50-1)
+* Setting up __libio-stringy-perl__ (2.110-3)
+* Setting up __libpod-escapes-perl__ (1.04-1)
+* Setting up __libpod-simple-perl__ (3.05-2)
+* Setting up __libgtk2-ex-podviewer-perl__ (0.17-2)
+* Setting up __podbrowser__ (0.12-1)

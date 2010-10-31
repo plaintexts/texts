@@ -1,0 +1,25 @@
+====== Shm ======
+Created Wednesday 16 April 2008
+
+What is /dev/shm and its practical usage
+
+/dev/shm is nothing but implementation of traditional shared memory concept. It is an efficient means of passing data between programs. One program will create a memory portion, which other processes (if permitted) can access. This will result into speeding up things on Linux.
+
+shm / shmfs is also known as tmpfs, which is a common name for a temporary file storage facility on many Unix-like operating systems. It is intended to appear as a mounted file system, but one which uses virtual memory instead of a persistent storage device.
+
+If you type mount command you will see /dev/shm as a tempfs file system. Therefore, it is a file system, which keeps all files in virtual memory. Everything in tmpfs is temporary in the sense that no files will be created on your hard drive. If you unmount a tmpfs instance, everything stored therein is lost. By default almost all Linux distros configured to use /dev/shm.
+Nevertheless, where can I use /dev/shm?
+
+You can use /dev/shm to improve the performance of application software or overall Linux system performance. On heavily loaded system, it can make tons of difference. For example VMware workstation/server can be optimized to improve your Linux host's performance (i.e. improve the performance of your virtual machines).
+
+For example, if you have 8GB RAM then remount /dev/shm as follows:
+# mount -o remount,size=8G /dev/shm
+To be frank, if you have more than 2GB RAM + multiple Virtual machines, this hack always improves performance.
+
+# mount -t tmpfs -o size=5G,nr_inodes=5k,mode=700 tmpfs /disk2/tmpfs
+Above will give you tmpfs instance on /disk2/tmpfs which can allocate 5GB RAM/SWAP in 5K inodes and it is only accessible by root.
+---------<META>---------
+revision: 1
+flags: 0
+ts: 1252696146
+username: xiaoranzzz

@@ -1,0 +1,24 @@
+|Filename extension 	          |  |.daa                    |
+|Developed by 	                  |  |PowerISO Computing, Inc.|
+|Type of format 	          |  |Disk image              |
+
+Direct Access Archive, or DAA, is a proprietary file format developed by PowerISO Computing for disk image files. The format supports features such as compression, password protection, and splitting to multiple volumes. Popular disk image mounting programs such as Alcohol 120% and Daemon Tools currently do not support the mounting of DAA images.
+
+Currently there is no published information about the format. Among mainstream applications, it can be opened or converted with PowerISO and MagicISO. Various free open source packages are also available to convert DAA to ISO images.
+
+==External links==
+
+* [http://www.poweriso.com/ PowerISO Website]
+* [http://www.poweriso.com/download.htm PowerISO downloads for Windows Linux and Mac OS X]
+---------<META>---------
+flags: 010101010
+ip: ::ffff:127.0.0.1
+ts: 1252424395
+minor: 
+host: ::ffff:127.0.0.1
+username: xiaoranzzz
+revision: 2
+summary: |Filename extension 	|.daa                    | |Developed by 	        |PowerISO Computing, Inc.| |Type of format 	|Disk image              | . . .
+languages: 
+lastmajor: 2
+keep-ts: 1252424395

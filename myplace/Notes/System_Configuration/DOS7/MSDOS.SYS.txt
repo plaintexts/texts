@@ -1,0 +1,101 @@
+====== MSDOS.SYS ======
+Created Friday 05 October 2007
+
+== SUMMARY ==
+
+The Windows Setup program creates a file called Msdos.sys in the root folder and sets the file with the Read-Only, System, and Hidden attributes. Unlike the Msdos.sys file in MS-DOS, this file is a text file. It contains a [Paths] section that lists the locations for other Windows files (such as the registry) and an [Options] section that you can use to personalize the boot process.
+
+== MORE INFORMATION ==
+
+**The [Paths] section can contain the following settings:**
+
+*	HostWinBootDrv=Root of Boot Drive
+Default: C
+Purpose: Specifies the location for the root of the boot drive.
+*	UninstallDir=Root of Boot Drive
+Default: C
+Purpose: Specifies the location of the W95undo.dat and W95undo.ini files. These files are necessary to uninstall Windows 95.
+
+NOTE: This setting is present only if you back up your system files when you are prompted during Windows 95 Setup.
+*	WinBootDir=Windows Folder
+Default: Folder specified during Setup (for example, C:\Windows)
+Purpose: Lists the location of the necessary files for booting.
+*	WinDir=Windows Folder
+Default: Folder specified during Setup (for example, C:\Windows)
+Purpose: Lists the location of the Windows 95 folder specified during Setup.
+
+
+**The [Options] section can contain the following settings. You must manually insert these settings if you want to use them:**
+
+*	AutoScan=Number
+Default: 1
+Purpose: Defines whether or not ScanDisk is run after a bad shutdown. A setting of 0 does not run ScanDisk; 1 prompts before running ScanDisk; 2 does not prompt before running ScanDisk but prompts you before fixing errors if any errors are found.
+
+This setting is used only by OEM Service Release 2 and Windows 98.
+*	BootDelay=Seconds Default: 2 Purpose: Sets the amount of time the "Starting Windows" message remains on the screen before Windows 95 continues to boot.
+
+NOTE: BootDelay is not supported in Windows 98.
+*	BootSafe=Boolean
+Default: 0
+Purpose: A setting of 1 forces your computer to boot in Safe mode.
+*	BootGUI=Boolean
+Default: 1
+Purpose: A setting of 1 forces the loading of the GUI interface. A setting of 0 disables the loading of the GUI interface.
+*	BootKeys=Boolean
+Default: 1
+Purpose: A setting of 1 enables the use of the function key boot options (that is, F4, F5, F6, F8, and CTRL). A setting of 0 disables the use of these function keys during the boot process
+
+NOTE: A setting of BootKeys=0 overrides the use of BootDelay=n.
+*	BootMenu=Boolean
+Default: 0
+Purpose: A setting of 1 enables the Startup menu. If this setting is 0, then you must press the F8 key when "Starting Windows 95" appears, (or press and hold the CTRL key when your Windows 98-based computer restarts) to invoke the Startup menu.
+*	BootMenuDefault=Number
+Default: 1 if the system is running correctly; 3 if the system hung in the previous instance
+Purpose: Use this setting to set the default menu item for startup.
+*	BootMenuDelay=Number
+Default: 30
+Purpose: This setting is used to set the number of seconds your system will pause on the Startup menu. If the number of seconds counts down to 0 without intervention, the BootMenuDefault is activated.
+
+NOTE: This option is not functional unless BootMenu=1 has been added to the [Options] section of the Msdos.sys file.
+*	BootMulti=Boolean
+Default: 1
+Purpose: A setting of 0 disables the multi-boot option. (For example, with a setting of 0 you cannot boot your previous operating system.) A setting of 1 enables the F4 and F8 keys to boot your previous operating system.
+*	BootWarn=Boolean
+Default: 1
+Purpose: A setting of 0 disables the Safe-mode boot warning message and the Startup menu.
+*	BootWin=Boolean
+Default: 1
+Purpose: A setting of 1 forces Windows 95 to load at startup. A setting of 0 disables Windows 95 as your default operating system (this is useful only if you have MS-DOS version 5.x or 6.x on the computer).
+
+NOTE: Pressing F4 inverts the default only if BootMulti=1. (For example, pressing the F4 key with a setting of 0 forces Windows 95 to load.)
+*	DoubleBuffer=Boolean
+Default: 0
+Purpose: A setting of 1 is a conditional setting that enables double- buffering for controllers that need it (for example, SCSI controllers). A setting of 2 is an unconditional setting that enables double-buffering regardless of whether the controller needs it or not.
+*	DBLSpace=Boolean
+Default: 1
+Purpose: A setting of 1 allows the automatic loading of the DBLSPACE.BIN file. A setting of 0 prevents the automatic loading of this file.
+
+NOTE: Windows 95 uses either Dblspace.bin or Drvspace.bin if either is present in the root folder of the boot drive at startup. To disable a compression driver from being loaded at startup, use both settings in the Msdos.sys file. For example:
+DBLSpace=0
+DRVSpace=0
+*	DRVSpace=Boolean
+Default: 1
+Purpose: A setting of 1 allows the automatic loading of the DRVSPACE.BIN file. A setting of 0 prevents the automatic loading of this file.
+
+NOTE: Windows 95 uses either Dblspace.bin or Drvspace.bin if either is present in the root folder of the boot drive at startup. To disable a compression driver from being loaded at startup, use both settings in the Msdos.sys file. For example:
+DBLSpace=0
+DRVSpace=0
+*	LoadTop=Boolean
+Default: 1
+Purpose: A setting of 0 does not let Windows 95 load COMMAND.COM or DRVSPACE.BIN/DBLSPACE.BIN at the top of 640K. If you are having compatibility problems with software that makes assumptions about the available memory try setting this to 0.
+*	Logo=Boolean
+Default: 1
+Purpose: A setting of 1 forces the default Windows 95 logo to appear. A setting of 0 prevents the animated logo from being displayed. A setting of 0 also avoids hooking a variety of interrupts that can create incompatibilities with certain third-party memory managers.
+*	Network=Boolean
+Default: 0
+Purpose: A setting of 1 means the network was installed and adds Safe mode with network support as an option on the Windows 95 Startup menu.
+---------<META>---------
+revision: 1
+flags: 0101010101010101010101010101010101010101010101010101010
+blocks: <p><span class="post_title">MSDOS.SYS </span><br /><span class="footer">Created Friday 05 October 2007</span><br /></p><p><h2>SUMMARY </h2></p><p>The Windows Setup program creates a file called Msdos.sys in the root folder and sets the file with the Read-Only, System, and Hidden attributes. Unlike the Msdos.sys file in MS-DOS, this file is a text file. It contains a [Paths] section that lists the locations for other Windows files (such as the registry) and an [Options] section that you can use to personalize the boot process.<br /><br /><h2>MORE INFORMATION </h2></p><p><strong>The [Paths] section can contain the following settings:</strong><br /><br /></p><ul><li>HostWinBootDrv=Root of Boot Drive<br />Default: C<br />Purpose: Specifies the location for the root of the boot drive.<br /></li><li>UninstallDir=Root of Boot Drive<br />Default: C<br />Purpose: Specifies the location of the W95undo.dat and W95undo.ini files. These files are necessary to uninstall Windows 95.<br /><br />NOTE: This setting is present only if you back up your system files when you are prompted during Windows 95 Setup.<br /></li><li>WinBootDir=Windows Folder<br />Default: Folder specified during Setup (for example, C:\Windows)<br />Purpose: Lists the location of the necessary files for booting.<br /></li><li>WinDir=Windows Folder<br />Default: Folder specified during Setup (for example, C:\Windows)<br />Purpose: Lists the location of the Windows 95 folder specified during Setup.<br /><br /><strong>The [Options] section can contain the following settings. You must manually insert these settings if you want to use them:</strong><br /><br /></li><li>AutoScan=Number<br />Default: 1<br />Purpose: Defines whether or not ScanDisk is run after a bad shutdown. A setting of 0 does not run ScanDisk; 1 prompts before running ScanDisk; 2 does not prompt before running ScanDisk but prompts you before fixing errors if any errors are found.<br /><br />This setting is used only by OEM Service Release 2 and Windows 98.<br /></li><li>BootDelay=Seconds Default: 2 Purpose: Sets the amount of time the "Starting Windows" message remains on the screen before Windows 95 continues to boot.<br /><br />NOTE: BootDelay is not supported in Windows 98.<br /></li><li>BootSafe=Boolean<br />Default: 0<br />Purpose: A setting of 1 forces your computer to boot in Safe mode.<br /></li><li>BootGUI=Boolean<br />Default: 1<br />Purpose: A setting of 1 forces the loading of the GUI interface. A setting of 0 disables the loading of the GUI interface.<br /></li><li>BootKeys=Boolean<br />Default: 1<br />Purpose: A setting of 1 enables the use of the function key boot options (that is, F4, F5, F6, F8, and CTRL). A setting of 0 disables the use of these function keys during the boot process<br /><br />NOTE: A setting of BootKeys=0 overrides the use of BootDelay=n.<br /></li><li>BootMenu=Boolean<br />Default: 0<br />Purpose: A setting of 1 enables the Startup menu. If this setting is 0, then you must press the F8 key when "Starting Windows 95" appears, (or press and hold the CTRL key when your Windows 98-based computer restarts) to invoke the Startup menu.<br /></li><li>BootMenuDefault=Number<br />Default: 1 if the system is running correctly; 3 if the system hung in the previous instance<br />Purpose: Use this setting to set the default menu item for startup.<br /></li><li>BootMenuDelay=Number<br />Default: 30<br />Purpose: This setting is used to set the number of seconds your system will pause on the Startup menu. If the number of seconds counts down to 0 without intervention, the BootMenuDefault is activated.<br /><br />NOTE: This option is not functional unless BootMenu=1 has been added to the [Options] section of the Msdos.sys file.<br /></li><li>BootMulti=Boolean<br />Default: 1<br />Purpose: A setting of 0 disables the multi-boot option. (For example, with a setting of 0 you cannot boot your previous operating system.) A setting of 1 enables the F4 and F8 keys to boot your previous operating system.<br /></li><li>BootWarn=Boolean<br />Default: 1<br />Purpose: A setting of 0 disables the Safe-mode boot warning message and the Startup menu.<br /></li><li>BootWin=Boolean<br />Default: 1<br />Purpose: A setting of 1 forces Windows 95 to load at startup. A setting of 0 disables Windows 95 as your default operating system (this is useful only if you have MS-DOS version 5.x or 6.x on the computer).<br /><br />NOTE: Pressing F4 inverts the default only if BootMulti=1. (For example, pressing the F4 key with a setting of 0 forces Windows 95 to load.)<br /></li><li>DoubleBuffer=Boolean<br />Default: 0<br />Purpose: A setting of 1 is a conditional setting that enables double- buffering for controllers that need it (for example, SCSI controllers). A setting of 2 is an unconditional setting that enables double-buffering regardless of whether the controller needs it or not.<br /></li><li>DBLSpace=Boolean<br />Default: 1<br />Purpose: A setting of 1 allows the automatic loading of the DBLSPACE.BIN file. A setting of 0 prevents the automatic loading of this file.<br /><br />NOTE: Windows 95 uses either Dblspace.bin or Drvspace.bin if either is present in the root folder of the boot drive at startup. To disable a compression driver from being loaded at startup, use both settings in the Msdos.sys file. For example:<br />DBLSpace=0<br />DRVSpace=0<br /></li><li>DRVSpace=Boolean<br />Default: 1<br />Purpose: A setting of 1 allows the automatic loading of the DRVSPACE.BIN file. A setting of 0 prevents the automatic loading of this file.<br /><br />NOTE: Windows 95 uses either Dblspace.bin or Drvspace.bin if either is present in the root folder of the boot drive at startup. To disable a compression driver from being loaded at startup, use both settings in the Msdos.sys file. For example:<br />DBLSpace=0<br />DRVSpace=0<br /></li><li>LoadTop=Boolean<br />Default: 1<br />Purpose: A setting of 0 does not let Windows 95 load COMMAND.COM or DRVSPACE.BIN/DBLSPACE.BIN at the top of 640K. If you are having compatibility problems with software that makes assumptions about the available memory try setting this to 0.<br /></li><li>Logo=Boolean<br />Default: 1<br />Purpose: A setting of 1 forces the default Windows 95 logo to appear. A setting of 0 prevents the animated logo from being displayed. A setting of 0 also avoids hooking a variety of interrupts that can create incompatibilities with certain third-party memory managers.<br /></li><li>Network=Boolean<br />Default: 0<br />Purpose: A setting of 1 means the network was installed and adds Safe mode with network support as an option on the Windows 95 Startup menu.</li></ul>
+ts: 1250975652

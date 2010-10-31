@@ -1,0 +1,4 @@
+====== Display ======
+Created Thursday 01/02/2007
+
+[[.fglrx|fglrx]]

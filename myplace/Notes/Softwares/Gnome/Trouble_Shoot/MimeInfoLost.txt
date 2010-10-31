@@ -1,0 +1,7 @@
+====== Mime Info Lost ======
+Created Thursday 01/02/2007
+
+It appears that GNOME lost all the mime-type data. So the file manager Nautilus could not recognize files from application/x-desktop to application/x-zip and so on.
+
+**Solution:**
+chmod -R a+r /usr/share/mime*

@@ -1,0 +1,4 @@
+====== Compiz ======
+Created Sunday 10 February 2008
+
+[[.DebianHowTo|Debian How To]]

@@ -1,0 +1,17 @@
+ WikiPedia http://en.wikipedia.org/wiki/
+ ZhWiki http://zh.wikipedia.org/wiki/
+---------<META>---------
+flags: 01010
+blocks: <p> WikiPedia <a class="url http" href="http://en.wikipedia.org/wiki/">http://en.wikipedia.org/wiki/</a><br /> ZhWiki <a class="url http" href="http://zh.wikipedia.org/wiki/">http://zh.wikipedia.org/wiki/</a></p>
+diff-minor: 
+ip: 127.0.0.1
+ts: 1251011886
+minor: 
+host: venus-vista
+username: 
+revision: 3
+diff-major: 1
+summary: WikiPedia http://en.wikipedia.org/wiki/
+languages: 
+lastmajor: 3
+keep-ts: 1251011886
