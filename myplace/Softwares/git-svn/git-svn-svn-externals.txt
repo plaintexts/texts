@@ -1,0 +1,35 @@
+http://algorithm.com.au/blog/files/git-svn-svn-externals.php
+
+git-svn & svn:externals
+-----------------------
+17 November 2008, 10:58 AM Filed in: …on Coding
+
+
+I’ve written before about git-svn and why I use it, but a major stumbling block with git-svn has been been a lack of support for svn:externals. If your project’s small and you have full control over the repository, you may be fortunate enough to not have any svn:externals definitions, or perhaps you can restructure your repository so you don’t need them anymore and live in git and Subversion interoperability bliss.
+
+However, many projects absolutely require svn:externals, and once you start having common libraries and frameworks that are shared amongst multiple projects, it becomes very difficult to avoid svn:externals. What to do for the git-svn user?
+
+If you Google around, it’s easy enough to find solutions out there, such as git-me-up, step-by-step tutorials, explanations about using git submodules, and an overview of all the different ways you can integrate the two things nicely. However, I didn’t like any of those solutions: either they required too much effort, were too fragile and could break easily if you did something wrong with your git configuration, or were simply too complex for such a seemingly simple problem. (Ah, I do like dismissing entire classes of solutions by wand-having them as over-engineering.)
+
+So, in the great spirit of scratching your own itch, here’s my own damn solution:
+
+    git-svn-clone-externals
+
+This is a very simple shell script to make git-svn clone your svn:externals definitions. Place the script in a directory where you have one or more svn:externals definitions, run it, and it will:
+
+        * git svn clone each external into a .git_externals/ directory.
+        * symlink the cloned repository in .git_externals/ to the proper directory name.
+        * add the symlink and .git_externals/ to the .git/info/excludes/ file, so that you’re not pestered about it when performing a git status.
+
+That’s pretty much about it. Low-tech and cheap and cheery, but I couldn’t find anything else like it after extensive Googling, so hopefully some other people out there with low-tech minds like mine will find this useful.
+
+You could certainly make the script a lot more complex and do things such as share svn:externals repositories between different git repositories, traverse through the entire git repository to detect svn:externals definitions instead of having to place the script in the correct directory, etc… but this works, it’s simple, and it does just the one thing, unlike a lot of other git/svn integration scripts that I’ve found. I absolutely do welcome those features, but I figured I’d push this out since it works for me and is probably useful for others.
+
+The source is on github.com at http://github.com/andrep/git-svn-clone-externals/tree/master. Have fun subverting your Subversion overlords!
+
+version information
+------- -----------
+Revision 2, Last updated Sat Oct 30 23:12:38 2010, by xiaoranzzz@myplace.hell
+ts: 1288451558
+lastmajor: 2
+keep-ts: 1288451558
