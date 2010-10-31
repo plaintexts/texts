@@ -1,0 +1,735 @@
+rTorrent Documents
+==================
+
+*   [Man Page](#manpage)
+*   [User Guide](#userguide)
+
+<h2 id="manpage">Man Page</h2>
+http://libtorrent.rakshasa.no/wiki/RTorrentMan
+
+rtorrent
+Name
+rtorrent -- a BitTorrent client for ncurses
+Synopsis
+
+rtorrent [-h] [-n] [-o key1=opt1,...] [-O key=opt] [URL | FILE...]
+DESCRIPTION
+
+rtorrent is a BitTorrent client for ncurses, using the libtorrent library. The client and library is written in C++ with emphasis on speed and efficiency, while delivering equivalent features to those found in GUI based clients in an ncurses client.
+
+Most of the options below have their own default unit in addition to supporting B, K, M and G suffixes.
+KEYBOARD CONTROL
+
+Global Keys
+
+^q
+
+    Initiate shutdown, press again to force the shutdown and skip sending the stop signal to trackers. 
+up | down | left | right arrow keys, ^P | ^N | ^B | ^F
+
+    Select entries or change windows. The right arrow key or ^F is often used 
+    for viewing details about the selected entry, while the left arrow key or
+    ^B often returns to the previous screen. 
+
+a | s | d
+
+    Increase the upload throttle by 1/5/50 KB. 
+A | S | D
+
+    Increase the download throttle by 1/5/50 KB. 
+z | x | c
+
+    Decrease the upload throttle by 1/5/50 KB. 
+Z | X | C
+
+    Decrease the download throttle by 1/5/50 KB. 
+
+Main View Keys
+
+->
+
+    View download. 
+1 - 7
+
+    Change view. 
+^S
+
+    Start download. 
+^D
+
+    Stop an active download, or remove a stopped download. 
+^K
+
+    Close a torrent and its files. 
+^R
+
+    Initiate hash check of torrent. 
+^O
+
+    Change the destination directory of the download. The torrent must be closed. 
+^X
+
+    Call commands or change settings. 
++ | -
+
+    Change the priority of the download. 
+backspace
+
+    Add torrent using an URL or file path. Use tab to view directory content and do auto-complete. 
+l
+
+    View log. Exit by pressing the space-bar. 
+U
+
+    Delete the file the torrent is tied to, and clear the association. 
+I
+
+    Toggle whether torrent ignores ratio settings. 
+
+Download View Keys
+
+->
+
+    View torrent file list. Use the space-bar to change the file priority and
+     * to change the priority of all files. Use / to collapse the directories. 
+    OUTDATED 
+1 | 2
+
+    Adjust max uploads. 
+3 | 4
+
+    Adjust min peers. 
+5 | 6
+
+    Adjust max peers. 
+u
+
+    Display transfering blocks. 
+i
+
+    Display chunk rarity. 
+o
+
+    Display the tracker list. Cycle the trackers in a group with the space-bar. 
+p
+
+    View peer and torrent information. 
+t | T
+
+    Initiate tracker request. Use capital T to force the request, ignoring
+    the "min interval" set by the tracker. 
+k
+
+    Disconnect peer. 
+*
+
+    Choke/Snub peer. 
+
+OPTIONS
+
+-b a.b.c.d
+
+    Bind listening socket and outgoing connections to this network interface address. 
+-d directory
+
+    Set the default download directory. Defaults to "./". 
+-h
+
+    Display help and exit. 
+-i a.b.c.d
+
+    Set the address reported to the tracker. 
+-n
+
+    Don't load ~/.rtorrent.rc on startup. 
+-o key1=opt1,..., -O key=opt
+
+    Set any number of options, see the SETTINGS section. The options given
+    here override the resource files. Use capital -O to allow comma in the
+    option. 
+-p a-b
+
+    Try to open a listening port in the range a up to and including b. 
+-s directory
+
+    Session management will be enabled and the torrent files for all open
+    downloads will be stored in this directory. Only one instance of rtorrent 
+    should be used with each session directory, though at the moment no
+    locking is done. An empty string will disable the session directory. 
+
+GENERAL SETTINGS
+
+bind = a.b.c.d
+
+    Bind listening socket and outgoing connections to this network interface
+    address. 
+ip = a.b.c.d, ip = hostname
+
+    Set the address reported to the tracker. 
+port_range = a-b
+
+    Try to open a listening port in the range a up to and including b. 
+port_random = yes | no
+
+    Open the listening port at a random position in the port range. 
+check_hash = yes | no
+
+    Perform hash check on torrents that have finished downloading. 
+directory = directory
+
+    Set the default download directory. Defaults to "./". 
+session = directory
+
+    Session management will be enabled and the torrent files for all open 
+    downloads will be stored in this directory. Only one instance of rtorrent
+    should be used with each session directory, though at the moment no 
+    locking is done. An empty string will disable the session directory. 
+http_proxy = url
+
+    Use a http proxy. Use an empty string to disable. 
+encoding_list = encoding
+
+    Add a preferred filename encoding to the list. The encodings are 
+    attempted in the order they are inserted, if none match the torrent 
+    default is used. 
+encryption = option,...
+
+    Set how rtorrent should deal with encrypted Bittorrent connections. By 
+    default, encryption is disabled, equivalent to specifying the option 
+    none. Alternatively, any number of the following options may be specified:
+
+    allow_incoming (allow incoming encrypted connections), try_outgoing (use 
+    encryption for outgoing connections), require (disable unencrypted 
+    handshakes), require_RC4 (also disable plaintext transmission after the 
+    initial encrypted handshake), enable_retry (if the initial outgoing 
+    connection fails, retry with encryption turned on if it was off or off if
+    it was on), prefer_plaintext (choose plaintext when peer offers a choice 
+    between plaintext transmission and RC4 encryption, otherwise RC4 will be 
+    used). 
+schedule = id,start,interval,command
+
+    Call command every interval seconds, starting from start. An interval of 
+    zero calls the task once, while a start of zero calls it immediately. 
+    Currently command is forwarded to the option handler. start and interval
+    may optionally use a time format, dd:hh:mm:ss. F.ex to start a task every
+    day at 18:00, use 18:00:00,24:00:00. 
+schedule_remove = id
+
+    Delete id from the scheduler. 
+start_tied =
+
+    Start torrents that are tied to filenames that have been re-added. 
+stop_untied =, close_untied =, remove_untied =
+
+    Stop, close or remove the torrents that are tied to filenames that have 
+    been deleted. Clear the association with the 'U' key. 
+close_low_diskspace = space
+
+    Close any active torrents on filesystems with less than space diskspace 
+    left. Use with the schedule option. 
+load = file, load_verbose = file, load_start = file, load_start_verbose = file
+
+    Load and possibly start a file, or possibly multiple files by using the 
+    wild-card "*". This is meant for use with schedule, though ensure that the
+    start is non-zero. The loaded file will be tied to the filename provided. 
+import = file, try_import = file
+
+    Load a resource file. try_import does not throw torrent::input_error exception on bad input. 
+stop_on_ratio = min_ratio, stop_on_ratio = min_ratio,min_upload, stop_on_ratio = min_ratio,min_upload,max_ratio
+
+    Stop torrents when they reach the given upload ratio min_ratio in percent. If the optional min_upload is given, require a total upload amount of this many bytes as well. If the optional max_ratio is given, stop the torrent when reaching this ratio regardless of the total upload amount. Exclude certain torrent by pressing Shift+I in the downlist list. Use with the schedule option. 
+on_insert = id,command, on_erase = id,command, on_open = id,command, on_close = id,command, on_start = id,command, on_stop = id,command, on_hash_queued = id,command, on_hash_removed = id,command, on_hash_done = id,command, on_finished = id,command
+
+    Call a command on a download when its state changes. Only a subset of commands are available. 
+
+THROTTLE SETTINGS
+
+upload_rate = KB, download_rate = KB
+
+    Set the maximum global uploand and download rates. 
+min_peers = value, max_peers = value
+
+    Set the minimum and maximum number of peers to allow in each download. 
+min_peers_seed = value, max_peers_seed = value
+
+    Set the minimum nad maximum number of peers to allow while seeding, or -1 (default) to use max_peers. 
+max_uploads = value
+
+    Set the maximum number of simultaneous uploads per download. 
+max_uploads_div = value, max_downloads_div = value
+
+    Change the divider used to calculate the max upload and download slots to use when the throttle is changed. Disable by setting 0. 
+max_uploads_global = value, max_downloads_global = value
+
+    Max upload and download slots allowed. Disable by setting 0. 
+
+TRACKER RELATED SETTINGS
+
+Tracker related settings.
+
+enable_trackers = yes
+
+    Set to no to disable all tracker requests. Useful for disabling rtorrent with the schedule command. 
+tracker_dump = filename
+
+    Dump tracker requests to filename, disable by supplying an empty string. Only torrents loaded while tracker_dump contains a non-empty string will be logged at the moment, although disabling it will work as expected. 
+tracker_numwant = number
+
+    Set the numwant field sent to the tracker, which indicates how many peers we want. A negative value disables this feature. 
+use_udp_trackers = yes
+
+    Use UDP trackers. Disable if you are behind a firewall, etc, that does not allow connections to UDP trackers. 
+http_capath = path, http_cacert = filename
+
+    Set the certificates to use in http requests. See Curl's CURLOPT_CAPATH and CURLOPT_CAINFO options for further information. 
+
+USER-INTERFACE SETTINGS
+
+Display related settings.
+
+view_add = name
+
+    Create a new view. 
+view_sort = name, view_sort = name,seconds
+
+    Sort a view according the the criteria set by view_sort_current. If the optional argument is supplied, the view is not sorted if a change happened during the last seconds. This command is meant to be used with schedule. 
+view_sort_new = name,..., view_sort_current = name,...
+
+    Set the sorting criteria for when new elements inserted or view_sort is called. The list can contain any number of criteria, including zero, from the following:
+
+    name, name_reverse, stopped, started, complete, incomplete, state_changed, state_changed_reverse 
+view_filter = name,...
+
+    Set a list of filter to apply when new new downloads are added and when view_sort is called. All filters must match for the download to be included.
+
+    stopped, started, complete, incomplete, 
+key_layout = qwerty|azerty|qwertz|dvorak
+
+    Change the key-bindings. 
+
+FILE-SYSTEM SETTINGS
+
+File-system related settings.
+
+max_file_size = size
+
+    Set the maximum size a file can have. Disable by passing -1. 
+split_file_size = size
+
+    Split files in a torrent larger than size into seperate files. Disable by passing -1. 
+split_suffix = string
+
+    Set the suffix used on split files. Defaults to .part. 
+
+DOWNLOAD SETTINGS
+
+Settings that require a download as a target, the options need to be called through f.ex on_finished.
+
+create_link = type,path,suffix, delete_link = type,path,suffix
+
+    Create or delete a symbolic link. The link path is the concatenation of path, the result of the type on the download, and suffix.
+
+    Available types are; base_path uses the base path of the download, base_filename uses the base filename of the download, tied uses the path of the file the download is tied to, see start_tied. 
+
+ADVANCED SETTINGS
+
+This list contains settings users shouldn't need to touch, some may even cause crashes or similar if incorrectly set.
+
+hash_read_ahead = MB
+
+    Configure how far ahead we ask the kernel to read when doing hash checking. The hash checker uses madvise(..., MADV_WILLNEED) for the requests. 
+hash_interval = ms
+
+    Interval between attempts to check the hash when the chunk is not in memory, in milliseconds. 
+hash_max_tries = tries
+
+    Number of attempts to check the hash while using the mincore status, before forcing. Overworked systems might need lower values to get a decent hash checking rate. 
+safe_sync = yes|no
+
+    Always use MS_SYNC rather than MS_ASYNC when syncing chunks. This may be nessesary in case of filesystem bugs like NFS in linux ~2.6.13. 
+max_open_files = value
+
+    Number of files to simultaneously keep open. LibTorrent dynamically opens and closes files as necessary when mapping files to memory. Default is based on sysconf(_SC_OPEN_MAX). You probably only think you know what this option does, so don't touch it. 
+max_open_sockets = value
+
+    Number of network sockets to simultaneously keep open. This value is set to a reasonable value based on sysconf(_SC_OPEN_MAX). 
+max_open_http = value
+
+    Number of sockets to simultaneously keep open. This value is set to 32 by default. 
+max_memory_usage = bytes
+
+    Set the max amount of memory space used to mapping file chunks. This may also be set using ulimit -m where 3/4 will be allocated to file chunks. 
+send_buffer_size = value, receive_buffer_size = value
+
+    Adjust the send and receive buffer size for socket. 
+umask = 0644
+
+    Set the umask for this process, which is applied to all files created by the program. 
+working_directory = directory
+
+    Changes the working directory of the process using chdir. 
+session_on_completion = yes
+
+    Controls if the session torrent is saved when a torrent finishes. By default on. 
+session_lock = yes
+
+    Controls if a lock file is created in the session directory on startup. 
+session_save =
+
+    Save the session files for all downloads. 
+tos = default|lowdelay|throughput|reliability|mincost, tos = hex
+
+    Change the TOS of peer connections, by default set to throughput. If the option is set to default then the system default TOS is used. A hex value may be used for non-standard settings. 
+handshake_log = yes
+
+    Enable logging of the peer handshake. This generates a large number of log messages, but may be useful to debug connection problems. 
+
+AUTHORS
+
+Jari "Rakshasa" Sundell <jaris@ifi.uio.no>
+
+
+<h2 id="userguide">User Guide</h2>
+http://libtorrent.rakshasa.no/wiki/RTorrentUserGuide
+
+RTorrent User Guide ¶
+
+Insert stuff about sessions, adding torrents, throttling etc. Anyone feel like writing something? This page really needs to be cleaned up...
+
+See manpage in the meanwhile.
+
+General note about key combinations: ^ means the Ctrl-key. M-x means Meta-x (Usually Alt-x or Esc-x)
+Adding and removing torrents ¶
+backspace	Add torrent using an URL or file path. Use tab to view directory content and do auto-complete. Also, wildcards can be used. For example: ~/torrent/*
+return	Same as backspace, except the torrent remains inactive. (Use ^s to activate)
+^o	Set new download directory for selected torrent. Only works if torrent has not yet been activated.
+^s	Start download. Runs hash first unless already done.
+^d	Stop an active download, or remove a stopped download.
+^k	Stop and close the files of an active download.
+^r	Initiate hash check of torrent. Without starting to download/upload.
+
+Note that ^s (and ^q for quit) is often used for terminal control to pause screen output (and ^q to resume). This may interfere with rTorrent. Type stty -a to see whether these have been mapped. To remove the mappings, execute the commands
+
+stty stop undef
+stty start undef
+
+before running rTorrent (or reattaching to screen) to leave them undefined. You could also replace undef with some other code -- ^p, say. ^d also usually sends end-of-file but ncurses passes this through to rTorrent. stty eof undef if you are worried.
+
+To fix this, you may also toggle the flow control in screen with ^a ^f until screen displays "-flow" in the bottom left corner.
+Throttling ¶
+a/s/d	Increase the upload throttle by 1/5/50 KB.
+z/x/c	Decrease the upload throttle by 1/5/50 KB.
+A/S/D	Increase the download throttle by 1/5/50 KB.
+Z/X/C	Decrease the download throttle by 1/5/50 KB.
+
+Note that all throttling is applied globally and not per torrent.
+Common Error Messages ¶
+
+Could not parse bencoded data
+    This message is caused by bad communication with the tracker, often caused by invalid client authentication (passkey, IP address, etc.) 
+Could not create download, the input is not a valid torrent
+    This message is caused by a corrupted or otherwise non-valid .torrent file. You should redownload the .torrent file or possibly find a new source for it. 
+
+Navigating ¶
+Global Keys ¶
+^q	Initiate shutdown, press again to force the shutdown and skip sending the stop signal to trackers.
+up/down	Select item.
+left	Go back to the previous screen.
+Main View Keys ¶
+right	Switch to Download View.
+^r	Initiate hash check of torrent.
++/-	Change priority of torrent.
+l	View log. Exit by pressing the space-bar.
+1	Show all downloads
+2	Show all downloads, ordered by name
+3	Show started downloads
+4	Show stopped downloads
+5	Show complete downloads
+6	Show incomplete downloads
+7	Show hashing downloads
+8	Show seeding downloads
+Download View Keys ¶
+right	Switch to selected view
+left	Switch to view selection or back to main view
+1/2	Adjust max uploads.
+3/4	Adjust min peers.
+5/6	Adjust max peers.
+p	Display peer list
+o	Display torrent info
+i	Display file list
+u	Display tracker list
+t/T	Initiate tracker request. Use capital T to force the request, ignoring the "min interval" set by the tracker.
+Peer list View Keys ¶
+left	Switch to view selection
+right	Show peer details
+*	Snub peer (stop uploading to this peer)
+k	Kick peer (disconnect from peer)
+B	Ban peer (No unbanning is possible.) 0.8.4+
+File list View Keys ¶
+left	Switch to view selection
+right	Show file details
+space	Change the file priority; applies recursively when done on a directory
+*	Change the priority of all files
+/	Collapse directories. While collapsed, press right to expand the selected directory.
+
+Priority options are blank (standard priority), hig (high priority) and off (not to be downloaded).
+Tracker list View Keys ¶
+left	Switch to view selection
+*	Enable/disable tracker
+space	Rotate trackers in a group
+Main view window. ¶
+
+The main view window lists all loaded torrents with respective status info. Example of a single torrent:
+
+*  ubuntu-5.10-install-i386.iso
+* Torrent:  161.6 /  617.2 MB Rate:   1.1 /  41.3 KB Uploaded:     5.1 MB [24%]  0d  3:09 [TI R: 0.03]
+*
+
+Torrent info line explanation
+
+Torrent: 161.6 / 617.2 MB
+
+    Amount of downloaded data / total size of torrent.
+
+Rate: 1.1 / 41.3 KB
+
+    Upload / download speed rates.
+
+Uploaded: 5.1 MB
+
+    Amount of uploaded data.
+
+[24%]
+
+    Download ratio. 161.6 MB downloaded makes 24% of the total 617.2 MB. Well, roughly apparently, presumably since some of the downloaded data may have been bad and discarded.
+
+0d 3:09
+
+    Estimated completion time. This torrent is expected to be completely downloaded in 0 days, 3 hours and 9 minutes.
+
+T
+
+    Present if torrent is tied to a file, blank otherwise.
+
+I
+
+    Present if torrent is ignoring commands (such as stop_on_ratio). Toggle with 'I'.
+
+R: 0.03
+
+    Share ratio. 5.1 MB uploaded makes 3% of the 161.6 MB already downloaded.
+
+Note that the estimated completion time does not take into account whether you turned off the download of individual files in the torrent. It just relies on the current download speed and total size of the torrent.
+Bottom line in GUI shows current info about a lot of things. ¶
+
+Here are a few outlined.
+
+Example of the statusbar:
+
+Throttle U/D: 200/off  Rate: 141.6 /   0.0 KiB  Listen:<default>:xxxxx  Bind: xxx.xxx.xxx.xxx  [U 3/14] [D 15/0] [H 1/32] [S 6/40/768] [F 4/128]
+
+Bottom line explanation
+
+Throttle U/D: 200/off
+
+    These are the current speed settings.
+
+    U = upload = outgoing transfer
+
+    D = download = incoming transfer
+
+    In this case the total upload speed is limited to 200 KB/s. With the D setting to "off" there is no limit on download speed.
+
+    See Throttling section for information on how to change the settings.
+
+Rate: 141.6 / 0.0 KiB
+
+    These numbers show the current upload/download speeds.
+
+Listen:<default>:xxxxx
+
+    This is the ip reported to the tracker. It should be the same as the ip from where you are browsing the tracker.
+
+Bind: xxx.xxx.xxx.xxx
+
+    This is the ip on which libtorrent/rtorrent is running. The external ip if you're behind a NAT.
+
+[D 15/0]
+
+    Current number of download slots in use and the maximum (0 if unlimited).
+
+[H 1/32]
+
+    Current number of active HTTP requests (for tracker announces and downloads of .torrent files), and the maximum.
+
+[U 3/14]
+
+    Current number of upload slots in use, and the maximum, which depends on the global upload rate limit.
+
+[S 6/40/768]
+
+    The three numbers represent handshakes/open sockets/max open sockets.
+
+[F 4/128]
+
+    The two numbers represent open files/max open files. The library dynamically closes the least used files as needed.
+
+The Peers screen ¶
+
+Some parts of this screen is fairly cryptic, here's explaination of the fields.
+
+Header:
+
+IP              UP     DOWN   PEER   C/RE/LO  QS    DONE  REQ   SNUB
+
+Example entry:
+
+1.1.1.1         1.1    0.0    20.5   r/ci/un  3/0   32
+
+Explanation
+
+IP
+
+    The IP address of the peer. (Which, of course, has nothing to do with DNS)
+
+UP
+
+    The rate at which your client is uploading to the peer (KiB/sec).
+
+DOWN
+
+    The rate at which your client is downloading from the peer (KiB/sec).
+
+PEER
+
+    The download rate (KiB/sec) of this peer for this torrent (reported to your client by the peer client).
+
+C/RE/LO
+
+    C = Connection type, can be r, l, R or L.
+
+        r = Started remotely, the peer initiated the connection to your client.
+
+        l = Started locally, your client initiated the connection to the peer.
+
+        R = Started remotely, using encrypted data transfer.
+
+        L = Started locally, using encrypted data transfer.
+
+    RE = Remote client information, has two parts; the first is u or c and the second is i or n.
+
+        c = This peer has choked your client (which means it is not going to send you any pieces for now).
+
+        u = Your client is not choked by this peer (unchoked).
+
+        i = This peer is interested in downloading from your client.
+
+        n = This peer is not interested in downloading from your client.
+
+    LO = Local client information, has two parts; the first is u or c and the second is i or n.
+
+        c = Your client has choked this peer (which means it is not going to send this peer any pieces for now).
+
+        u = Your client is not choking the peer (unchoked).
+
+        i = Your client is interested in downloading from this peer.
+
+        n = Your client is not interested in downloading from this peer.
+
+QS
+
+    Queues Outoing/Incoming pieces. The first is the number of pieces that are queued to be sent to the peer. The second is the number of pieces your client has requested and is waiting for the peer to send.
+
+DONE
+
+    What percent this peer has of the file.
+
+REQ
+
+    The number of the piece that is currently on the top of the request queue.
+
+SNUB
+
+    This field has a * in it when your client is snubbing this peer. When a peer agrees to send you a piece you have requested and then does not send that piece within a certain time your client will snub this peer. It is basically a way for the client to flag that this peer is unreliable and it is better to request pieces from other clients.
+
+Status
+
+A status line in this screen lists information such as:
+
+Peers: 99(1002) Min/Max: 40/100 Uploads: 15 U/I/C/A: 3/71/5/3 Failed: 0
+
+Peers
+
+    The amount of peers you are connected and (not connected) to.
+
+Min/Max
+
+    The minimum and maximum amount of peers to try to keep connected. Can be toyed with keys 3, 4, 5 and 6.
+
+Uploads
+
+    Maximum number of peers to upload to at the same time (given the global upload slots are available). Can be toyed with keys 1 and 2.
+
+U/I/C/A
+
+    U = Number of corrently unchoked peers
+
+    I = Currently interested peers
+
+    C = Complete peers
+
+    A = Peers accounted
+
+Failed
+
+    Number of failed chunks.
+
+The Chunks seen screen ¶
+
+You see that screen after you press the 'i' key. You got
+
+ Chunks seen: [C/A/D 25/29/6.99]     X downloaded  X missing  X queued  X downloading
+    0 EFDFEFFDFE CEFFFFFFFF EFCFCFDDBC 9DFDBDDECF BDDBCEDDFD DEFEEDECFC
+   60 DBDFEE9BEC FCCBECCFEB FAFDDFCAAD CABCDECDFC 9BFDCDEFAA ADCEFFBBDC
+  120 FAFFCCBEAC EDFFEDDF9B EDD9DEBDDD C9BCEAFF9C F8FDCDDBFB CFCECFCEDD
+  180 FFFADCCFAE FB9FBFCCAC BEABBB9FDD ABCECEDFAB DCF9BDDFBD BBEFAE7EED
+  240 DDCEAFBCF7 EEEFBF9AAD 9FDBCDDEBB DDF79C8FCE EFF9FDFE9A EF9DCCEEBA
+
+C/A/D stands for Complete/Accounted/Distributed copies. Only those peers whose bitfields are accounted for are included above; they do not include seeders, peers with empty bitfields, nor normal peers if there are too many.
+
+Then, you have a view of the chunks of the torrent. The chunks are shown in groups of 10. Each new line begins with the number of the first chunk on that line.
+
+Each chunk is shown by a hexadecimal number (0123456789ABCDEF) which is equal to its rarity among the non-seeders:
+
+    * a chunk shown as 0 is not available from non-seeders in the swarm (but all seeders have it of course)
+    * a chunk shown as 6 is available from 6 non-seeders
+    * and a chunk shown as F is available from 15 or more peers. 
+
+If the chunk is in bold it means you do not have that chunk yet, if it is underlined then it is in the transfer list (i.e. queued to be downloaded), and if the chunk is in reverse, it is currently being downloaded. Otherwise, a normal font indicates that the chunk has already been downloaded and verified as correct by rTorrent.
+Session directory ¶
+
+Setting the session option will enable session management and the torrent files for all open downloads will be stored in this directory. When restarting rtorrent all torrents previously open will be restored. Only one instance of rtorrent should be used with each session directory, though at the moment no locking is done. An empty string will disable the session directory.
+Watching a directory for torrents ¶
+
+The client may be configured to check a directory for new torrents and load them. Torrents loaded in this manner will be tied to the filename and when the file is deleted the torrent may be stopped or removed. If a torrent which is tied to a file is removed from the client, the tied file will be deleted.
+
+schedule = watch_directory,5,5,load_start=./watch/*.torrent
+schedule = untied_directory,5,5,stop_untied=
+
+Creating a config file ¶
+Trackers ¶
+
+Using the -i <ip> flag or "ip = <ip>" option you may change your ip address that is reported to the tracker. If you have a dynamic ip address then "schedule = ip_tick,0,1800,ip=my_address" may be used to update the ip address every 30 minutes.
+
+The client may spend as much as 60 seconds trying to contact a UDP tracker, so if you are behind a firewall that blocks the reply packets you should tell the client to skip the UDP tracker. Set "use_udp_trackers = no" in your configuration file or in the command line option.
+Signal handlers ¶
+SIGINT 	Normal shutdown with 5 seconds to send the stopped request to trackers.
+SIGTERM 	Shut down immediately.
+SIGWINCH 	Resize and redraw. 
+
+version information
+------- -----------
+Revision 6, Last updated Thu Oct 14 22:58:45 2010@localhost
+ts: 1287068325
+lastmajor: 6
+keep-ts: 1287068325

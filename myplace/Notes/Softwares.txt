@@ -12,9 +12,11 @@
 
 [[.Others|Others]]
 
+[[.rTorrent|rTorrent]]
+
 version information
 ------- -----------
-Revision 5, Last updated Tue May 25 03:14:10 2010, by xiaoranzzz@myplace.hell
-ts: 1274728450
-lastmajor: 5
-keep-ts: 1274728450
+Revision 6, Last updated Thu Oct 14 22:20:03 2010@localhost
+ts: 1287066003
+lastmajor: 6
+keep-ts: 1287066003
