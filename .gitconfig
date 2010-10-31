@@ -10,3 +10,6 @@
 	tags = text/tags/*:refs/remotes/tags/*
 [svn]
 	authorsfile = .gitauthors
+[remote "github"]
+	url = git@github.com:eotect/text.git
+	fetch = +refs/heads/*:refs/remotes/github/*
