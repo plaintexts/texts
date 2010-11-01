@@ -4,15 +4,15 @@
 	bare = false
 	logallrefupdates = true
 [svn-remote "svn"]
-	url = https://xrzworkspace.googlecode.com/svn
-	fetch = text/trunk:refs/remotes/trunk
-	branches = text/branches/*:refs/remotes/*
-	tags = text/tags/*:refs/remotes/tags/*
+	url = https://ztext.googlecode.com/svn
+	fetch = trunk:refs/remotes/trunk
+	branches = branches/*:refs/remotes/*
+	tags = tags/*:refs/remotes/tags/*
 [svn]
-	authorsfile = .gitauthors
-[remote "github"]
-	url = git@github.com:eotect/text.git
-	fetch = +refs/heads/*:refs/remotes/github/*
+	authorsfile = .gitauthors.txt
 [user]
 	name = xiaoranzzz
 	email = xiaoranzzz@gmail.com
+[remote "github"]
+	url = git@github.com:eotect/text.git
+	fetch = +refs/heads/*:refs/remotes/github/*
