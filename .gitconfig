@@ -9,10 +9,13 @@
 	branches = branches/*:refs/remotes/*
 	tags = tags/*:refs/remotes/tags/*
 [svn]
-	authorsfile = .gitauthors.txt
+	authorsfile = .gitauthors
 [user]
 	name = xiaoranzzz
 	email = xiaoranzzz@gmail.com
 [remote "github"]
 	url = git@github.com:eotect/text.git
 	fetch = +refs/heads/*:refs/remotes/github/*
+[remote "gitorious"]
+	url = git@gitorious.org:eotect/text.git
+	fetch = +refs/heads/*:refs/remotes/gitorious/*
