@@ -1,11 +1,25 @@
-Text
----------
+Text works
+==========
 
-*project host
+Source
+------
 
-**https://ztext.googlecode.com/svn/trunk
+1. GoogleCode
 
-**git@github.com:eotect/text.git
+    <http://ztext.googlecode.com>
 
-**git@gitorious.org:eotect/text.git
+    <https://ztext.googlecode.com/svn/trunk>
+
+2. GitHub
+
+    <http://github.com/eotect/text>
+
+    <git@github.com:eotect/text.git>
+
+2. Gitorious
+
+    <http://gitorious.org/eotect/text>
+
+    <git@gitorious.org:eotect/text.git>
+    
 
