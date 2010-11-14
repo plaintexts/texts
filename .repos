@@ -1,0 +1,12 @@
+v.user              =   eotect
+v.name              =   text
+v.email             =   @gmail.com
+git.github          =   git@github.com:$user$/$name$.git
+git.gitorious       =   git@gitorious.org:$user$/$name$.git
+svn.googlecode      =   https://z$name$.googlecode.com/svn
+svn.googlecode2     =   https://$topname$.googlecode.com/svn/$name$
+user                =   Nahn Eotect <eotect$email$>
+authors.(no author) =   Nahn Eotect <eotect$email$>
+authors.xiaoranzzz  =   Nahn Eotect <eotect$email$>
+authors.eotect      =   Nahn Eotect <eotect$email$>
+
